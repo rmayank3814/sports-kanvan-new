@@ -30,6 +30,13 @@
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
                                         </div>
                                     </div>
+                                    <div class="carousel-item" style="background-image: url('main/images/banner-2.jpg'); background-size: cover;">
+                                        <div class="caption">
+                                            <h1>Create and share your whatever</h1>
+                                            <h2>Make it easy for you to do whatever this thing does.</h2>
+                                        </div>
+                                        
+                                    </div>
 
                                 </div>
 
@@ -83,9 +90,6 @@
                         <div class="col-md-6 wrap-service11-box">
                             <div class="card card-shadow border-0 mb-4 wow">
                                 <div class="p-4">
-                                    <!-- <div class="icon-space">
-                                        <div class="icon-round text-center d-inline-block rounded-circle bg-success-gradiant"><i class="far fa-handshake"></i></div>
-                                    </div> -->
                                     <h6 class="font-weight-medium"><a href="#" class="linking">Our Technology Helps You</a></h6>
                                     <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat
                                         bibendum consequat.</p>
@@ -98,9 +102,6 @@
                         <div class="col-md-6 wrap-service11-box">
                             <div class="card card-shadow border-0 mb-4">
                                 <div class="p-4">
-                                    <!-- <div class="icon-space">
-                                        <div class="icon-round text-center d-inline-block rounded-circle bg-success-gradiant"><i class="fas fa-users"></i></div>
-                                    </div> -->
                                     <h6 class="font-weight-medium"><a href="#" class="linking">Meetings</a></h6>
                                     <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat
                                         bibendum consequat.</p>
@@ -112,9 +113,6 @@
                         <div class="col-md-6 wrap-service11-box">
                             <div class="card card-shadow border-0 mb-4">
                                 <div class="p-4">
-                                    <!-- <div class="icon-space">
-                                        <div class="icon-round text-center d-inline-block rounded-circle bg-success-gradiant"><i class="far fa-frown"></i></div>
-                                    </div> -->
                                     <h6 class="font-weight-medium"><a href="#" class="linking">Documentation</a></h6>
                                     <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat
                                         bibendum consequat.</p>
@@ -125,9 +123,6 @@
                         <div class="col-md-6 wrap-service11-box">
                             <div class="card card-shadow border-0 mb-4">
                                 <div class="p-4">
-                                    <!-- <div class="icon-space">
-                                        <div class="icon-round text-center d-inline-block rounded-circle bg-success-gradiant"><i class="fas fa-chalkboard-teacher"></i></div>
-                                    </div> -->
                                     <h6 class="font-weight-medium"><a href="#" class="linking">Training</a></h6>
                                     <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat
                                         bibendum consequat</p>
