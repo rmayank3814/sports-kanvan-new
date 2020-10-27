@@ -161,7 +161,6 @@ class Pages extends CI_Controller {
 			$this->users_model->tfa_insert($sess_id);
 			redirect('pages/about');
 		}
-		$this->load->view('pages/tfa');
 		$this->load->view('templates/footer');
 	}
 

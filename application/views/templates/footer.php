@@ -1,3 +1,4 @@
+    
     <!--End Section-->
     <footer class="footer-area footer--light">
         <div class="footer-big">
@@ -98,7 +99,9 @@
 
     <!--Scripts-->
     <script src="<?php echo base_url();?>vendor/others/js/jquery.min.js "></script>
-    <script src="<?php echo base_url();?>vendor/others/js/popper.min.js "></script>
+    <script src="<?php echo base_url();?>vendor/bootstrap/js/common.js "></script>
+    <script src="<?php echo base_url();?>main/bootstrap/js/common.js "></script>
+    <script src="<?php echo base_url();?>vendor/js/custom.js "></script>
     <script src="<?php echo base_url();?>vendor/bootstrap/js/bootstrap.min.js "></script>
     <script src="<?php echo base_url();?>vendor/others/js/owl.carousel.js "></script>
     <script src="<?php echo base_url();?>vendor/others/js/wow.min.js "></script>

@@ -5,8 +5,8 @@
 }
 </style>
 
- <div class="image-about-banner">
-    <div class="col-lg-12">
+ <div class="image-about-banner" style="margin-top:100px">
+    <div class="">
         <div class="py-5 section-bg-quote mb-5" id="section-quote">
             <div class="container">
                 <div class="row d-flex justify-content-center">
@@ -33,22 +33,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="password">Password: <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="password" name="password" id="password">
-                                        <div class="invalid-feedback">
-                                            Valid password is required.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="passconf">Password Confirmation: <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="password" name="passconf" id="passconf">
-                                        <div class="invalid-feedback">
-                                            Valid confirm password is required.
-                                        </div>
-                                    </div>
-                                </div>
+                              
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="email">Email Id: <span class="text-danger font-weight-medium">*</span></label>
@@ -62,6 +47,22 @@
                                         <input class="form-control" type="text" name="mobile" id="mobile">
                                         <div class="invalid-feedback">
                                             Valid phone number is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="label-input" for="password">Password: <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="password" name="password" id="password">
+                                        <div class="invalid-feedback">
+                                            Valid password is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="label-input" for="passconf">Password Confirmation: <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="password" name="passconf" id="passconf">
+                                        <div class="invalid-feedback">
+                                            Valid confirm password is required.
                                         </div>
                                     </div>
                                 </div>
@@ -104,22 +105,23 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="row">
+                                <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="height">Height <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="height" id="height">
+                                        <label class="label-input" for="shift">Shift <span class="text-danger font-weight-medium">*</span></label>
+                                        <select class="custom-select d-block w-100" name="shift" id="shift">
+                                            <option value="">---Select--</option>
+                                            <option>Morning</option>
+                                            <option>Evening</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="label-input" for="time">Timing <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="time" name="time" id="time">
                                         <div class="invalid-feedback">
                                             Valid phone number is required.
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="weight">Weight <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="weight" id="weight">
-                                        <div class="invalid-feedback">
-                                            Valid phone number is required.
-                                        </div>
-                                    </div>
-                                </div> -->
+                                </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="emergency">Emergency Contact:<span class="text-danger font-weight-medium">*</span></label>
@@ -137,7 +139,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <button class="btn btn-blue btn-sm m-auto"name="registration" type="submit">Submit</button>
+                                    <button class="btn btn-blue btn-sm m-auto" name="registration" type="submit">Submit</button>
                                 </div>
                             </form>
                         </div>

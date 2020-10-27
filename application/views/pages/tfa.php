@@ -1,5 +1,5 @@
 <!--form quote-->
-<div class="image-about-banner">
+<div class="image-about-banner" style="margin-top:100px">
 <div class="py-5 section-bg-quote" id="section-quote">
     <div class="container">
         <!-- Row -->
