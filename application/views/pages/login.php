@@ -103,7 +103,7 @@
     </style>
     </style>
 <br>
-<div class="image-about-banner">
+<div class="image-about-banner" style="margin-top:100px">
     <div class="col-lg-12 col-sm-8">
         <div class="box">
             <?php echo form_open('pages/login',['class' => 'login-form mb-5'],['method' => 'post']);  ?>

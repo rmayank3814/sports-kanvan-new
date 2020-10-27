@@ -1,19 +1,6 @@
-<<<<<<< HEAD:assets/policy.html
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title></title>
-    <!--Bootstrap css-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-</head>
-
-<body>
-=======
-<div class="image-about-banner">
+ <div class="image-about-banner" style="margin-top:100px">
     <div class="container">
     <div class="row">
->>>>>>> f3e6f9e6d7aabc232fa3c300964b1a8d1812e3d4:application/views/pages/privacy_policy.php
     <div class="container">
         <h3 class="comman-spaces">This privacy policy discloses the privacy practices for (Kanvan Sports powered by Kanvan Business Solutions Pvt Ltd). This privacy policy applies solely to information collected by this web site. It will notify you of the following</h3>
         <ul>

@@ -7,7 +7,7 @@
 
 </head>
 <body>
-
+<div class="image-about-banner" style="margin-top:100px">
 <div id="main">
 <div id="login">
 <?php echo @$error; ?>
@@ -18,6 +18,7 @@
 		<input type="password" name="email" id="name" placeholder="Email ID"/><br /><br />
 	    <input type="submit" value="login" name="forgot"/><br />
 </form>
+</div>
 </div>
 </div>
 </body>

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="<?php echo base_url();?>images/cropped-kanvan-final-av.png" type="image/gif" sizes="16x16">
+    <link rel="icon" href="<?php echo base_url();?>main/images/sports-kanvan-logo.png" type="image/png" sizes="159x73">
     <!--Bootstrap css-->
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/bootstrap/css/bootstrap.min.css">
     <!--Custom css-->
@@ -22,10 +22,10 @@
         <div class="hero-anime">
             <div class="navigation-wrap start-header start-style ">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12">
+                    <div class="">
+                        <div class="col">
                             <nav class="navbar navbar-expand-md navbar-light">
-                                <a class="navbar-brand" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/cropped-kanvan-final-av.png" alt="kanvan logo"></a>
+                                <a class="navbar-brand" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>main/images/sports-kanvan-logo.png" alt="kanvan logo"></a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span></button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

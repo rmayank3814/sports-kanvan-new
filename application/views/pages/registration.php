@@ -5,8 +5,8 @@
 }
 </style>
 
- <div class="image-about-banner">
-    <div class="col-lg-12">
+ <div class="image-about-banner" style="margin-top:100px">
+    <div class="">
         <div class="py-5 section-bg-quote mb-5" id="section-quote">
             <div class="container">
                 <div class="row d-flex justify-content-center">
