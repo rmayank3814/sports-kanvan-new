@@ -40,13 +40,13 @@ class Pages extends CI_Controller {
 	
 	public function medical(){
 		$sess_id = $this->session->userdata('id');
+		$this->get_medical($sess_id);
 		$this->load->view('templates/header');
 		
 		if(isset($_POST['medical'])){
 			$this->users_model->medical_data($sess_id);
-			$this->load->view('pages/medical');
+			redirect('pages/about');
 		}
-		$this->load->view('pages/medical');
 		$this->load->view('templates/footer');
 
 	}
@@ -97,38 +97,15 @@ class Pages extends CI_Controller {
 			return FALSE;
 		}
 	}
-	
-
-	// public function forgot_password() {
-	// 	if($this->input->post('forgot')) {
-	// 		$email = $this->input->post('email');
-	// 		$query = $this->db->query("select password , email from users where email = '$email'");
-	// 		$row = $query->row();
-	// 		$user_email = $row->email;
-	// 		if((!strcmp($email, $user_email))) {
-	// 		    $pass = $row-> $pass;
-	// 			/*Mail Code*/
-	// 			$to = $user_email;
-	// 			$subject = "Forgot Password";
-	// 			$txt = "Your password is $password .";
-	// 			$headers = "From: password@example.com" . "\r\n" .
-	// 			"CC: ifany@example.com";
-
-	// 			mail($to,$subject,$txt,$headers);
-	// 		}
-	// 		else{
-	// 			$data['error']="Invalid Email ID !";
-	// 		}
-	//     }
-	//    $this->load->view('pages/forgot_password',@$data);	
-	// }	    
-
+	   
 	function privacy_policy(){
 	$this->load->view('pages/privacy_policy');
 	}
 
 	function contact(){
+		$this->load->view('templates/header');
 		$this->load->view('pages/contact');
+		$this->load->view('templates/footer');
 	}
 
 	function about(){
@@ -175,8 +152,9 @@ class Pages extends CI_Controller {
         return false;
 	}
 	
-	function tfa(){
+	function tfa() {
 		$sess_id = $this->session->userdata('id');
+		$this->get_tfa($sess_id);
 		$this->load->view('templates/header');
 
 		if(isset($_POST['tfa_button'])){
@@ -187,15 +165,63 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	function ptc(){
+	function ptc() {
 		$sess_id = $this->session->userdata('id');
+		$this->get_ptc($sess_id);
 		$this->load->view('templates/header');
 
 		if(isset($_POST['ptc_button'])){
 			$this->users_model->ptc_insert($sess_id);
 			redirect('pages/about');
 		}
-		$this->load->view('pages/ptc');
 		$this->load->view('templates/footer');
 	}
+
+	function community() {
+		$sess_id = $this->session->userdata('id');
+		$this->get_community($sess_id);
+		$this->load->view('templates/header');
+		if(isset($_POST['community_button'])){
+			$this->users_model->community_insert($sess_id);
+			redirect('pages/about');
+		}
+		$this->load->view('templates/footer');	
+	}
+
+	function agreement() {
+		$sess_id = $this->session->userdata('id');
+		$this->get_agreement($sess_id);
+		$this->load->view('templates/header');
+		if(isset($_POST['agreement_button'])){
+			$userdata = $this->users_model->agreement_insert($sess_id);
+			redirect('pages/about');
+		}
+		$this->load->view('templates/footer');	
+	}
+
+	public function get_community($sess_id) {
+			$userdata= $this->users_model->get_community_data($sess_id);
+            $this->load->view('pages/community', $userdata);
+		}
+
+	public function get_agreement($sess_id) {
+		$userdata = $this->users_model->get_agreement_data($sess_id);
+		$this->load->view('pages/agreement', $userdata);
+	}	
+		
+	public function get_ptc($sess_id) {
+		$userdata = $this->users_model->get_ptc_data($sess_id);
+		$this->load->view('pages/ptc', $userdata);
+	}
+
+	public function get_tfa($sess_id) {
+		$userdata = $this->users_model->get_tfa_data($sess_id);
+		$this->load->view('pages/tfa', $userdata);
+	}
+
+	public function get_medical($sess_id) {
+		$userdata = $this->users_model->get_medical_data($sess_id);
+		$this->load->view('pages/medical', $userdata);
+	}
+	
 }

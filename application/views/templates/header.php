@@ -57,6 +57,12 @@
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/ptc">PTC</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/community">Community</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/agreement">Agreement</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/tfa">TFA</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">

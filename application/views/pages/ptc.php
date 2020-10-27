@@ -28,14 +28,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="investment">Total investment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="number" name="investment" id="investment" placeholder="" required>
+                                        <input class="form-control" type="number" name="investment" id="investment" value="<?php echo $investment; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid dob is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="method">Method of payment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="method" id="method" placeholder="" required>
+                                        <input class="form-control" type="text" name="method" id="method" value="<?php echo $method; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid height is required.
                                         </div>
@@ -44,14 +44,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="print" id="print" placeholder="" required>
+                                        <input class="form-control" type="text" name="print" id="print" value="<?php echo $print; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Print Name is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="sign" id="sign" placeholder="" required>
+                                        <input class="form-control" type="text" name="sign" id="sign" value="<?php echo $sign; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Sign Name is required.
                                         </div>
@@ -60,7 +60,7 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="date">Date<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="date" name="date" id="date" placeholder="" required>
+                                        <input class="form-control" type="date" name="date" id="date" value="<?php echo $date; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid date is required.
                                         </div>
@@ -69,7 +69,7 @@
                                 <div class="d-flex justify-content-center mt-3 mb-3">
                                     <button class="btn btn-blue btn-sm m-auto" name="ptc_button" type="submit">Submit</button>
                                 </div>
-                            </form>
+                                <?php echo form_close(); ?>
                             <h6 class="text-center pt-4 pb-4"> WE ARE EXCITED TO BEGIN WORKING WITH YOU!</h6>
                         </div>
                     </div>

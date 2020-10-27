@@ -57,7 +57,7 @@ class Users_model extends CI_Model {
             'back_pain'=> $this->input->post('option29'),
             'joint_pain'=> $this->input->post('option30'),
             'muscle_pain'=> $this->input->post('option31'),
-            'sign_name'=> $this->input->post('sign'),
+            'sign'=> $this->input->post('sign'),
             'date'=> $this->input->post('medical_date')
         );
         $this->db->select("*");
@@ -164,4 +164,87 @@ class Users_model extends CI_Model {
             return $this->db->update('ptc');
         }
     }
+
+    function agreement_insert($sess_id){
+        $data = array(
+            'sess_id' => $sess_id,
+            'print' => $this->input->post('print'),
+            'sign' => $this->input->post('sign'),
+            'name' => $this->input->post('name'),
+            'date' => $this->input->post('date')
+        );
+        $this->db->select("*");
+        $this->db->from('agreement');
+        $this->db->where('sess_id', $sess_id);
+        $query = $this->db->get();
+
+	    if($query->num_rows() == 0){
+            return $this->db->insert('agreement', $data);
+        }    
+        else {
+            $this->db->set($data);
+            $this->db->where('sess_id', $sess_id);
+            return $this->db->update('agreement');
+        }
+    }
+
+    function community_insert($sess_id){
+        $data = array(
+            'sess_id' => $sess_id,
+            'name' => $this->input->post('name'),
+            'full_name1' => $this->input->post('full_name1'),
+            'contact1' => $this->input->post('contact1'),
+            'relationship1' => $this->input->post('relationship1'),
+            'email1' => $this->input->post('email1'),
+            'full_name2' => $this->input->post('full_name2'),
+            'contact2' => $this->input->post('contact2'),
+            'relationship2' => $this->input->post('relationship2'),
+            'email2' => $this->input->post('email2')
+        );
+        $this->db->select("*");
+        $this->db->from('community');
+        $this->db->where('sess_id', $sess_id);
+        $query = $this->db->get();
+
+	    if($query->num_rows() == 0){
+            return $this->db->insert('community', $data);
+        }    
+        else {
+            $this->db->set($data);
+            $this->db->where('sess_id', $sess_id);
+            return $this->db->update('community');
+        }
+
+    }
+
+    public function get_ptc_data($sess_id){
+        $sql = "SELECT * FROM ptc where sess_id = $sess_id";
+        $query = $this->db->query( $sql );
+        return $query->row_array();
+    }
+    
+    public function get_agreement_data($sess_id){
+        $sql = "SELECT * FROM agreement where sess_id = $sess_id";
+        $query = $this->db->query( $sql );
+        return $query->row_array();
+    } 
+
+    public function get_community_data($sess_id){
+        $sql = "SELECT * FROM community where sess_id = $sess_id";
+        $query = $this->db->query( $sql );
+        return $query->row_array();
+    } 
+
+    public function get_tfa_data($sess_id){
+        $sql = "SELECT * FROM tfa where sess_id = $sess_id";
+        $query = $this->db->query( $sql );
+        return $query->row_array();
+    } 
+
+    public function get_medical_data($sess_id){
+        $sql = "SELECT * FROM medical where sess_id = $sess_id";
+        $query = $this->db->query( $sql );
+        return $query->row_array();
+    } 
+
 }

@@ -317,11 +317,11 @@
 
             <div class="form-group">
                 <label>Sign Name (Type your name) *</label>
-                <input type="text" name="sign" id="sign" class="form-control" />
+                <input type="text" name="sign" id="sign" value="<?php echo $sign ?>" class="form-control" />
             </div>
             <div class="form-group">
                 <label>Date *</label>
-                <input type="date" name="medical_date" id="medical_date" class="form-control" />
+                <input type="date" name="medical_date" id="medical_date" value="<?php echo $date ?>" class="form-control" />
             </div>
             </div>
             <br />
@@ -342,46 +342,27 @@
         $('#doctor_yes').click(function() { 
             $('#explain').show(); 
         }); 
-    });
-    $(document).ready(function() { 
         $('#doctor_no').click(function() { 
             $('#explain').hide(); 
-        }); 
-    });
-    
-    $(document).ready(function() { 
+        });
         $('#stress_yes').click(function() { 
             $('#result').show(); 
         }); 
-    });
-    $(document).ready(function() { 
         $('#stress_no').click(function() { 
             $('#result').hide(); 
-        }); 
-    }); 
-    $(document).ready(function() { 
+        });
         $('#stress_dont_know').click(function() { 
             $('#result').hide(); 
         }); 
-    }); 
-
-    $(document).ready(function() { 
         $('#regular_yes').click(function() { 
             $('#medication').show(); 
         }); 
-    });
-    $(document).ready(function() { 
         $('#regular_no').click(function() { 
             $('#medication').hide(); 
         }); 
-    });
-
-    $(document).ready(function() { 
         $('#hospitalized_yes').click(function() { 
             $('#relation').show(); 
         }); 
-    });
-    $(document).ready(function() { 
         $('#hospitalized_no').click(function() { 
             $('#relation').hide(); 
         }); 
