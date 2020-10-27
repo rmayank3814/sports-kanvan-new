@@ -1,42 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Kanvan Sports</title>
-    <meta charset="utf-8">
-    <link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <script src="javascript/bootstrap4.js" rel="stylesheet"></script>
-    <script src="<?php echo base_url(); ?>js/script.js" rel="stylesheet"></script>
-    <script src="jquery/jquery-3.2.1.js" rel="stylesheet"></script>
-</head>
+    <title>Kanvan Sports </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="<?php echo base_url();?>images/cropped-kanvan-final-av.png" type="image/gif" sizes="16x16">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="<?php echo base_url();?>vendor/bootstrap/css/bootstrap.min.css">
+    <!--Custom css-->
+    <link rel="stylesheet" href="<?php echo base_url();?>main/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>vendor/others/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>vendor/others/css/owl.theme.default.min.css">
+    <!--Font family-->
+    <link rel="stylesheet" href="<?php echo base_url();?>vendor/font-family/font-family.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>vendor/fonts/Font-Awesome/css/all.min.css">
 
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
-        <div class="container">
-            <img src="<?php echo base_url(); ?>images/cropped-kanvan-final-av.png" class="navbar-brand logo" alt="Website Development Company">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                </ul>
+</head>
+    <body>
+        <div class="hero-anime">
+            <div class="navigation-wrap start-header start-style ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav class="navbar navbar-expand-md navbar-light">
+                                <a class="navbar-brand" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/cropped-kanvan-final-av.png" alt="kanvan logo"></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span></button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav ml-auto px-3 py-4 py-md-0">
+                                    <?php if(!isset($_SESSION) || (empty($_SESSION['id']))) { ?>
+                                       <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>">Home</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/about">About us</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/contact">Contact us</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/registration">Register</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/login">Login</a>
+                                        </li>
+                                    <?php } else { ?>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>">Home</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/medical">Medical</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/ptc">PTC</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/tfa">TFA</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
+                                        </li>
+                                    <?php } ?>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
+            
