@@ -7,7 +7,7 @@
                         <div class="card-body rounded-sm">
                             <div class="text-box">
                             <h3 class="text-center mt-3 mb-4">PERSONAL DETAILS</h3>
-                            <?php echo form_open('pages/registration',array('method'=>'post','novalidate'=>"novalidate")); ?>
+                            <?php echo form_open('pages/registration',array('method'=>'post','novalidate'=>"novalidate", 'id' =>'registration_form')); ?>
                             <?php echo validation_errors(); ?>
                             <div class="row">
                                 <div class="col-md-6 mb-3">

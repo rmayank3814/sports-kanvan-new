@@ -98,18 +98,18 @@
     </footer><a href="#" id="back-to-top" title="Back to top"><i class="fas fa-angle-up"></i></a>
 
     <!--Scripts-->
-    <script src="<?php echo base_url();?>vendor/others/js/jquery.min.js "></script>
+    <script src="<?php echo base_url();?>vendor/others/js/jquery.min.js"></script>
     <!-- <script src="<?php echo base_url();?>vendor/js/custom.js "></script> -->
-    <script src="<?php echo base_url();?>vendor/bootstrap/js/bootstrap.min.js "></script>
-    <script src="<?php echo base_url();?>vendor/others/js/owl.carousel.js "></script>
-    <script src="<?php echo base_url();?>vendor/others/js/wow.min.js "></script>
-    <script src="<?php echo base_url();?>vendor/others/js/lazyload.min.js "></script>
-    <script src="<?php echo base_url();?>vendor/others/js/sweetalert.js "></script>
+    <script src="<?php echo base_url();?>vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>vendor/others/js/owl.carousel.js"></script>
+    <script src="<?php echo base_url();?>vendor/others/js/wow.min.js"></script>
+    <script src="<?php echo base_url();?>vendor/others/js/lazyload.min.js"></script>
+    <script src="<?php echo base_url();?>vendor/others/js/sweetalert.js"></script>
     <script> new WOW().init(); </script>
     <!--Custom Script-->
-    <script src="<?php echo base_url();?>main/js/custom.js "></script>
-    <script src="<?php echo base_url();?>/others/js/validation.js "></script>
-    <script src="<?php echo base_url();?>/others/js/medical.js "></script>
+    <script src="<?php echo base_url();?>main/js/custom.js"></script>
+    <script src="<?php echo base_url();?>/others/js/validation.js"></script>
+    <script src="<?php echo base_url();?>/others/js/medical.js"></script>
 </body>
 
 </html>
