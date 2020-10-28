@@ -56,10 +56,9 @@
                                     
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label class="label-input" for="dob">Birth Date: <span class="text-danger font-weight-medium">*</span></label>
-                                    <input class="form-control" type="date" name="dob" id="dob" required>
-                                    
-                                </div>
+                                    <label class="label-input">Birth Date: <span class="text-danger font-weight-medium">*</span></label>
+                                    <input class="form-control" type="date" id="dob" name="dob"> 
+                                </div> 
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
