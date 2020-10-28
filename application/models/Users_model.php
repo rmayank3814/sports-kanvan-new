@@ -7,22 +7,22 @@ class Users_model extends CI_Model {
 
     public function users_data() {       
         $data = array(
-            'name' => $this->input->post('name'),
-            'date' => $this->input->post('date'),
+            'fname' => $this->input->post('fname'),
+            'lname' => $this->input->post('lname'),
             'mobile' => $this->input->post('mobile'),
             'email' => $this->input->post('email'),
-            'age' => $this->input->post('age'),
+            'shift' => $this->input->post('shift'),
             'dob' => $this->input->post('dob'),
             'emergency' => $this->input->post('emergency'),
-            'address' => $this->input->post('address'),
-            'relationship' => $this->input->post('relationship'),
+            'address1' => $this->input->post('address1'),
+            'address2' => $this->input->post('address2'),
             'gender' => $this->input->post('gender'),
             'password' => md5($this->input->post('password'))
-        );  
-        return $this->db->insert('users', $data);
+        );        
+            return $this->db->insert('users', $data);
     }
 
-    public function medical_data($sess_id){
+    function medical_data($sess_id){
         $data = array(
             'sess_id' => $sess_id,
             'doctor_care' => $this->input->post('option1'),
@@ -76,7 +76,7 @@ class Users_model extends CI_Model {
     }
 
     function login_process($email , $password) {
-        $this->db->select("id , email , name");
+        $this->db->select("id , email , fname");
         $this->db->from('users');
         $this->db->where(array('email'=>$email,'password'=> $password));
         $query = $this->db->get();
@@ -217,31 +217,31 @@ class Users_model extends CI_Model {
 
     }
 
-    public function get_ptc_data($sess_id){
+    function get_ptc_data($sess_id){
         $sql = "SELECT * FROM ptc where sess_id = $sess_id";
         $query = $this->db->query( $sql );
         return $query->row_array();
     }
     
-    public function get_agreement_data($sess_id){
+    function get_agreement_data($sess_id){
         $sql = "SELECT * FROM agreement where sess_id = $sess_id";
         $query = $this->db->query( $sql );
         return $query->row_array();
     } 
 
-    public function get_community_data($sess_id){
+    function get_community_data($sess_id){
         $sql = "SELECT * FROM community where sess_id = $sess_id";
         $query = $this->db->query( $sql );
         return $query->row_array();
     } 
 
-    public function get_tfa_data($sess_id){
+    function get_tfa_data($sess_id){
         $sql = "SELECT * FROM tfa where sess_id = $sess_id";
         $query = $this->db->query( $sql );
         return $query->row_array();
     } 
 
-    public function get_medical_data($sess_id){
+    function get_medical_data($sess_id){
         $sql = "SELECT * FROM medical where sess_id = $sess_id";
         $query = $this->db->query( $sql );
         return $query->row_array();

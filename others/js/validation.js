@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#first_form').submit(function(e) {
+    $('.login-form').submit(function(e) {
         //e.preventDefault();
         var fname = $('#fname').val();
         var lname = $('#lname').val()

@@ -95,14 +95,6 @@ button.btn {
                         <a href="#" class="social-linking">&nbsp; info@kanvan.in</a>
                     </p>
                 </div>
-                <div class="footer-widget wow fadeInDown" data-wow-delay="0.5s">
-                    <h4 class="footer-widget-title border-link">Stay Connected:</h4><br/>
-                    <a href="#" class="icon-button twitter" title="Facebook"><i class="fab fa-twitter"></i><span></span></a>
-                    <a href="#" class="icon-button facebook" title="Twitter"><i class="fab fa-facebook-f" ></i><span></span></a>
-                    <a href="#" class="icon-button instagram" title="Instagram"><i class="fab fa-instagram" ></i><span></span></a>
-                    <a href="#" class="icon-button linkedin" title="LinkedIn"><i class="fab fa-linkedin-in" ></i><span></span></a>
-                    <a href="#" class="icon-button skype" title="Skype"><i class="fab fa-skype"></i><span></span></a>
-                </div>
             </div>
         </div>
     </div>
