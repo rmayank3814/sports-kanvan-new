@@ -9,36 +9,41 @@ class Pages extends CI_Controller {
         $this->load->model('users_model');
 		$this->load->helper(array('form','url','html'));
 		$this->load->library(array('form_validation','session'));
-    }
-    public function index()
-	{
+	}
+	
+    function index(){
 		$this->load->view('templates/header');
 		$this->load->view('pages/home');
 		$this->load->view('templates/footer');
 	}
 
-	public function registration() {
+	function registration() {
 		$this->load->view('templates/header');
 
-        $this->form_validation->set_rules('name', 'Name','trim|required|min_length[2]|max_length[50]');
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[users.email]');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
-		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'trim|required|matches[password]');
-		
-		if(isset($_POST['registration'])){
-			if ($this->form_validation->run() === FALSE) { 
-				redirect('pages/registration');
-			}
-			else {
-				$this->users_model->users_data();
-				redirect('pages/login');	
-			}
+		$this->form_validation->set_rules('fname', 'First name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('lname', 'Last name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]|is_unique[users.email]');
+		$this->form_validation->set_rules('password', 'Password', 'required|regex_match[/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/]|min_length[8]');
+		$this->form_validation->set_rules('passconf', 'Confirm Password', 'required|matches[password]');
+		$this->form_validation->set_rules('mobile', 'Mobile number','required|min_length[10]|max_length[12]|regex_match[/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/]');
+		$this->form_validation->set_rules('gender', 'Gender','required');
+		$this->form_validation->set_rules('dob', 'Birth Date','required');
+		$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/]');
+		$this->form_validation->set_rules('shift', 'Shift','required');
+		$this->form_validation->set_rules('address1', 'Address','required');
+
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+		$this->form_validation->set_message('required', 'Enter %s');
+
+		if(isset($_POST['registration']) && $this->form_validation->run() == TRUE) { 
+			$this->users_model->users_data();
+			redirect('pages/login');
 		}
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');
 	}
 	
-	public function medical(){
+	function medical(){
 		$sess_id = $this->session->userdata('id');
 		$this->get_medical($sess_id);
 		$this->load->view('templates/header');
@@ -51,7 +56,7 @@ class Pages extends CI_Controller {
 
 	}
 	
-	public function dashboard() {
+	function dashboard() {
 		$this->load->view('templates/header');
 		$this->load->view('pages/dashboard');
 		$this->load->view('templates/footer');	
@@ -75,21 +80,19 @@ class Pages extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$this->form_validation->set_message('required', 'Enter %s');
 		
-		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('pages/login');
-		}else {
+		if(isset($_POST['login']) && $this->form_validation->run() == TRUE){
+		
 			$user = $query->row_array();
 			if(!empty($user)) {
 				$this->session->set_userdata($user);
 				redirect('pages/dashboard');
-			} else {
-				redirect('pages/login');
-			}
+			} 	
 		}
-		$this->load->view('templates/footer');	
-	}
+		$this->load->view('pages/login');
+		$this->load->view('templates/footer');
+    }
 	
-	public function validateUser($email,$recordCount){
+	function validateUser($email,$recordCount){
 		if ($recordCount != 0){
 			return TRUE;
 		}else{
@@ -112,7 +115,7 @@ class Pages extends CI_Controller {
 		$this->load->view('pages/about');
 	}
     
-    public function change_password() {
+    function change_password() {
 
 		$this->load->view('templates/header');
 
@@ -198,27 +201,27 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');	
 	}
 
-	public function get_community($sess_id) {
+	function get_community($sess_id) {
 			$userdata= $this->users_model->get_community_data($sess_id);
             $this->load->view('pages/community', $userdata);
 		}
 
-	public function get_agreement($sess_id) {
+	function get_agreement($sess_id) {
 		$userdata = $this->users_model->get_agreement_data($sess_id);
 		$this->load->view('pages/agreement', $userdata);
 	}	
 		
-	public function get_ptc($sess_id) {
+	function get_ptc($sess_id) {
 		$userdata = $this->users_model->get_ptc_data($sess_id);
 		$this->load->view('pages/ptc', $userdata);
 	}
 
-	public function get_tfa($sess_id) {
+	function get_tfa($sess_id) {
 		$userdata = $this->users_model->get_tfa_data($sess_id);
 		$this->load->view('pages/tfa', $userdata);
 	}
 
-	public function get_medical($sess_id) {
+	function get_medical($sess_id) {
 		$userdata = $this->users_model->get_medical_data($sess_id);
 		$this->load->view('pages/medical', $userdata);
 	}

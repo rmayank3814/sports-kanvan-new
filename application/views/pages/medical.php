@@ -12,7 +12,8 @@
         <div class="col-lg-12">
          <div class="panel panel-default">
          <h3 class="text-center mt-3 mb-4">MEDICAL DETAILS</h3>
-         <?php echo form_open('pages/medical'); ?>
+         <?php echo form_open('pages/medical',array('method' => 'post','novalidate'=>'novalidate')); ?>
+         <?php echo validation_errors();?>
         <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
@@ -31,7 +32,7 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>When was the last time you had a physical examination? <span class="error-medical"> *</span></label>
-                    <input type="text" name="physical_examination" class="form-control" />
+                    <input type="date" name="physical_examination" class="form-control" />
                 </div>
             </div>
         </div>
@@ -251,38 +252,10 @@
         <div class="row">
         <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Have parents or siblings who, prior to age 55 had <span class="error-medical"> *</span></label>
-                    <div class="optional-radio-button">
-                        <label class="radio-inline">
-                            <input type="radio" name="option14" value="yes">Yes
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="option14" value="no" checked> No
-                        </label>
-                    </div>  
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label>A heart attack? <span class="error-medical"> *</span></label>
-                    <div class="optional-radio-button">
-                        <label class="radio-inline">
-                            <input type="radio" name="option15" value="yes">Yes
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="option15" value="no" checked> No
-                        </label>
-                    </div>  
-                </div>
-            </div>
-        </div>
-        <div class="row">
-        <div class="col-lg-6">
-                <div class="form-group">
                     <label>Have parents or siblings who, prior to age 55 had *</label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option16" value="yes">Yes
+                            <input type="radio" name="option14" value="yes">Yes
                         </label>
                         <label class="radio-inline">
                             <input type="radio" name="option16" value="no" checked> No
