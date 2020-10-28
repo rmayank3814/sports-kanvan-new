@@ -10,7 +10,8 @@
                     <div class="card-body rounded-sm">
                         <div class="text-box">
                             <h3 class="text-center mt-3 mb-4">TRAINING FITNESS ASSESSMENT</h3>
-                            <?php echo form_open('pages/tfa',['class' => 'needs-validation'],['method' => 'post']);  ?>
+                            <?php echo form_open('pages/tfa',array('class' => 'needs-validation','method' => 'post','novalidate' => 'novalidate');  ?>
+                            <?php echo validation_errors();?>
                             <h5 class="mt-3 mb-4">Measurements: </h5>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">

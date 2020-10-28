@@ -25,17 +25,17 @@ class Pages extends CI_Controller {
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]|is_unique[users.email]');
 		$this->form_validation->set_rules('password', 'Password', 'required|regex_match[/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/]|min_length[8]');
 		$this->form_validation->set_rules('passconf', 'Confirm Password', 'required|matches[password]');
-		$this->form_validation->set_rules('mobile', 'Mobile number','required|min_length[10]|max_length[12]|regex_match[/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/]');
+		$this->form_validation->set_rules('mobile', 'Mobile number','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
 		$this->form_validation->set_rules('gender', 'Gender','required');
 		$this->form_validation->set_rules('dob', 'Birth Date','required');
-		$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/]');
+		$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
 		$this->form_validation->set_rules('shift', 'Shift','required');
 		$this->form_validation->set_rules('address1', 'Address','required');
 
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$this->form_validation->set_message('required', 'Enter %s');
 
-		if(isset($_POST['registration']) && $this->form_validation->run() == TRUE) { 
+		if(isset($_POST['registration']) && $this->form_validation->run()) { 
 			$this->users_model->users_data();
 			redirect('pages/login');
 		}
@@ -53,18 +53,11 @@ class Pages extends CI_Controller {
 			redirect('pages/about');
 		}
 		$this->load->view('templates/footer');
-
-	}
-	
-	function dashboard() {
-		$this->load->view('templates/header');
-		$this->load->view('pages/dashboard');
-		$this->load->view('templates/footer');	
 	}
 	
 	function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url());
+		redirect();
 	}
 	   
 	function login(){
@@ -80,12 +73,11 @@ class Pages extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$this->form_validation->set_message('required', 'Enter %s');
 		
-		if(isset($_POST['login']) && $this->form_validation->run() == TRUE){
-		
+		if(isset($_POST['login']) && $this->form_validation->run()){
 			$user = $query->row_array();
 			if(!empty($user)) {
 				$this->session->set_userdata($user);
-				redirect('pages/dashboard');
+				redirect();
 			} 	
 		}
 		$this->load->view('pages/login');
@@ -102,7 +94,7 @@ class Pages extends CI_Controller {
 	}
 	   
 	function privacy_policy(){
-	$this->load->view('pages/privacy_policy');
+		$this->load->view('pages/privacy_policy');
 	}
 
 	function contact(){
@@ -131,14 +123,9 @@ class Pages extends CI_Controller {
 		$this->form_validation->set_message('required', 'Enter %s');
 
 
-		if(isset($_POST['change_password'])){
-			if($this->form_validation->run() == false){
-				redirect('pages/change_password');
-			}
-			else{
+		if(isset($_POST['change_password']) && $this->form_validation->run() == true){
 				$this->users_model->change_pass($session_id,$new_pass);
 				redirect('pages/contact');
-			}
 		}
 		$this->load->view('pages/change_password');
 		$this->load->view('templates/footer');
