@@ -1,6 +1,6 @@
 <style>
 .form4 {
-    background-image: url("<?php echo base_url();?>images/sports.jpg");
+    background-image: url("<?php echo base_url();?>main/images/sports.jpg");
     background-size: cover;
 }
 

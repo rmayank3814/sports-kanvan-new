@@ -10,9 +10,10 @@
     <div class="container">
         <div class="row">
         <div class="col-lg-12">
+        <form>
          <div class="panel panel-default">
          <h3 class="text-center mt-3 mb-4">MEDICAL DETAILS</h3>
-         <?php echo form_open('pages/medical'); ?>
+         <?php echo form_open('pages/medical' ,array('id'=> 'medical_form','method' =>'post', 'novalidate' =>'novalidate')); ?>
         <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
@@ -30,16 +31,16 @@
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>When was the last time you had a physical examination? <span class="error-medical"> *</span></label>
-                    <input type="text" name="physical_examination" class="form-control" />
+                    <label for="physical_examination">When was the last time you had a physical examination? <span class="error-medical"> *</span></label>
+                    <input type="text" name="physical_examination" id="physical_examination" class="form-control" />
                 </div>
             </div>
         </div>
         <div class="row">
         <div class="col-lg-6">
                 <div class="form-group hidden"  id="explain">
-                    <label>If yes, explain <span class="error-medical"> *</span></label>
-                    <input type="text" name="explain" class="form-control"/>
+                    <label for="explain">If yes, explain <span class="error-medical"> *</span></label>
+                    <input type="text" name="explain" id="explain" class="form-control"/>
                 </div>
             </div>
         </div>

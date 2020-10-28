@@ -16,18 +16,18 @@
                                 <div class="text-box">
                                 <h3 class="text-center mt-3 mb-4">PERSONAL DETAILS</h3>
                                 <div class="error1">   <?php echo validation_errors(); ?> </div>
-                                <?php echo form_open('pages/registration'); ?>
+                                <?php echo form_open('pages/registration',['id'=> 'first_form']); ?>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="name">Name: <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="name" id="name">
+                                        <label class="label-input" for="fname">First Name <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="text" name="fname" id="fname">
                                         <div class="invalid-feedback">
                                             Valid phone number is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="date">Date: <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="date" name="date" id="date">
+                                        <label class="label-input" for="lname">Last Name <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="text" name="lname" id="lname">
                                         <div class="invalid-feedback">
                                             Valid phone number is required.
                                         </div>
@@ -139,7 +139,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center">
-                                    <button class="btn btn-blue btn-sm m-auto" name="registration" type="submit">Submit</button>
+                                    <button class="btn btn-blue btn-sm m-auto"  name="registration" value="Submit"  type="submit" >Submit</button>
                                 </div>
                             </form>
                         </div>

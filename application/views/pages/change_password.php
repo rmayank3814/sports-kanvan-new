@@ -1,33 +1,3 @@
-<!-- <div class="image-about-banner" style="margin-top:100px">
-    <div class="container">
-        <div class="row">
-		    <div class="col-lg-12">
-			<div class="mb-4 mt-4" >
-			<?php echo form_open('pages/change_password',['method' => 'post']); ?>
-				<h2 class="mt-3 mb-5">Change Password</h2>
-				<div><?php echo validation_errors();?> </div>
-			<div class="row">
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-					<label>Old Password :</label>
-					<input type="password" name="old_pass" placeholder="Old Pass"/><br /><br />
-					</div>
-					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-					<label>New Password :</label>
-					<input type="password" name="new_pass" placeholder="New Password"/><br/><br />
-			</div>
-			</div>
-					<label>Confirm Password :</label>
-					<input type="password" name="confirm_pass" placeholder="Confirm Password"/><br/><br />
-					<input type="submit" name="change_password" value="Change Password" /><br />
-
-			    <?php echo form_close(); ?>
-		    </div>
-			</div>
-	    </div>
-    </div>
-</div> -->
-
-
 
 
 <!--form quote-->

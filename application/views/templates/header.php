@@ -16,7 +16,11 @@
     <!--Font family-->
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/font-family/font-family.css">
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/fonts/Font-Awesome/css/all.min.css">
-
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> 
+    <!-- <script src="<?php echo base_url();?>others/js/jquery-validation.js "></script>
+    <script src="<?php echo base_url();?>others/js/jquery-3.1.1.js "></script> -->
 </head>
     <body>
         <div class="hero-anime">

@@ -2818,3 +2818,7 @@ button {
                     .error {
                         color: red;
                     }
+                    
+                    .login-buttons {
+                        width: 160px;
+                    }
