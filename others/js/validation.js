@@ -6,10 +6,13 @@ $(document).ready(function() {
         var lname = $('#lname').val()
         var email = $('#email').val();
         var mobile = $('#mobile').val();
+        var emergency = $('#emergency').val();
+        var password = $('#password').val();
+        var passconf = $('#passconf').val();
         var dob = $('#dob').val();
         var gender = $('#gender').val();
         var shift = $('#shift').val();
-        var address = $('#address').val();
+        var address = $('#address1').val();
         var i = 0;
 
         $(".error").remove();
@@ -48,6 +51,18 @@ $(document).ready(function() {
                 i++;
             }
         }
+        if (password == '') {
+            $('#password').after('<span class="error">This field is required</span>');
+            i++;
+        }
+        if (passconf == '') {
+            $('#passconf').after('<span class="error">This field is required</span>');
+            i++;
+        }
+        if (emergency == '') {
+            $('#emergency').after('<span class="error">This field is required</span>');
+            i++;
+        }
         if (dob == '') {
             $('#dob').after('<span class="error">This field is required</span>');
             i++;
@@ -61,7 +76,7 @@ $(document).ready(function() {
             i++;
         }
         if (address == '') {
-            $('#address').after('<span class="error">This field is required</span>');
+            $('#address1').after('<span class="error">This field is required</span>');
             i++;
         }
         if (i > 0) {
