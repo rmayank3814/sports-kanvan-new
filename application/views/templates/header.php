@@ -19,6 +19,9 @@
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
      <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> 
+     <!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <!-- <script src="<?php echo base_url();?>others/js/jquery-validation.js "></script>
     <script src="<?php echo base_url();?>others/js/jquery-3.1.1.js "></script> -->
 </head>
@@ -50,6 +53,7 @@
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/login">Login</a>
                                         </li>
+                                 
                                     <?php } else { ?>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="<?php echo base_url();?>">Home</a>
@@ -72,8 +76,15 @@
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
                                         </li>
+                                        <!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php// echo base_url();?>index.php/pages/logout">Logout</a>
+                                        </li> -->
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >My Account</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/login"> View Profile</a>
+                                                <a class="dropdown-item" href="login.html">logout</a>
+                                            </div>
                                         </li>
                                     <?php } ?>
                                     </ul>
