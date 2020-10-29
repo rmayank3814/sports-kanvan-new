@@ -1,4 +1,4 @@
-<div class="image-about-banner">
+<div style="margin-top:100px">
     <div class="" id="section-quote">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -10,13 +10,14 @@
                     <div class="card mt-5 mb-5 border-0 card-opacity  ">
                         <div class="card-body rounded-sm">
                             <div class="text-box">
-                            <?php echo form_open('pages/community',['class' => 'needs-validation'],['method' => 'post']);  ?>
+                                <?php echo form_open('pages/community',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
+                                <?php echo validation_errors();?>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="name">YOUR NAME:<span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="name" id="name" value="<?php echo $name;?>" required>
+                                            <input class="form-control" type="text" name="name" id="name" value="<?php //echo $name;?>" required>
                                             <div class="invalid-feedback">
-                                                Valid dob is required.
+                                                Valid Your Name is required.
                                             </div>
                                         </div>
                                     </div>
@@ -25,14 +26,14 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="full_name1">Full Name <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="full_name1" id="full_name1" value="<?php echo $full_name1;?>" required>
+                                            <input class="form-control" type="text" name="full_name1" id="full_name1" value="<?php //echo $full_name1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Name is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="contact1">Contact Number <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="number" name="contact1" id="contact1" value="<?php echo $contact1;?>" required>
+                                            <input class="form-control" type="number" name="contact1" id="contact1" value="<?php //echo $contact1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid contact is required.
                                             </div>
@@ -41,14 +42,14 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="relationship1">Relationship <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="relationship1" id="relationship1" value="<?php echo $relationship1;?>" required>
+                                            <input class="form-control" type="text" name="relationship1" id="relationship1" value="<?php //echo $relationship1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid relationship is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="email1">E-­mail (optional) <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="email" name="email1" id="email1" value="<?php echo $email1;?>" required>
+                                            <input class="form-control" type="email" name="email1" id="email1" value="<?php //echo $email1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Sign Name is required.
                                             </div>
@@ -59,31 +60,30 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="full_name2">Full Name <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="full_name2" id="full_name2" value="<?php echo $full_name2;?>" required>
+                                            <input class="form-control" type="text" name="full_name2" id="full_name2" value="<?php //echo $full_name2;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Name is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="contact2">Contact Number <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="number" name="contact2" id="contact2" value="<?php echo $contact2;?>" required>
+                                            <input class="form-control" type="number" name="contact2" id="contact2" value="<?php //echo $contact2;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid contact number is required.
                                             </div>
                                         </div>
                                     </div>
-                            </div>
-                            <div class="row">
+                               <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="relationship2">Relationship <span class="text-danger font-weight-medium">*</span></label>
-                                    <input class="form-control" type="text" name="relationship2" id="relationship2" value="<?php echo $relationship2;?>" required>
+                                    <input class="form-control" type="text" name="relationship2" id="relationship2" value="<?php //echo $relationship2;?>" required>
                                     <div class="invalid-feedback">
                                         Valid Relationship is required.
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="email2">E-­mail (optional) <span class="text-danger font-weight-medium">*</span></label>
-                                    <input class="form-control" type="email" name="email2" id="email2" value="<?php echo $email2;?>" required>
+                                    <input class="form-control" type="email" name="email2" id="email2" value="<?php //echo $email2;?>" required>
                                     <div class="invalid-feedback">
                                         Valid Sign Name is required.
                                     </div>

@@ -58,7 +58,6 @@ class Users_model extends CI_Model {
             'joint_pain'=> $this->input->post('option30'),
             'muscle_pain'=> $this->input->post('option31'),
             'sign'=> $this->input->post('sign'),
-            'date'=> $this->input->post('medical_date')
         );
         $this->db->select("*");
         $this->db->from('medical');
@@ -85,12 +84,10 @@ class Users_model extends CI_Model {
     }
 
 	function change_pass($session_id,$new_pass){
-       
         $this->db->set('password', $new_pass);
         $this->db->where('id', $session_id);
         $update_pass = $this->db->update('users');
         return $update_pass;
-       
     }
 
     function tfa_insert($sess_id){
@@ -148,7 +145,6 @@ class Users_model extends CI_Model {
             'method' => $this->input->post('method'),
             'print' => $this->input->post('print'),
             'sign' => $this->input->post('sign'),
-            'date' => $this->input->post('date')
         );
         $this->db->select("*");
         $this->db->from('ptc');
@@ -170,8 +166,7 @@ class Users_model extends CI_Model {
             'sess_id' => $sess_id,
             'print' => $this->input->post('print'),
             'sign' => $this->input->post('sign'),
-            'name' => $this->input->post('name'),
-            'date' => $this->input->post('date')
+            'name' => $this->input->post('name')
         );
         $this->db->select("*");
         $this->db->from('agreement');

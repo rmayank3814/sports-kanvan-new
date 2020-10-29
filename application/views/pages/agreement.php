@@ -1,7 +1,6 @@
-<div class="image-about-banner">
+<div style="margin-top:100px">
     <div class="py-5 mt-3">
         <div class="container">
-            <div class="row ">
                 <h3><b>ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</b></h3><br/><br/>
                 <h5>DECLARATIONS:</h5>
                 <p>This Agreement is entered into between Kanvan Sports (“FitnessTrainer”) and the undersigned (“Client”). The provision of personal training services by Trainer to Client, and Client’s use of any premises, facilities or equipment are
@@ -46,29 +45,36 @@
             training from trainer. You have read and voluntarily signed the waiver and release and further agree that no oral representations, statements, or inducement apart from the foregoing written agreement have been made.</p>
 
 
-        <?php echo form_open('pages/agreement',['method' => 'post']);  ?>
-            <div class="col-lg-6">
-                <label for="print">Print Name:</label>
-                <input type="text" id="print" name="print" value="<?php echo $print;?>"><br>
+        <?php echo form_open('pages/agreement',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
+        <?php echo validation_errors();?>
+        <div class='row'>
+            <div class="col-lg-4">
+                <label for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="print" name="print" value="<?php //echo $print;?>"><br>
+                <div class="invalid-feedback">
+                    Valid Print Name is required.
+                </div>
             </div>
-            <div class="col-lg-6">
-                <label for="sign">Sign:</label>
-                <input type="text" id="sign" name="sign" value="<?php echo $sign;?>"><br>
+            <div class="col-lg-4">
+                <label for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="sign" name="sign" value="<?php //echo $sign;?>"><br>
+                <div class="invalid-feedback">
+                    Valid Sign Name is required.
+                </div>
             </div>
-            <div class="col-lg-6">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" value="<?php echo $name;?>"><br>
+            <div class="col-lg-4">
+                <label for="name">Full Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="name" name="name" value="<?php //echo $name;?>"><br>
+                <div class="invalid-feedback">
+                    Valid Full Name is required.
+                </div>
             </div>
-            <div class="col-lg-6">
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" value="<?php echo $date;?>"><br>
-            </div>
+        </div>
             <div class="d-flex justify-content-center mt-3 mb-3">
                 <button class="btn btn-blue btn-sm m-auto" name="agreement_button" type="submit">Submit</button>
             </div>
             <?php echo form_close(); ?>
         </div>
     </div>
-    </div>
 </div>
-</div>
+

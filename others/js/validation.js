@@ -22,7 +22,7 @@ $(document).ready(function() {
             i++;
         }
         if (fname != '') {
-            var regEx = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            // var regEx = /^[a-zA-Z]+ [a-zA-Z]+$/;
             var validfname = regEx.test(fname);
             if (!validfname) {
                 $('#fname').after('<span class="error">Enter a valid name</span>');
@@ -34,7 +34,7 @@ $(document).ready(function() {
             i++;
         }
         if (lname != '') {
-            var regEx = /^[a-zA-Z]+ [a-zA-Z]+$/;
+            // var regEx = /^[a-zA-Z]+ [a-zA-Z]+$/;
             var validlname = regEx.test(lname);
             if (!validlname) {
                 $('#lname').after('<span class="error">Enter a valid last name</span>');

@@ -23,46 +23,38 @@
                 <div class="card mt-5 mb-5 border-0 card-opacity  ">
                     <div class="card-body rounded-sm">
                         <div class="text-box">
-                        <?php echo form_open('pages/ptc',['class' => 'needs-validation'],['method' => 'post']);  ?>
+                        <?php echo form_open('pages/ptc',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
+                        <?php echo validation_errors();?>
                                 <h3 class="text-center mt-3 mb-4">Description of program:</h3>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="investment">Total investment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="number" name="investment" id="investment" value="<?php echo $investment; ?>" required>
+                                        <input class="form-control" type="number" name="investment" id="investment" value="<?php //echo $investment; ?>" required>
                                         <div class="invalid-feedback">
-                                            Valid dob is required.
+                                            Valid Total Investment is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="method">Method of payment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="method" id="method" value="<?php echo $method; ?>" required>
+                                        <input class="form-control" type="text" name="method" id="method" value="<?php //echo $method; ?>" required>
                                         <div class="invalid-feedback">
-                                            Valid height is required.
+                                            Valid Payment method is required.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="print" id="print" value="<?php echo $print; ?>" required>
+                                        <input class="form-control" type="text" name="print" id="print" value="<?php //echo $print; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Print Name is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="sign" id="sign" value="<?php echo $sign; ?>" required>
+                                        <input class="form-control" type="text" name="sign" id="sign" value="<?php //echo $sign; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Sign Name is required.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="date">Date<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="date" name="date" id="date" value="<?php echo $date; ?>" required>
-                                        <div class="invalid-feedback">
-                                            Valid date is required.
                                         </div>
                                     </div>
                                 </div>
