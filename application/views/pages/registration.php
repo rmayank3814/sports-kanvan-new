@@ -1,5 +1,5 @@
 <div style="margin-top:100px">
-    <div class="py-5 section-bg-quote mb-5" id="section-quote">
+    <div class="py-5 global-container mb-5" id="section-quote">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10 both-space">

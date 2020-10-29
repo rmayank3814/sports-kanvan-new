@@ -1,5 +1,5 @@
 
-    <div class="image-testimonial-banner" style="margin-top:70px">
+    <div class="global-container" style="margin-top:100px">
         <div class="container">
             <div class="row">
             <div class="mt-5 mb-5">

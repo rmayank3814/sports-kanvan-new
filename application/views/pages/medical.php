@@ -7,12 +7,11 @@
 
 
 <div style="margin-top:100px">
+<div class="global-container">
     <div class="container">
         <div class="row">
         <div class="col-lg-12">
-        <form>
-         <!-- <div class="panel panel-default"> -->
-         <h3 class="text-center mt-3 mb-4">MEDICAL DETAILS</h3>
+         <h3 class="text-center mt-5 mb-5">MEDICAL DETAILS</h3>
          <?php echo form_open('pages/medical',array('method' => 'post','novalidate'=>'novalidate')); ?>
          <?php echo validation_errors(); ?>
         <div class="panel-body">
@@ -503,6 +502,7 @@
         </div>
         </form>
     </div>
+</div>
 </div>
 </div>
 </div>

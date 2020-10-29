@@ -27,10 +27,10 @@
 }
     </style>
     <div class="image-about-banner" style="margin-top:120px">
-<section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+<section class="accordion-section clearfix mt-3 global-container mt-5 mb-5" aria-label="Question Accordions">
   <div class="container">
   
-	  <h2>Frequently Asked Questions </h2>
+	  <h2 class="mt-3 mb-3">Frequently Asked Questions </h2>
 	  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 		<div class="panel panel-default">
 		  <div class="panel-heading p-3 mb-3" role="tab" id="heading0">

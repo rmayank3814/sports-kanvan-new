@@ -1,7 +1,8 @@
 <div style="margin-top:100px">
-    <div class="py-5 mt-3">
+
+    <div class="py-5 mt-3 global-container">
         <div class="container">
-                <h3><b>ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</b></h3><br/><br/>
+                <h4 class="text-center"><b>ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</b></h4><br/><br/>
                 <h5>DECLARATIONS:</h5>
                 <p>This Agreement is entered into between Kanvan Sports (“FitnessTrainer”) and the undersigned (“Client”). The provision of personal training services by Trainer to Client, and Client’s use of any premises, facilities or equipment are
                     contingent upon this Agreement.</p>

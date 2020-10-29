@@ -1,13 +1,13 @@
 <div style="margin-top:100px">
-    <div class="" id="section-quote">
+    <div class="global-container" id="section-quote">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-12 both-space">
-                    <h3><b>LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</b></h3>
+                <div class="col-md-12 both-space mt-4">
+                    <h3 class="text-center mt-3 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
                     <p>We want to build an awesome fitness community here, so we’re asking for your input. Who are your “Plus-­Two” friends, family, co-­workers, or neighbors who could benefit from personal training?</p>
                     <p>Your two referrals (a.k.a. your “Plus-­Two”) will each receive a FREE transformation coaching session for 3 days where Kanvan Sports will help them outline their goals and a path to get there.</p>
                     <p>So, who comes to mind when you think of your Plus‐Two?</p>
-                    <div class="card mt-5 mb-5 border-0 card-opacity  ">
+                    <div class=" mt-5 mb-5 border-0 card-opacity  ">
                         <div class="card-body rounded-sm">
                             <div class="text-box">
                                 <?php echo form_open('pages/community',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
