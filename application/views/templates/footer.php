@@ -9,7 +9,7 @@
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.2s">
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">SERVICES</h4>
-                                <a href="about.html">About us</a>
+                                <a href="<?php echo base_url();?>index.php/pages/about">About us</a>
                                 <a href="#">Statistical Analysis</a>
                                 <a href="#">What we do</a>
                                 <a href="#">Careers</a>
@@ -24,7 +24,6 @@
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.2s">
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">POLICIES</h4>
-                                <a href="about.html">About us</a>
                                 <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonial</a>
                                 <a href="#">What we do</a>
                                 <a href="#">Careers</a>
@@ -41,7 +40,7 @@
                                 <h4 class="footer-widget-title border-link">INFORMATION</h4>
                                 <a href="#">Core Values</a>
                                 <a href="<?php echo base_url();?>index.php/pages/privacy_policy">Privacy Policy</a>
-                                <a href="testimonial.html">Testimonials</a>
+                                <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonials</a>
                                 <a href="<?php echo base_url();?>index.php/pages/contact">Contact Us</a>
                                 <a href="<?php echo base_url();?>index.php/pages/faq">FAQ</a>
                                 <a href="#">Blog</a>

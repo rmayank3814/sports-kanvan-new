@@ -48,8 +48,9 @@
 
         <?php echo form_open('pages/agreement',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
         <?php echo validation_errors();?>
+        <div class="mt-5 mb-3">
         <div class='row'>
-            <div class="col-lg-4">
+            <div class="col-lg-4 ">
                 <label for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
                 <input type="text" id="print" name="print" value="<?php //echo $print;?>"><br>
                 <div class="invalid-feedback">
@@ -71,9 +72,11 @@
                 </div>
             </div>
         </div>
+        </div>
             <div class="d-flex justify-content-center mt-3 mb-3">
                 <button class="btn btn-blue btn-sm m-auto" name="agreement_button" type="submit">Submit</button>
             </div>
+            
             <?php echo form_close(); ?>
         </div>
     </div>
