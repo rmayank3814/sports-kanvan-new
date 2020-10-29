@@ -112,7 +112,7 @@ class Pages extends CI_Controller {
 			$user = $query->row_array();
 			if(!empty($user)) {
 				$this->session->set_userdata($user);
-				redirect();
+				redirect('pages/medical');
 			} 	
 		}
 		$this->load->view('pages/login');
