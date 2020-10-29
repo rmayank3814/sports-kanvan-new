@@ -13,13 +13,15 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="fname">First Name: <span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="fname" id="fname">
+                                    <div class="invalid-feedback">
+                                        Valid height is required.
+                                    </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="lname">Last Name: <span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="lname" id="lname">
                                 </div>
                             </div>
-                            
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="email">Email Id: <span class="text-danger font-weight-medium">*</span></label>

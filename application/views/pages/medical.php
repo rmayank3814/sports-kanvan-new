@@ -6,33 +6,33 @@
 </style>
 
 
-<div class="image-about-banner" style="margin-top:100px">
+<div style="margin-top:100px">
     <div class="container">
         <div class="row">
         <div class="col-lg-12">
         <form>
-         <div class="panel panel-default">
+         <!-- <div class="panel panel-default"> -->
          <h3 class="text-center mt-3 mb-4">MEDICAL DETAILS</h3>
          <?php echo form_open('pages/medical',array('method' => 'post','novalidate'=>'novalidate')); ?>
-         <?php echo validation_errors();?>
+         <?php echo validation_errors(); ?>
         <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Are you currently under a doctor’s care? </label>
+                    <label>1) Are you currently under a doctor’s care?<span class="error-medical"> *</span> </label>
                     <div class="optional-radio-button">
                     <label class="radio-inline">
                         <input type="radio" id="doctor_yes" name="option1" value="yes">Yes
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" id="doctor_no" name="option1" value="no" checked> No
+                        <input type="radio" id="doctor_no" name="option1" value="no"> No
                     </label>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>When was the last time you had a physical examination? <span class="error-medical"> *</span></label>
+                    <label>2) When was the last time you had a physical examination? <span class="error-medical"> *</span></label>
                     <input type="date" name="physical_examination" class="form-control" />
                 </div>
             </div>
@@ -48,26 +48,26 @@
         <div class="row">
         <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Do you take any medications on a regular basis? <span class="error-medical"> *</span></label>
+                    <label>3) Do you take any medications on a regular basis? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option4" id="regular_yes" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option4" id="regular_no" value="no" checked> No
+                            <input type="radio" name="option4" id="regular_no" value="no"> No
                         </label>
                    </div>
                 </div>
              </div>
              <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Do you smoke? <span class="error-medical"> *</span></label>
+                    <label>4) Do you smoke? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option6" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option6" value="no" checked> No
+                            <input type="radio" name="option6" value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -87,26 +87,26 @@
         
              <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Have you been recently hospitalized?<span class="error-medical"> *</span></label>
+                    <label>5) Have you been recently hospitalized?<span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option5" id="hospitalized_yes" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option5" id="hospitalized_no" value="no" checked> No
+                            <input type="radio" name="option5" id="hospitalized_no" value="no"> No
                         </label>
                   </div>
                 </div>
             </div>
             <div class="col-lg-6">
                     <div class="form-group">
-                       <label>Muscle pain or an injury (explain on back of Form)? <span class="error-medical"> *</span></label>
+                       <label>6) Muscle pain or an injury (explain on back of Form)? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option31" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option31" value="no"  checked> No
+                            <input type="radio" name="option31" value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -123,13 +123,13 @@
         <div class="row">
         <div class="col-lg-6">
                 <div class="form-group" >
-                    <label>Have you ever had an exercise stress test <span class="error-medical"> *</span></label>
+                    <label>7) Have you ever had an exercise stress test <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option2" id="stress_yes" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option2" id="stress_no" value="no" checked> No
+                            <input type="radio" name="option2" id="stress_no" value="no"> No
                         </label>
                         <label class="radio-inline">
                             <input type="radio" name="option2" id="stress_dont_know" value="don't know"> Don’t Know
@@ -139,13 +139,13 @@
              </div>
             <div class="col-lg-6">
             <div class="form-group">
-                <label>Are you pregnant? <span class="error-medical"> *</span></label>
+                <label>8) Are you pregnant? <span class="error-medical"> *</span></label>
                 <div class="optional-radio-button">
                     <label class="radio-inline">
                         <input type="radio" name="option7" value="yes">Yes
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="option7" value="no" checked> No
+                        <input type="radio" name="option7" value="no"> No
                     </label>
                 </div>
             </div>
@@ -169,26 +169,26 @@
         <div class="row">
         <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Do you drink alcohol more than three times/week? <span class="error-medical"> *</span></label>
+                    <label>9) Do you drink alcohol more than three times/week? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option8" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option8" value="no" checked> No
+                            <input type="radio" name="option8" value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Is your stress level high? <span class="error-medical"> *</span></label>
+                    <label>10) Is your stress level high? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option9" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option9" value="no" checked> No
+                            <input type="radio" name="option9" value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -197,322 +197,304 @@
         <div class="row">
         <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Are you moderately active on most days of the week? <span class="error-medical"> *</span></label>
+                    <label>11) Are you moderately active on most days of the week? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option10" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option10" value="no" checked> No
+                            <input type="radio" name="option10" value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>High blood pressure? <span class="error-medical"> *</span></label>
+                    <label>12) High blood pressure? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option11" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option11" value="no" checked> No
+                            <input type="radio" name="option11" value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
         </div>
         <div class="row">
-        <div class="col-lg-6">
+            <div class="col-lg-6">
                 <div class="form-group">
-                    <label>High cholesterol? <span class="error-medical"> *</span></label>
+                    <label>13) High cholesterol? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option12" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option12" value="no" checked> No
+                            <input type="radio" name="option12" value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Diabetes? <span class="error-medical"> *</span></label>
+                    <label>14) Diabetes? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option13" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option13" value="no" checked> No
+                            <input type="radio" name="option13" value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
         </div>
         <div class="row">
-        <div class="col-lg-6">
+            <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Have parents or siblings who, prior to age 55 had *</label>
+                    <label>15) Have parents or siblings who, prior to age 55 had *</label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option14" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option16" value="no" checked> No
+                            <input type="radio" name="option16" value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>A heart attack? <span class="error-medical"> *</span></label>
+                    <label>16) A heart attack? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
                             <input type="radio" name="option17" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option17" value="no" checked> No
+                            <input type="radio" name="option17" value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                      <label>A stroke? <span class="error-medical"> *</span></label>
+                      <label>17) A stroke? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option18" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option1" value="no"  checked> No
+                            <input type="radio" name="option1" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Known heart disease? <span class="error-medical"> *</span></label>
+                    <label>18) Known heart disease? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option17" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option17" value="no"  checked> No
+                            <input type="radio" name="option17" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
+            </div>
+             <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Rheumatic heart disease? <span class="error-medical"> *</span></label>
+                    <label>19) Rheumatic heart disease? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
                            <input type="radio" name="option18" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option18" value="no"  checked> No
+                          <input type="radio" name="option18" value="no"> No
                        </label>
                         </div>  
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                       <label>A heart murmur? <span class="error-medical"> *</span></label>
+                       <label>20) A heart murmur? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option19" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option19" value="no"  checked> No
+                            <input type="radio" name="option19" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-6">
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Chest pain with exertion? <span class="error-medical"> *</span></label>
+                    <label>21) Chest pain with exertion? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
                            <input type="radio" name="option20" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option20" value="no"  checked> No
+                          <input type="radio" name="option20" value="no"> No
                        </label>
                         </div>  
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                       <label>Irregular heart beat or palpitations? <span class="error-medical"> *</span></label>
+                       <label>22) Irregular heart beat or palpitations? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option21" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option21" value="no"  checked> No
+                            <input type="radio" name="option21" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Lightheadedness or do you faint? <span class="error-medical"> *</span></label>
+                    <label>23) Lightheadedness or do you faint? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
                            <input type="radio" name="option22" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option22" value="no"  checked> No
+                          <input type="radio" name="option22" value="no"> No
                        </label>
                         </div>  
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                       <label>Unusual shortness of breath? <span class="error-medical"> *</span></label>
+                       <label>24) Unusual shortness of breath? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option23" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option23" value="no"  checked> No
+                            <input type="radio" name="option23" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Cramping pains in legs or feet? <span class="error-medical"> *</span></label>
+                    <label>25) Cramping pains in legs or feet? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
                            <input type="radio" name="option24" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option24" value="no"  checked> No
+                          <input type="radio" name="option24" value="no"> No
                        </label>
                         </div>  
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                       <label>Emphysema? <span class="error-medical"> *</span></label>
+                       <label>26) Emphysema? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option25" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option25" value="no"  checked> No
+                            <input type="radio" name="option25" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Other metabolic disorders (thyroid, kidney, etc.)? <span class="error-medical"> *</span></label>
+                    <label>27) Other metabolic disorders (thyroid, kidney, etc.)? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
                            <input type="radio" name="option26" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option26" value="no"  checked> No
+                          <input type="radio" name="option26" value="no"> No
                        </label>
                         </div>  
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                       <label>Epilepsy? <span class="error-medical"> *</span></label>
+                       <label>28) Epilepsy? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option27" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option27" value="no"  checked> No
+                            <input type="radio" name="option27" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Asthma? <span class="error-medical"> *</span></label>
+                    <label>29) Asthma? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
                            <input type="radio" name="option28" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option28" value="no"  checked> No
+                          <input type="radio" name="option28" value="no"> No
                        </label>
                         </div>  
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                       <label>Back pain: upper, middle, lower? <span class="error-medical"> *</span></label>
+                       <label>30) Back pain: upper, middle, lower? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
                             <input type="radio" name="option29" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option29" value="no"  checked> No
+                            <input type="radio" name="option29" value="no"> No
                             </label>
                         </div>  
                     </div>
                 </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
                     <div class="form-group">
-                    <label>Other joint pain (explain on back of form)? <span class="error-medical"> *</span></label>
-                        <div class="optional-radio-button">
+                    <label>31) Other joint pain (explain on back of form)? <span class="error-medical"> *</span></label>
+                    <div class="optional-radio-button">
                         <label class="radio-inline">
                            <input type="radio" name="option30" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option30" value="no"  checked> No
+                          <input type="radio" name="option30" value="no"> No
                        </label>
                         </div>  
                     </div>
                 </div>
-               
-        </div>
-         
-        <div class="row">
-            <div class="col-lg-6">
-            <div class="form-group">
-                <label>Sign Name (Type your name) *</label>
-                <input type="text" name="sign" id="sign" value="<?php echo $sign ?>" class="form-control" />
-            </div>
-            <div class="form-group">
-                <label>Date *</label>
-                <input type="date" name="medical_date" id="medical_date" value="<?php echo $date ?>" class="form-control" />
-                <label>Sign Name (Type your name) <span class="error-medical"> *</span></label>
-                <input type="text" name="sign" id="sign" class="form-control" />
-            </div>
-                </div>
                 <div class="col-lg-6">
-                <div class="form-group">
-                <label>Date <span class="error-medical"> *</span></label>
-                <input type="date" name="medical_date" id="medical_date" class="form-control" />
-            </div>
+                    <div class="form-group">
+                        <label>32) Sign Name (Type your name) *</label>
+                        <input type="text" name="sign" id="sign" value="<?php //echo $sign ?>" class="form-control" />
+                    </div>
                 </div>
-        </div>
-            </div>
+            </div>    
             <br />
             <div class="d-flex justify-content-center">
                 <button class="btn btn-blue btn-sm m-auto" name="medical" type="submit">Submit</button>
@@ -521,7 +503,6 @@
         </div>
         </form>
     </div>
-</div>
 </div>
 </div>
 </div>
