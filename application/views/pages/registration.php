@@ -6,7 +6,7 @@
                     <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
                         <div class="card-body rounded-sm">
                             <div class="text-box">
-                            <h3 class="text-center mt-3 mb-4">PERSONAL DETAILS</h3>
+                            <h3 class="text-center mt-4 mb-5">PERSONAL DETAILS</h3>
                             <?php echo form_open('pages/registration',array('method'=>'post','novalidate'=>"novalidate", 'id' =>'registration_form')); ?>
                             <?php echo validation_errors(); ?>
                             <div class="row">
@@ -86,8 +86,9 @@
                                     <input class="form-control" type="text" name="address2" id="address2">
                                     
                                 </div>
+                                
                             </div>
-                            <div class="d-flex justify-content-center">
+                            <div class="d-flex justify-content-center  mt-3 mb-4">
                                 <button class="btn btn-blue btn-sm m-auto" name="registration" type="submit">Submit</button>
                             </div>
                         <?php echo form_close(); ?>

@@ -25,7 +25,7 @@
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">POLICIES</h4>
                                 <a href="about.html">About us</a>
-                                <a href="#">Statistical Analysis</a>
+                                <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonial</a>
                                 <a href="#">What we do</a>
                                 <a href="#">Careers</a>
                             </div>
@@ -43,7 +43,7 @@
                                 <a href="<?php echo base_url();?>index.php/pages/privacy_policy">Privacy Policy</a>
                                 <a href="testimonial.html">Testimonials</a>
                                 <a href="<?php echo base_url();?>index.php/pages/contact">Contact Us</a>
-                                <a href="#">FAQ</a>
+                                <a href="<?php echo base_url();?>index.php/pages/faq">FAQ</a>
                                 <a href="#">Blog</a>
                             </div>
                             <!-- end /.footer-menu -->
@@ -110,6 +110,7 @@
     <script src="<?php echo base_url();?>main/js/custom.js"></script>
     <script src="<?php echo base_url();?>/others/js/validation.js"></script>
     <script src="<?php echo base_url();?>/others/js/medical.js"></script>
+    <script src="<?php echo base_url();?>/others/js/login.js"></script>
 </body>
 
 </html>

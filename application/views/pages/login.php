@@ -3,7 +3,7 @@
 <div class="col-lg-6 col-sm-6 col-xs-12">
 	<div class="card login-form" >
 	<div class="card-body">
-    <?php echo form_open('pages/login',array('class' => 'login-form mb-5','method' => 'post','novalidate'=>'novalidate')); ?>
+    <?php echo form_open('pages/login',array('class' => 'login-form mb-5', 'id' => 'login_form','method' => 'post','novalidate'=>'novalidate')); ?>
         <h3 class="card-title text-center">Login </h3>
         <?php echo validation_errors();?>
 		<div class="card-text">

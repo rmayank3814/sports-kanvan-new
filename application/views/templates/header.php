@@ -9,10 +9,12 @@
     <link rel="icon" href="<?php echo base_url();?>main/images/sports-kanvan-logo.png" type="image/png" sizes="159x73">
     <!--Bootstrap css-->
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/bootstrap/css/bootstrap.min.css">
+
     <!--Custom css-->
     <link rel="stylesheet" href="<?php echo base_url();?>main/css/style.css">
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/others/css/animate.css">
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/others/css/owl.theme.default.min.css">
+    
     <!--Font family-->
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/font-family/font-family.css">
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/fonts/Font-Awesome/css/all.min.css">
@@ -20,8 +22,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
      <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> 
      <!-- Bootstrap Date-Picker Plugin -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <!-- <script src="<?php echo base_url();?>others/js/jquery-validation.js "></script>
     <script src="<?php echo base_url();?>others/js/jquery-3.1.1.js "></script> -->
 </head>
@@ -83,7 +83,7 @@
                                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >My Account</a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/login"> View Profile</a>
-                                                <a class="dropdown-item" href="login.html">logout</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/logout">logout</a>
                                             </div>
                                         </li>
                                     <?php } ?>

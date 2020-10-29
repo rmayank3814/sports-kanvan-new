@@ -94,7 +94,19 @@ class Pages extends CI_Controller {
 	}
 	   
 	function privacy_policy(){
+		$this->load->view('templates/header');
 		$this->load->view('pages/privacy_policy');
+		$this->load->view('templates/footer');
+	}
+	function testimonial(){
+		$this->load->view('templates/header');
+		$this->load->view('pages/testimonial');
+		$this->load->view('templates/footer');
+	}
+	function faq(){
+		$this->load->view('templates/header');
+		$this->load->view('pages/faq');
+		$this->load->view('templates/footer');
 	}
 
 	function contact(){

@@ -30,6 +30,18 @@
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
                                         </div>
                                     </div>
+                                    <div class="carousel-item" style="background-image: url('main/images/banner-4.jpg'); background-size: cover;">
+                                        <div class="caption">
+                                            <h1>Create and share your whatever</h1>
+                                            <h2>Make it easy for you to do whatever this thing does.</h2>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" style="background-image: url('main/images/banner-5.jpg'); background-size: cover;">
+                                        <div class="caption">
+                                            <h1>Create and share your whatever</h1>
+                                            <h2>Make it easy for you to do whatever this thing does.</h2>
+                                        </div>
+                                    </div>
                                     <div class="carousel-item" style="background-image: url('main/images/banner-2.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>

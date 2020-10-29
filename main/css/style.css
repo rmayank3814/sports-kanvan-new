@@ -1912,10 +1912,10 @@
                         font-family: Georgia, serif;
                         content: "”";
                         position: absolute;
-                        bottom: -110px;
+                        bottom: -70px;
                         line-height: 100px;
-                        right: -8px;
-                        font-size: 20em;
+                        right: 1px;
+                        font-size: 10em;
                         color: rgba(238, 238, 238, 0.8);
                         font-weight: normal;
                     }

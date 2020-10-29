@@ -1,7 +1,8 @@
 <style>
 .form4 {
-    background-image: url("<?php echo base_url();?>main/images/sports.jpg");
+    background-image: url("<?php echo base_url();?>main/images/contact-us-page.jpg");
     background-size: cover;
+    opacity:0.9;
 }
 
 .top {
@@ -63,13 +64,13 @@ button.btn {
     border: 1px solid #4285f4
 }
 </style>
-<div class="image-about-banner">
+<div class="image-about-banner" style="margin-top:100px">
 <div class="form4 top">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2">
                 <div class="form-bg">
-                    <h3><i>GET IN TOUCH WITH US</i></h3>
+                    <h3 class="text-white">GET IN TOUCH WITH US</h3>
                     <form class="form">
                         <div class="form-group"> <label class="sr-only">Name</label>
                          <input type="text" class="form-control" required="" id="nameNine" placeholder="Your Name"> </div>
@@ -81,11 +82,12 @@ button.btn {
                     </form>
                 </div>
             </div>
-            <div class="col-md-5 col-md-offset-2"> 
-                <div class="contact-widget wow fadeInDown" data-wow-delay="0.2s">
-                    <h3 class="" style="color:white;">Contact us</h3>
+            <div class="col-md-4 col-md-offset-2"> 
+                <div class="contact-widget wow fadeInDown mt-4" data-wow-delay="0.2s">
+                    <h3 class="text-white" >CONTACT US</h3>
                     <p><i class="fas fa-map-marked"></i>&nbsp;B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
                     <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9871587820</p>
+                    <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9911445549</p>
                     <p>
                         <i class="fas fa-globe-americas"></i>
                         <a href="#" class="social-linking">&nbsp; www.kanvan.in</a>
