@@ -24,7 +24,7 @@
   color: #a6a6a6;
 }
 .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 4px solid rgb(80,144,247);
+  border-bottom: 3px solid rgb(80,144,247);
 }
 .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
   border: 0;
@@ -38,7 +38,7 @@
   margin-top: 0px;
 }
 .tabbable-line > .nav-tabs > li.active {
-  border-bottom: 4px solid #32465B;
+  border-bottom: 3px solid #32465B;
   position: relative;
 }
 .tabbable-line > .nav-tabs > li.active > a {
@@ -62,12 +62,8 @@
 <div class="image-about-banner" style="margin-top:140px">
 <div class="container">
   <div class="row">
-  	
-	<div class="col-sm-9">
-	<h3 class="float-md-right"> aakash</h3>
-	</div>
     <div class="col-md-12">
-			<div class="tabbable-panel">
+			<div class="tabbable-panel mb-5">
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs ">
 						<li class="active ">
@@ -89,10 +85,10 @@
 							<a href="#tab_default_6" data-toggle="tab" class="spaces">Indemnity Agreement</a>
 						</li>
 					</ul>
-					<div class="tab-content">
+					<div class="tab-content mt-4">
 						<div class="tab-pane active" id="tab_default_1">
 						<div class="container">
-            <div class="row d-flex justify-content-center">
+               <div class="row d-flex justify-content-center">
                 <div class="col-md-10 both-space">
                     <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
                         <div class="card-body rounded-sm">
@@ -100,13 +96,11 @@
                             <h3 class="text-center mt-4 mb-5">PERSONAL DETAILS</h3>
                             <?php echo form_open('pages/registration',array('method'=>'post','novalidate'=>"novalidate", 'id' =>'registration_form')); ?>
                             <?php echo validation_errors(); ?>
-							
-      <div class="text-center">
-        <img src="<?php echo base_url('main/images/avatar.png');?>" class="avatar rounded-circle img-thumbnail" alt="avatar">
-        <h6>Upload a different photo...</h6>
-        <input type="file" class="" value="upload">
-      </div>       
-    
+								<div class="text-center mb-5">
+									<img src="<?php echo base_url('main/images/avatar.png');?>" class="avatar rounded-circle img-thumbnail" alt="avatar">
+									<h6>Upload a different photo...</h6>
+									<input type="file" class="" value="upload">
+								</div>       
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="fname">First Name: <span class="text-danger font-weight-medium">*</span></label>
