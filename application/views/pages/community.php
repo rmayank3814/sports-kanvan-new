@@ -28,48 +28,47 @@
                                             <label class="label-input" for="full_name1">Full Name <span class="text-danger font-weight-medium">*</span></label>
                                             <input class="form-control" type="text" name="full_name1" id="full_name1" value="<?php //echo $full_name1;?>" required>
                                             <div class="invalid-feedback">
-                                                Valid Name is required.
+                                                Valid Plus One Full Name is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="contact1">Contact Number <span class="text-danger font-weight-medium">*</span></label>
                                             <input class="form-control" type="number" name="contact1" id="contact1" value="<?php //echo $contact1;?>" required>
                                             <div class="invalid-feedback">
-                                                Valid contact is required.
+                                                Valid Plus One Contact Number is required.
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="relationship1">Relationship <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="relationship1" id="relationship1" value="<?php //echo $relationship1;?>" required>
+                                            <input class="form-control" type="text" name="relationship1" id="relationship1" value="<?php //echo $email1;?>" required>
                                             <div class="invalid-feedback">
-                                                Valid relationship is required.
+                                                Valid Plus One Relationship is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label class="label-input" for="email1">E-­mail (optional) <span class="text-danger font-weight-medium">*</span></label>
+                                            <label class="label-input" for="email1">E-­mail<span class="text-danger font-weight-medium">*</span></label>
                                             <input class="form-control" type="email" name="email1" id="email1" value="<?php //echo $email1;?>" required>
                                             <div class="invalid-feedback">
-                                                Valid Sign Name is required.
+                                                Valid Plus One Email-Id is required.
                                             </div>
                                         </div>
                                     </div>
-
                                     <h3 class="text-center mt-3 mb-4">PLUS TWO:</h3>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="full_name2">Full Name <span class="text-danger font-weight-medium">*</span></label>
                                             <input class="form-control" type="text" name="full_name2" id="full_name2" value="<?php //echo $full_name2;?>" required>
                                             <div class="invalid-feedback">
-                                                Valid Name is required.
+                                                Valid Plus Two Full Name is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="contact2">Contact Number <span class="text-danger font-weight-medium">*</span></label>
                                             <input class="form-control" type="number" name="contact2" id="contact2" value="<?php //echo $contact2;?>" required>
                                             <div class="invalid-feedback">
-                                                Valid contact number is required.
+                                                Valid Plus Two Contact Number is required.
                                             </div>
                                         </div>
                                     </div>
@@ -78,14 +77,14 @@
                                     <label class="label-input" for="relationship2">Relationship <span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="relationship2" id="relationship2" value="<?php //echo $relationship2;?>" required>
                                     <div class="invalid-feedback">
-                                        Valid Relationship is required.
+                                        Valid Plus Two Relationship is required.
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label class="label-input" for="email2">E-­mail (optional) <span class="text-danger font-weight-medium">*</span></label>
+                                    <label class="label-input" for="email2">E-­mail<span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="email" name="email2" id="email2" value="<?php //echo $email2;?>" required>
                                     <div class="invalid-feedback">
-                                        Valid Sign Name is required.
+                                        Valid Plus Two Email-Id is required.
                                     </div>
                                 </div>
                             </div>

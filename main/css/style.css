@@ -2817,3 +2817,7 @@ button {
                     .login-buttons {
                         width: 160px;
                     }
+
+.hidden{
+    display:none;
+}

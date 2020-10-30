@@ -89,7 +89,7 @@
         <div class="mini-footer ">
             <div class="container ">
                 <div class="copyright-text wow fadeInDown" data-wow-delay="0.5s " style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-                    <p>© 2020 . All rights reserved.
+                    <p>© <?php echo date('Y'); ?> . All rights reserved.
                     </p>
                     <p class="love">Made with <i class="fas fa-heart"></i> .<a href="#" class="text-footer" target="_blank"> Designed by Kanvan Business Solution</a></p>
                 </div>

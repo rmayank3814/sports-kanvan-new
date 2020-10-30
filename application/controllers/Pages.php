@@ -253,15 +253,15 @@ class Pages extends CI_Controller {
 	function community() {
 		$sess_id = $this->session->userdata('id');
 		$this->load->view('templates/header');
-		$this->form_validation->set_rules('name', 'Name','required');
-		$this->form_validation->set_rules('full_name1', 'Plus-One Full Name','required');
-		$this->form_validation->set_rules('contact1', 'Plus-One Contact Number','required');
+		$this->form_validation->set_rules('name', 'Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
+		$this->form_validation->set_rules('full_name1', 'Plus-One Full Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
+		$this->form_validation->set_rules('contact1', 'Plus-One Contact Number','required|regex_match[/^[0]?[6789]\d{9}$/]');
 		$this->form_validation->set_rules('relationship1', 'Plus-One Relationship','required');
-		$this->form_validation->set_rules('email1', 'Plus-One Email','required');
-		$this->form_validation->set_rules('full_name2', 'Plus-One Full Name','required');
-		$this->form_validation->set_rules('contact2', 'Plus-One Contact Number','required');
+		//$this->form_validation->set_rules('email1', 'Plus-One Email','regex_match[/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/]');
+		$this->form_validation->set_rules('full_name2', 'Plus-One Full Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
+		$this->form_validation->set_rules('contact2', 'Plus-One Contact Number','required|regex_match[/^[0]?[6789]\d{9}$/]');
 		$this->form_validation->set_rules('relationship2', 'Plus-One Relationship','required');
-		$this->form_validation->set_rules('email2', 'Plus-One Email','required');
+		//$this->form_validation->set_rules('email2', 'Plus-One Email','regex_match[/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/]');
 
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$this->form_validation->set_message('required', 'Enter %s');
@@ -277,7 +277,7 @@ class Pages extends CI_Controller {
 	function agreement() {
 		$sess_id = $this->session->userdata('id');
 		$this->load->view('templates/header');
-		$this->form_validation->set_rules('name', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('name', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
 		$this->form_validation->set_rules('print', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 		$this->form_validation->set_rules('sign', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 
@@ -286,7 +286,7 @@ class Pages extends CI_Controller {
 
 		if(isset($_POST['agreement_button']) && $this->form_validation->run()){
 			$this->users_model->agreement_insert($sess_id);
-			redirect();
+			redirect(base_url());
 		}
 		$this->load->view('pages/agreement');
 		$this->load->view('templates/footer');	
