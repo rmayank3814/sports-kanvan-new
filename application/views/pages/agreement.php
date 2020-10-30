@@ -73,7 +73,7 @@
             </div>
         </div>
         </div>
-            <div class="d-flex justify-content-center mt-3 mb-3">
+            <div class="d-flex justify-content-center mt-5 mb-3">
                 <button class="btn btn-blue btn-sm m-auto" name="agreement_button" type="submit">Submit</button>
             </div>
             

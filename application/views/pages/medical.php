@@ -495,7 +495,7 @@
                 </div>
             </div>    
             <br />
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-4 mb-5">
                 <button class="btn btn-blue btn-sm m-auto" name="medical" type="submit">Submit</button>
             </div>
             <br />

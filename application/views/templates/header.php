@@ -42,16 +42,19 @@
                                             <a class="nav-link" href="<?php echo base_url();?>">Home</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/about">About us</a>
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/about">About Us</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/contact">Contact us</a>
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/contact">Contact Us</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/registration">Register</a>
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/Blog">Blog</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/login">Login</a>
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/registration">Sign Up</a>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/login">Sign In</a>
                                         </li>
                                  
                                     <?php } else { ?>
@@ -59,19 +62,14 @@
                                             <a class="nav-link" href="<?php echo base_url();?>">Home</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/medical">Medical</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/ptc">PTC</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/community">Community</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/agreement">Agreement</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/tfa">TFA</a>
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >Sports Form</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/medical">Medical</a>
+                                                <a class="dropdown-item"href="<?php echo base_url();?>index.php/pages/tfa">Training Fitness</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/ptc">Personal Training</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/community">Fitness Community</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/agreement">Indemnity Agreement</a>
+                                            </div>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
@@ -82,8 +80,8 @@
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >My Account</a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/login"> View Profile</a>
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/logout">logout</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
                                             </div>
                                         </li>
                                     <?php } ?>

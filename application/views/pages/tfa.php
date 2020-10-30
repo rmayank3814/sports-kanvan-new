@@ -7,7 +7,7 @@
                 <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
                     <div class="card-body rounded-sm">
                         <div class="text-box">
-                            <h3 class="text-center mt-3 mb-4">TRAINING FITNESS ASSESSMENT</h3>
+                            <h3 class="text-center mt-3 mb-5">TRAINING FITNESS ASSESSMENT</h3>
                             <?php echo form_open('pages/tfa',array('class' => 'needs-validation','method' => 'post','novalidate' => 'novalidate'));  ?>
                             <?php echo validation_errors();?>
                             <h5 class="mt-3 mb-4">Measurements: </h5>
@@ -228,7 +228,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center mt-3 mb-4">
                                     <button class="btn btn-blue btn-sm m-auto" name="tfa_button" type="submit">Submit</button>
                                 </div>
                             <?php echo form_close(); ?>

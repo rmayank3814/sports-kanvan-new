@@ -90,11 +90,11 @@
                                 </div>
                             </div>
 
-                            <div class="d-flex justify-content-center mt-3 mb-3">
+                            <div class="d-flex justify-content-center mt-5 mb-3">
                                 <button class="btn btn-blue btn-sm m-auto" name="community_button" type="submit">Submit</button>
                             </div>
                             <?php echo form_close(); ?>
-                            <h6 class="text-center pt-4 pb-4"> THANKS FOR HELPING SPREAD THE GIFT OF IMPROVED HEALTH AND FITNESS!</h6>
+                            <h6 class="text-center pt-4 pb-1"> THANKS FOR HELPING SPREAD THE GIFT OF IMPROVED HEALTH AND FITNESS!</h6>
                         </div>
                     </div>
                 </div>
