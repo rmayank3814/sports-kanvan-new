@@ -19,7 +19,6 @@ class Pages extends CI_Controller {
 
 	function registration() {
 		$this->load->view('templates/header');
-
 		$this->form_validation->set_rules('fname', 'First name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 		$this->form_validation->set_rules('lname', 'Last name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]|is_unique[users.email]');
@@ -45,7 +44,6 @@ class Pages extends CI_Controller {
 	
 	function medical(){
 		$sess_id = $this->session->userdata('id');
-		//$this->get_medical($sess_id);
 		$this->load->view('templates/header');
 		$this->form_validation->set_rules('option1', 'Field-1','required');
 		$this->form_validation->set_rules('physical_examination', 'Field-2','required');
@@ -290,5 +288,99 @@ class Pages extends CI_Controller {
 		}
 		$this->load->view('pages/agreement');
 		$this->load->view('templates/footer');	
+	}
+
+	function profile(){
+		$this->load->view('templates/header');
+		$sess_id = $this->session->userdata('id');
+		$data = $this->fetch_user_profile_details($sess_id);
+		
+		$this->form_validation->set_rules('fname', 'First name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('lname', 'Last name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]|is_unique[users.email]');
+		$this->form_validation->set_rules('mobile', 'Mobile number','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
+		$this->form_validation->set_rules('gender', 'Gender','required');
+		$this->form_validation->set_rules('dob', 'Birth Date','required');
+		$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
+		$this->form_validation->set_rules('shift', 'Shift','required');
+		$this->form_validation->set_rules('address1', 'Address','required');
+
+		if(isset($_POST['update_profile']) && $this->form_validation->run()){
+			$config['upload_path'] = './main/images/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['max_size'] = 2000;
+			$config['max_width'] = 1500;
+			$config['max_height'] = 1500;
+
+			print_r($this->load->library('upload', $config));die;
+
+			if (!$this->upload->do_upload('profile_image')) {
+				$error = array('error' => $this->upload->display_errors());
+			} else {
+				$_POST['profile_image'] = $this->upload->data('file_name');
+				$this->users_model->profile_update($sess_id);
+			}
+		}	
+		$this->load->view('pages/profile', $data);
+		$this->load->view('templates/footer');
+	}
+
+	function fetch_user_profile_details($sess_id) {
+		if($sess_id !== '') {
+			$query = $this->db->query("select * from users where id = $sess_id");
+			return $query->row_array();
+		}
+	}
+
+	function medical_profile(){
+		$this->load->view('templates/header');
+		$sess_id = $this->session->userdata('id');
+		$data = $this->fetch_medical_details($sess_id);
+		$this->form_validation->set_rules('option1', 'Field-1','required');
+		$this->form_validation->set_rules('physical_examination', 'Field-2','required');
+		$this->form_validation->set_rules('option2', 'Field-3','required');
+		$this->form_validation->set_rules('option4', 'Field-4','required');
+		$this->form_validation->set_rules('option5', 'Field-5','required');
+		$this->form_validation->set_rules('option6', 'Field-6','required');
+		$this->form_validation->set_rules('option7', 'Field-7','required');
+		$this->form_validation->set_rules('option8', 'Field-8','required');
+		$this->form_validation->set_rules('option9', 'Field-9','required');
+		$this->form_validation->set_rules('option10', 'Field-10','required');
+		$this->form_validation->set_rules('option11', 'Field-11','required');
+		$this->form_validation->set_rules('option12', 'Field-12','required');
+		$this->form_validation->set_rules('option13', 'Field-13','required');
+		$this->form_validation->set_rules('option14', 'Field-14','required');
+		$this->form_validation->set_rules('option15', 'Field-15','required');
+		$this->form_validation->set_rules('option16', 'Field-16','required');
+		$this->form_validation->set_rules('option17', 'Field-17','required');
+		$this->form_validation->set_rules('option18', 'Field-18','required');
+		$this->form_validation->set_rules('option19', 'Field-19','required');
+		$this->form_validation->set_rules('option20', 'Field-20','required');
+		$this->form_validation->set_rules('option21', 'Field-21','required');
+		$this->form_validation->set_rules('option22', 'Field-22','required');
+		$this->form_validation->set_rules('option23', 'Field-23','required');
+		$this->form_validation->set_rules('option24', 'Field-24','required');
+		$this->form_validation->set_rules('option25', 'Field-25','required');
+		$this->form_validation->set_rules('option26', 'Field-26','required');
+		$this->form_validation->set_rules('option27', 'Field-27','required');
+		$this->form_validation->set_rules('option28', 'Field-28','required');
+		$this->form_validation->set_rules('option29', 'Field-29','required');
+		$this->form_validation->set_rules('option30', 'Field-30','required');
+		$this->form_validation->set_rules('option31', 'Field-31','required');
+		$this->form_validation->set_rules('sign', 'Sign name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+		$this->form_validation->set_message('required', 'Enter %s');
+		
+		if(isset($_POST['medical']) && $this->form_validation->run()){
+			$this->users_model->medical_update($sess_id);
+		}
+	}
+
+	function fetch_medical_details($sess_id) {
+		if($sess_id !== '') {
+			$query = $this->db->query("select * from medical where sess_id = $sess_id");
+			return $query->row_array();
+		}
 	}
 }
