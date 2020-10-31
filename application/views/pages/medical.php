@@ -1,11 +1,3 @@
-<style>
-.hidden{
-    display:none;
-}
-
-</style>
-
-
 <div style="margin-top:100px">
 <div class="global-container">
     <div class="container">
@@ -13,7 +5,7 @@
         <div class="col-lg-12">
          <h3 class="text-center mt-5 mb-5">MEDICAL DETAILS</h3>
          <?php echo form_open('pages/medical',array('method' => 'post','novalidate'=>'novalidate')); ?>
-         <?php echo validation_errors(); ?>
+         <?php //echo validation_errors(); ?>
         <div class="panel-body">
         <div class="row">
             <div class="col-lg-6">
@@ -26,6 +18,7 @@
                     <label class="radio-inline">
                         <input type="radio" id="doctor_no" name="option1" value="no"> No
                     </label>
+                    <?php echo form_error('option1', '<div class="error ml-2">', '</div>'); ?>
                     </div>
                 </div>
             </div>
@@ -33,6 +26,7 @@
                 <div class="form-group">
                     <label>2) When was the last time you had a physical examination? <span class="error-medical"> *</span></label>
                     <input type="date" name="physical_examination" class="form-control" />
+                    <?php echo form_error('physical_examination', '<div class="error">', '</div>'); ?>
                 </div>
             </div>
         </div>
@@ -55,6 +49,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option4" id="regular_no" value="no"> No
                         </label>
+                        <?php echo form_error('option4', '<div class="error ml-2">', '</div>'); ?>
                    </div>
                 </div>
              </div>
@@ -68,6 +63,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option6" value="no"> No
                         </label>
+                        <?php echo form_error('option6', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -83,7 +79,6 @@
             </div>
         </div>
         <div class="row">
-        
              <div class="col-lg-6">
                 <div class="form-group">
                     <label>5) Have you been recently hospitalized?<span class="error-medical"> *</span></label>
@@ -94,6 +89,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option5" id="hospitalized_no" value="no"> No
                         </label>
+                        <?php echo form_error('option5', '<div class="error ml-2">', '</div>'); ?>
                   </div>
                 </div>
             </div>
@@ -107,6 +103,7 @@
                             <label class="radio-inline">
                             <input type="radio" name="option31" value="no"> No
                             </label>
+                            <?php echo form_error('option31', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -133,6 +130,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option2" id="stress_dont_know" value="don't know"> Don’t Know
                         </label>
+                        <?php echo form_error('option2', '<div class="error ml-2">', '</div>'); ?>
                     </div>
                 </div>
              </div>
@@ -146,6 +144,7 @@
                     <label class="radio-inline">
                         <input type="radio" name="option7" value="no"> No
                     </label>
+                    <?php echo form_error('option7', '<div class="error ml-2">', '</div>'); ?>
                 </div>
             </div>
             </div>   
@@ -161,6 +160,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option3" value="abnormal"> Abnormal
                         </label>
+                        <?php echo form_error('option3', '<div class="error ml-2">', '</div>'); ?>
                   </div>
                  </div>
             </div>
@@ -176,6 +176,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option8" value="no"> No
                         </label>
+                        <?php echo form_error('option8', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -189,6 +190,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option9" value="no"> No
                         </label>
+                        <?php echo form_error('option9', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -204,6 +206,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option10" value="no"> No
                         </label>
+                        <?php echo form_error('option10', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -217,6 +220,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option11" value="no"> No
                         </label>
+                        <?php echo form_error('option11', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -232,6 +236,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option12" value="no"> No
                         </label>
+                        <?php echo form_error('option12', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -245,6 +250,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option13" value="no"> No
                         </label>
+                        <?php echo form_error('option13', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -258,8 +264,9 @@
                             <input type="radio" name="option14" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option16" value="no"> No
+                            <input type="radio" name="option14" alue="no"> No
                         </label>
+                        <?php echo form_error('option14', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -273,6 +280,7 @@
                         <label class="radio-inline">
                             <input type="radio" name="option17" value="no"> No
                         </label>
+                        <?php echo form_error('option17', '<div class="error ml-2">', '</div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -286,8 +294,9 @@
                             <input type="radio" name="option18" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option1" value="no"> No
+                            <input type="radio" name="option18" value="no"> No
                             </label>
+                            <?php echo form_error('option18', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -296,11 +305,12 @@
                     <label>18) Known heart disease? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option17" value="yes">Yes
+                            <input type="radio" name="option15" value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option17" value="no"> No
+                            <input type="radio" name="option15" value="no"> No
                             </label>
+                            <?php echo form_error('option15', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -311,11 +321,12 @@
                     <label>19) Rheumatic heart disease? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option18" value="yes">Yes
+                           <input type="radio" name="option16" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option18" value="no"> No
+                          <input type="radio" name="option16" value="no"> No
                        </label>
+                       <?php echo form_error('option16', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -329,6 +340,7 @@
                             <label class="radio-inline">
                             <input type="radio" name="option19" value="no"> No
                             </label>
+                            <?php echo form_error('option19', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -344,6 +356,7 @@
                         <label class="radio-inline">
                           <input type="radio" name="option20" value="no"> No
                        </label>
+                       <?php echo form_error('option20', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -357,6 +370,7 @@
                             <label class="radio-inline">
                             <input type="radio" name="option21" value="no"> No
                             </label>
+                            <?php echo form_error('option21', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -372,6 +386,7 @@
                         <label class="radio-inline">
                           <input type="radio" name="option22" value="no"> No
                        </label>
+                       <?php echo form_error('option22', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -385,6 +400,7 @@
                             <label class="radio-inline">
                             <input type="radio" name="option23" value="no"> No
                             </label>
+                            <?php echo form_error('option23', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -400,6 +416,7 @@
                         <label class="radio-inline">
                           <input type="radio" name="option24" value="no"> No
                        </label>
+                       <?php echo form_error('option24', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -413,6 +430,7 @@
                             <label class="radio-inline">
                             <input type="radio" name="option25" value="no"> No
                             </label>
+                            <?php echo form_error('option25', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -428,6 +446,7 @@
                         <label class="radio-inline">
                           <input type="radio" name="option26" value="no"> No
                        </label>
+                       <?php echo form_error('option26', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -441,6 +460,7 @@
                             <label class="radio-inline">
                             <input type="radio" name="option27" value="no"> No
                             </label>
+                            <?php echo form_error('option27', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -456,6 +476,7 @@
                         <label class="radio-inline">
                           <input type="radio" name="option28" value="no"> No
                        </label>
+                       <?php echo form_error('option28', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -469,6 +490,7 @@
                             <label class="radio-inline">
                             <input type="radio" name="option29" value="no"> No
                             </label>
+                            <?php echo form_error('option29', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -484,6 +506,7 @@
                         <label class="radio-inline">
                           <input type="radio" name="option30" value="no"> No
                        </label>
+                       <?php echo form_error('option30', '<div class="error ml-2">', '</div>'); ?>
                         </div>  
                     </div>
                 </div>
@@ -491,11 +514,12 @@
                     <div class="form-group">
                         <label>32) Sign Name (Type your name) *</label>
                         <input type="text" name="sign" id="sign" value="<?php //echo $sign ?>" class="form-control" />
+                        <?php echo form_error('sign', '<div class="error ml-1">', '</div>'); ?>
                     </div>
                 </div>
             </div>    
             <br />
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-4 mb-5">
                 <button class="btn btn-blue btn-sm m-auto" name="medical" type="submit">Submit</button>
             </div>
             <br />
@@ -506,36 +530,4 @@
 </div>
 </div>
 </div>
-<script src= "https://code.jquery.com/jquery-1.12.4.min.js"> </script>
-<script type="text/javascript"> 
-    $(document).ready(function() { 
-        $('#doctor_yes').click(function() { 
-            $('#explain').show(); 
-        }); 
-        $('#doctor_no').click(function() { 
-            $('#explain').hide(); 
-        });
-        $('#stress_yes').click(function() { 
-            $('#result').show(); 
-        }); 
-        $('#stress_no').click(function() { 
-            $('#result').hide(); 
-        });
-        $('#stress_dont_know').click(function() { 
-            $('#result').hide(); 
-        }); 
-        $('#regular_yes').click(function() { 
-            $('#medication').show(); 
-        }); 
-        $('#regular_no').click(function() { 
-            $('#medication').hide(); 
-        }); 
-        $('#hospitalized_yes').click(function() { 
-            $('#relation').show(); 
-        }); 
-        $('#hospitalized_no').click(function() { 
-            $('#relation').hide(); 
-        }); 
-    });
-
-</script> 
+           

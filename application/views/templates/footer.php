@@ -8,11 +8,11 @@
                     <div class="col-md-3 col-sm-4">
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.2s">
                             <div class="footer-menu footer-menu--1 ">
-                                <h4 class=" footer-widget-title border-link">SERVICES</h4>
-                                <a href="<?php echo base_url();?>index.php/pages/about">About us</a>
-                                <a href="#">Statistical Analysis</a>
-                                <a href="#">What we do</a>
-                                <a href="#">Careers</a>
+                                <h4 class=" footer-widget-title border-link">INFORMATION</h4>
+                                <a href="<?php echo base_url();?>index.php/pages/about">About Us</a>
+                                <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonials</a>
+                                <a href="<?php echo base_url();?>index.php/pages/contact">Contact Us</a>
+                                <a href="<?php echo base_url();?>index.php/pages/faq">FAQ</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -24,6 +24,7 @@
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.2s">
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">POLICIES</h4>
+                                <a href="<?php echo base_url();?>index.php/pages/privacy_policy">Privacy Policy</a>
                                 <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonial</a>
                                 <a href="#">What we do</a>
                                 <a href="#">Careers</a>
@@ -37,13 +38,13 @@
                     <div class="col-md-3 col-sm-4 ">
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.3s">
                             <div class="footer-menu ">
-                                <h4 class="footer-widget-title border-link">INFORMATION</h4>
-                                <a href="#">Core Values</a>
-                                <a href="<?php echo base_url();?>index.php/pages/privacy_policy">Privacy Policy</a>
-                                <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonials</a>
-                                <a href="<?php echo base_url();?>index.php/pages/contact">Contact Us</a>
-                                <a href="<?php echo base_url();?>index.php/pages/faq">FAQ</a>
-                                <a href="#">Blog</a>
+                                <h4 class="footer-widget-title border-link">SPORTS FORMS</h4>
+                                <a href="<?php echo base_url();?>index.php/pages/registration">Registration</a>
+                                <a href="<?php echo base_url();?>index.php/pages/medical">Medical </a>
+                                <a href="<?php echo base_url();?>index.php/pages/tfa">Training Fitness</a>
+                                <a href="<?php echo base_url();?>index.php/pages/ptc">Personal Training</a>
+                                <a href="<?php echo base_url();?>index.php/pages/community">Fitness Community</a>
+                                <a href="<?php echo base_url();?>index.php/pages/agreement">Indemnity Agreement</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -53,8 +54,8 @@
 
                     <div class="col-md-3 col-sm-4 ">
                         <div class="contact-widget wow fadeInDown" data-wow-delay="0.4s">
-                            <h4 class="footer-widget-title border-link">Contact us</h4>
-                            <p><i class="fas fa-map-marked"></i>&nbsp;B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
+                            <h4 class="footer-widget-title border-link">CONTACT US</h4>
+                            <p><i class="fas fa-map-marked"></i>&nbsp; B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
                             <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9871587820</p>
                             <p>
                                 <i class="fas fa-globe-americas"></i>
@@ -67,7 +68,7 @@
                         </div>
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.5s">
                             <h4 class="footer-widget-title border-link">Stay Connected:</h4><br/>
-                            <a href="#" class="icon-button facebook" title="Twitter"><i class="fab fa-facebook-f" ></i><span></span></a>
+                            <a href="#" class="icon-button facebook" title="Facebook"><i class="fab fa-facebook-f" ></i><span></span></a>
                             <a href="#" class="icon-button instagram" title="Instagram"><i class="fab fa-instagram" ></i><span></span></a>
                             <a href="https://www.linkedin.com/company/kanvan-business-solutions/" class="icon-button linkedin" title="LinkedIn"><i class="fab fa-linkedin-in" ></i><span></span></a>
                             <a href="#" class="icon-button skype" title="Skype"><i class="fab fa-skype"></i><span></span></a>
@@ -88,7 +89,7 @@
         <div class="mini-footer ">
             <div class="container ">
                 <div class="copyright-text wow fadeInDown" data-wow-delay="0.5s " style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-                    <p>© 2020 . All rights reserved.
+                    <p>© <?php echo date('Y'); ?> . All rights reserved.
                     </p>
                     <p class="love">Made with <i class="fas fa-heart"></i> .<a href="#" class="text-footer" target="_blank"> Designed by Kanvan Business Solution</a></p>
                 </div>

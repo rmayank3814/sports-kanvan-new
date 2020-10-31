@@ -20,6 +20,29 @@
         </div>
     </div>
 </section>
+<div class="service-half section-gr">
+                <div class="container py-1">
+                    <div class="row ">
+                    <div class="section-head col-sm-12">
+                                <h3 class="heading-title text-center pb-5">What  Choose ?</h3>
+                            </div>
+                       
+                        <div class="col-md-7 align-self-center wow fadeInRight" data-wow-delay="0.2s">
+                            <h3 class="my-2 heading-terinary">Awesome with Ordinary Flexibility</h3>
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat bibendum
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat bibendum
+                                consequat. Praesent eget feugiat quam</p>
+
+                            <a href="" class="btn-text">View Details →</a>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="main/images/fit.gif" alt=".." class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
 <!--card section-->
 <div class="section-gr">
     <div class="container  py-1">

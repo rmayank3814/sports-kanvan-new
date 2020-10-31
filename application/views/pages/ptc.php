@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 both-space">
-                <h3 class="text-center mt-5 mb-4">PERSONAL TRAINING CONTRACT / AGREEMENT</h3>
+                <h3 class="text-center mt-5 mb-4">PERSONAL TRAINING CONTRACT</h3>
                 <p class=" mt-3 mb-4">Congratulations on your decision to improve your health by participating in a professional exercise program!</p>
                 <p class="">With the help of our Fitness trainer, you greatly improve your ability to accomplish your training goals faster, safer, and with maximum benefits. The education you will learn during these training sessions can be used for a lifetime.</p>
                 <p>In order to maximize progress, it will be necessary for you to follow program guidelines during supervised and, if applicable, unsupervised training days. Remember, exercise and healthy eating are EQUALLY important!</p>
@@ -58,7 +58,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-center mt-3 mb-3">
+                                <div class="d-flex justify-content-center mt-5 mb-3">
                                     <button class="btn btn-blue btn-sm m-auto" name="ptc_button" type="submit">Submit</button>
                                 </div>
                                 <?php echo form_close(); ?>

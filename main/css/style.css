@@ -2817,3 +2817,16 @@ button {
                     .login-buttons {
                         width: 160px;
                     }
+                    
+                    .hidden {
+                        display: none;
+                    }
+                    
+                    .latest-updates {
+                        color: red;
+                        background-color: #32c3f138;
+                        padding: 3px 0px;
+                        opacity: 0.9;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }

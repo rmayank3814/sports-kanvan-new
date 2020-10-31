@@ -45,35 +45,27 @@
         <p>You are aware and agree that by executing this waiver and release, you are giving up your right to bring a legal action or assert a claim against trainer for trainer’s negligence, or for any defective product used while receiving personal
             training from trainer. You have read and voluntarily signed the waiver and release and further agree that no oral representations, statements, or inducement apart from the foregoing written agreement have been made.</p>
 
-
-        <?php echo form_open('pages/agreement',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
-        <?php echo validation_errors();?>
+        <?php echo form_open('pages/agreement',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));?>
         <div class="mt-5 mb-3">
         <div class='row'>
             <div class="col-lg-4 ">
+                <?php echo form_error('print', '<div class="error text-center pb-2">', '</div>'); ?>
                 <label for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
                 <input type="text" id="print" name="print" value="<?php //echo $print;?>"><br>
-                <div class="invalid-feedback">
-                    Valid Print Name is required.
-                </div>
             </div>
             <div class="col-lg-4">
+                <?php echo form_error('sign', '<div class="error text-center pb-2">', '</div>'); ?>
                 <label for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
                 <input type="text" id="sign" name="sign" value="<?php //echo $sign;?>"><br>
-                <div class="invalid-feedback">
-                    Valid Sign Name is required.
-                </div>
             </div>
             <div class="col-lg-4">
+                <?php echo form_error('name', '<div class="error text-center pb-2">', '</div>'); ?>
                 <label for="name">Full Name <span class="text-danger font-weight-medium">*</span></label>
                 <input type="text" id="name" name="name" value="<?php //echo $name;?>"><br>
-                <div class="invalid-feedback">
-                    Valid Full Name is required.
-                </div>
             </div>
         </div>
         </div>
-            <div class="d-flex justify-content-center mt-3 mb-3">
+            <div class="d-flex justify-content-center mt-5 mb-3">
                 <button class="btn btn-blue btn-sm m-auto" name="agreement_button" type="submit">Submit</button>
             </div>
             
