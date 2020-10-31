@@ -209,37 +209,31 @@ class Users_model extends CI_Model {
             $this->db->where('sess_id', $sess_id);
             return $this->db->update('community');
         }
-
     }
 
-    function get_ptc_data($sess_id){
-        $sql = "SELECT * FROM ptc where sess_id = $sess_id";
-        $query = $this->db->query( $sql );
-        return $query->row_array();
+    function profile_update($sess_id){
+        $data = array(
+            'fname' => $this->input->post('fname'),
+            'lname' => $this->input->post('lname'),
+            'mobile' => $this->input->post('mobile'),
+            'email' => $this->input->post('email'),
+            'shift' => $this->input->post('shift'),
+            'dob' => $this->input->post('dob'),
+            'emergency' => $this->input->post('emergency'),
+            'address1' => $this->input->post('address1'),
+            'address2' => $this->input->post('address2'),
+            'gender' => $this->input->post('gender'),
+            'profile_image' => $this->input->post('profile_image')
+        );  
+
+        $this->db->select("*");
+        $this->db->from('users');
+        $this->db->where('id', $sess_id);
+        return $this->db->update('users',$data);
     }
-    
-    function get_agreement_data($sess_id){
-        $sql = "SELECT * FROM agreement where sess_id = $sess_id";
-        $query = $this->db->query( $sql );
-        return $query->row_array();
-    } 
 
-    function get_community_data($sess_id){
-        $sql = "SELECT * FROM community where sess_id = $sess_id";
-        $query = $this->db->query( $sql );
-        return $query->row_array();
-    } 
+    function medical_update($sess_id){
 
-    function get_tfa_data($sess_id){
-        $sql = "SELECT * FROM tfa where sess_id = $sess_id";
-        $query = $this->db->query( $sql );
-        return $query->row_array();
-    } 
-
-    function get_medical_data($sess_id){
-        $sql = "SELECT * FROM medical where sess_id = $sess_id";
-        $query = $this->db->query( $sql );
-        return $query->row_array();
-    } 
+    }
 
 }
