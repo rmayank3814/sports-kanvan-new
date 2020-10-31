@@ -1,11 +1,25 @@
            <div class="image-about-banner" style="margin-top:100px">
-                <div class="">
+           
+                <!-- <div class=""> -->
                     <div class="row">
                         <div class="col">
                             <br/>
                             <div id="carousel" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
-
+                                <div class="carousel-item" style="background-image: url('main/images/banner-7.jpg'); background-size: cover;">
+                                        <div class="caption">
+                                            <h1>Create and share your whatever</h1>
+                                            <h2>Make it easy for you to do whatever this thing does.</h2>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="carousel-item" style="background-image: url('main/images/sports-8.gif'); background-size: cover;">
+                                        <div class="caption">
+                                            <h1>Create and share your whatever</h1>
+                                            <h2>Make it easy for you to do whatever this thing does.</h2>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="carousel-item active" style="background: #25c;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
@@ -29,6 +43,7 @@
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
                                         </div>
+                                        
                                     </div>
                                     <div class="carousel-item" style="background-image: url('main/images/banner-4.jpg'); background-size: cover;">
                                         <div class="caption">
@@ -62,13 +77,17 @@
                                 </a>
 
                             </div>
-                            <br/>
+                          
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
-
-              <!--single half section-->
+            <marquee class="latest-updates" style="" ><i>Hence, Kanvan Sports Events incorporated with multi Sports players, Gamers, Sports activist, Fitness players, Finest Yoga teachers & all those who can contribute their time, talent, potential & effort in order to help all our Indian Corporate people to feel the pleasure & inner satisfaction just by taking out 1-2 hours on weekends to become a healthy child again & feel the same enthusiasm & energy which were lost somewhere due to daily hectic life.</i></marquee>
+            <!-- <marquee behavior="scroll" direction="up" scrollamount="1">Slow Scrolling</marquee> -->
+<!-- <marquee behavior="scroll" direction="right" scrollamount="12">Little Fast Scrolling It is being noticed that we are not taking time towards maintaining our health & peace of our mind due to many rigorous responsibilities</marquee>
+<marquee behavior="scroll" direction="left" scrollamount="20"> It is being noticed that we are not taking time towards maintaining our health & peace of our mind due to many rigorous responsibilities</marquee> -->
+<marquee behavior="alternate" scrollamount="13">Your bouncing text goes here</marquee>           
+<!--single half section-->
               <div class="service-half section-gr">
                 <div class="container py-1">
                     <div class="row ">
@@ -90,7 +109,28 @@
                     </div>
                 </div>
             </div>
+            <div class="service-half section-gr">
+                <div class="container py-1">
+                    <div class="row ">
+                    <div class="section-head col-sm-12">
+                                <h3 class="heading-title text-center pb-5">What  Choose ?</h3>
+                            </div>
+                       
+                        <div class="col-md-7 align-self-center wow fadeInRight" data-wow-delay="0.2s">
+                            <h3 class="my-2 heading-terinary">Awesome with Ordinary Flexibility</h3>
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat bibendum
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat bibendum
+                                consequat. Praesent eget feugiat quam</p>
 
+                            <a href="" class="btn-text">View Details →</a>
+                        </div>
+                        <div class="col-md-5">
+                            <img src="main/images/fitness.gif" alt=".." class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="service-half section-gr">
                 <div class="container py-1">
