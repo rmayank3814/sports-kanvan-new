@@ -72,7 +72,7 @@
                             <a href="#" class="icon-button instagram" title="Instagram"><i class="fab fa-instagram" ></i><span></span></a>
                             <a href="https://www.linkedin.com/company/kanvan-business-solutions/" class="icon-button linkedin" title="LinkedIn"><i class="fab fa-linkedin-in" ></i><span></span></a>
                             <a href="#" class="icon-button skype" title="Skype"><i class="fab fa-skype"></i><span></span></a>
-                            <a href="https://www.youtube.com/channel/UCvli4ZZsTLPH_tt6EXnGLdw" class="icon-button youtube" title="Youtube"><i class="fab fa-youtube"></i><span></span></a>
+                            <a href="https://www.youtube.com/channel/UCvli4ZZsTLPH_tt6EXnGLdw/" class="icon-button youtube" title="Youtube"><i class="fab fa-youtube"></i><span></span></a>
                         </div>
 
                         <!-- Ends: .footer-widget -->

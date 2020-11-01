@@ -85,6 +85,7 @@
 							<a href="#tab_default_6" data-toggle="tab" class="spaces">Indemnity Agreement</a>
 						</li>
 					</ul>
+
 <div class="tab-content">
 	<div class="tab-pane active" id="tab_default_1">
 		<div class="container">
@@ -94,15 +95,16 @@
                         <div class="card-body rounded-sm">
                             <div class="text-box">
                             <h3 class="text-center mt-4 mb-5">PERSONAL DETAILS</h3>
-                            <?php echo form_open('pages/profile',array('method'=>'post','novalidate'=>"novalidate", 'id' =>'registration_form','enctype' => "multipart/form-data")); ?>
+                            <?php echo form_open('pages/profile',array('method'=>'post','novalidate'=>"novalidate",'enctype' => "multipart/form-data")); ?>
                             <?php echo validation_errors(); ?>
-							
+                            <?php if($profile_image == ''){
+                                $profile_image = 'avatar.png';
+                            } ?>
                             <div class="text-center">
-                                <img src="<?php echo base_url('main/images/avatar.png');?>" class="avatar rounded-circle img-thumbnail" alt="avatar">
+                                <img src="<?php echo base_url();?>/main/images/<?php echo $profile_image; ?>" class="avatar rounded-circle profile_size img-thumbnail" alt="avatar">
                                 <h6>Upload a different photo...</h6>
-                                <input type="file" name="profile_image" value="<?php //echo $profile_image?>">
+                                <input type="file" name="profile_image" >
                             </div>       
-    
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="fname">First Name: <span class="text-danger font-weight-medium">*</span></label>
@@ -117,36 +119,32 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="email">Email Id: <span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="email" id="email" value="<?php echo $email ?>">
-                                    
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="mobile">Mobile: <span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="mobile" id="mobile" value="<?php echo $mobile ?>">
-                                    
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input">Gender: </label>
                                     <select class="custom-select d-block w-100" name="gender" id="gender">
-                                        <option value="">---Select---</option>
+                                        <option>---Select---</option>
                                         <option <?php if(trim(strtolower($gender)) === trim(strtolower("Male"))){ echo 'Selected'; } ?>>Male</option>
                                         <option <?php if(trim(strtolower($gender)) === trim(strtolower("Female"))){ echo 'Selected'; } ?>>Female</option>
                                         <option <?php if(trim(strtolower($gender)) === trim(strtolower("Other"))){ echo 'Selected'; } ?>>other</option>
-                                        </select>
-                                    
+                                    </select>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input">Birth Date: <span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="date" id="dob" name="dob" value="<?php echo $dob ?>"> 
                                 </div> 
                             </div>
-                            
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="shift">Shift <span class="text-danger font-weight-medium">*</span></label>
                                     <select class="custom-select d-block w-100" name="shift" id="shift">
-                                        <option value="">---Select---</option>
+                                        <option>---Select---</option>
                                         <option <?php if(trim(strtolower($shift)) === trim(strtolower("Morning(5am-11am)"))){ echo 'Selected'; } ?>>Morning(5am-11am)</option>
                                         <option <?php if(trim(strtolower($shift)) === trim(strtolower("Evening(5pm-9pm)"))){ echo 'Selected'; } ?>>Evening(5pm-9pm)</option>
                                     </select>
@@ -154,19 +152,16 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="emergency">Emergency Contact:<span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="emergency" id="emergency" value="<?php echo $emergency ?>">
-                                    
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="address1">Address 1:<span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="address1" id="address1" value="<?php echo $address1 ?>">
-                                    
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="address2">Address 2:</label>
                                     <input class="form-control" type="text" name="address2" id="address2" value="<?php echo $address2 ?>">
-                                    
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center mt-3 mb-4">
@@ -185,7 +180,7 @@
         <div class="row">
             <div class="col-lg-12">
             <h3 class="card text-center mt-5 mb-5">MEDICAL DETAILS</h3>
-            <?php echo form_open('pages/medical_profile',array('method' => 'post','novalidate'=>'novalidate')); ?>
+            <?php echo form_open('pages/profile',array('method' => 'post','novalidate'=>'novalidate')); ?>
             <?php echo validation_errors(); ?>
             <div class="panel-body">
                 <div class="row">
@@ -194,10 +189,10 @@
                     <label>1) Are you currently under a doctor’s care?<span class="error-medical"> *</span> </label>
                     <div class="optional-radio-button">
                     <label class="radio-inline">
-                        <input type="radio" id="doctor_yes" name="option1" value="yes">Yes
+                        <input type="radio" id="doctor_yes" name="option1" <?php if(trim(strtolower($doctor_care)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" id="doctor_no" name="option1" value="no"> No
+                        <input type="radio" id="doctor_no" name="option1" <?php if(trim(strtolower($doctor_care)) == trim(strtolower('no'))) { echo 'Checked' ;}?> value="no"> No
                     </label>
                     </div>
                 </div>
@@ -205,7 +200,7 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>2) When was the last time you had a physical examination? <span class="error-medical"> *</span></label>
-                    <input type="date" name="physical_examination" class="form-control" />
+                    <input type="date" name="physical_examination" value = "<?php echo $physical_examination ?>" class="form-control" />
                 </div>
             </div>
         </div>
@@ -223,10 +218,10 @@
                     <label>3) Do you take any medications on a regular basis? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option4" id="regular_yes" value="yes">Yes
+                            <input type="radio" name="option4" id="regular_yes" <?php if(trim(strtolower($medication)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option4" id="regular_no" value="no"> No
+                            <input type="radio" name="option4" id="regular_no" <?php if(trim(strtolower($medication)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                    </div>
                 </div>
@@ -236,10 +231,10 @@
                     <label>4) Do you smoke? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option6" value="yes">Yes
+                            <input type="radio" name="option6" <?php if(trim(strtolower($smoke)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option6" value="no"> No
+                            <input type="radio" name="option6" <?php if(trim(strtolower($smoke)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -262,10 +257,10 @@
                     <label>5) Have you been recently hospitalized?<span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option5" id="hospitalized_yes" value="yes">Yes
+                            <input type="radio" name="option5" id="hospitalized_yes" <?php if(trim(strtolower($hospitalized)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option5" id="hospitalized_no" value="no"> No
+                            <input type="radio" name="option5" id="hospitalized_no" <?php if(trim(strtolower($hospitalized)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                   </div>
                 </div>
@@ -275,10 +270,10 @@
                        <label>6) Muscle pain or an injury (explain on back of Form)? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option31" value="yes">Yes
+                            <input type="radio" name="option31" <?php if(trim(strtolower($muscle_pain)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option31" value="no"> No
+                            <input type="radio" name="option31" <?php if(trim(strtolower($muscle_pain)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -298,13 +293,13 @@
                     <label>7) Have you ever had an exercise stress test <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option2" id="stress_yes" value="yes">Yes
+                            <input type="radio" name="option2" id="stress_yes" <?php if(trim(strtolower($stress_test)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option2" id="stress_no" value="no"> No
+                            <input type="radio" name="option2" id="stress_no" <?php if(trim(strtolower($stress_test)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option2" id="stress_dont_know" value="don't know"> Don’t Know
+                            <input type="radio" name="option2" id="stress_dont_know" <?php if(trim(strtolower($stress_test)) == trim(strtolower("don't know"))) { echo 'Checked';} ?> value="don't know"> Don’t Know
                         </label>
                     </div>
                 </div>
@@ -314,10 +309,10 @@
                 <label>8) Are you pregnant? <span class="error-medical"> *</span></label>
                 <div class="optional-radio-button">
                     <label class="radio-inline">
-                        <input type="radio" name="option7" value="yes">Yes
+                        <input type="radio" name="option7" <?php if(trim(strtolower($pregnant)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="option7" value="no"> No
+                        <input type="radio" name="option7" <?php if(trim(strtolower($pregnant)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                     </label>
                 </div>
             </div>
@@ -329,10 +324,10 @@
                     <label>If yes, were the results <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option3" value="normal">Normal
+                            <input type="radio" name="option3" <?php if(trim(strtolower($result)) == trim(strtolower('normal'))) { echo 'Checked';} ?> value="normal">Normal
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option3" value="abnormal"> Abnormal
+                            <input type="radio" name="option3"  <?php if(trim(strtolower($result)) == trim(strtolower('abnormal'))) { echo 'Checked';} ?> value="abnormal"> Abnormal
                         </label>
                     </div>
                 </div>
@@ -344,10 +339,10 @@
                     <label>9) Do you drink alcohol more than three times/week? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option8" value="yes">Yes
+                            <input type="radio" name="option8" <?php if(trim(strtolower($drink_alcohal)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option8" value="no"> No
+                            <input type="radio" name="option8" <?php if(trim(strtolower($drink_alcohal)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -357,10 +352,10 @@
                     <label>10) Is your stress level high? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option9" value="yes">Yes
+                            <input type="radio" name="option9" <?php if(trim(strtolower($stress_level)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option9" value="no"> No
+                            <input type="radio" name="option9" <?php if(trim(strtolower($stress_level)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -372,10 +367,10 @@
                     <label>11) Are you moderately active on most days of the week? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option10" value="yes">Yes
+                            <input type="radio" name="option10" <?php if(trim(strtolower($moderately)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option10" value="no"> No
+                            <input type="radio" name="option10" <?php if(trim(strtolower($moderately)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -385,10 +380,10 @@
                     <label>12) High blood pressure? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option11" value="yes">Yes
+                            <input type="radio" name="option11" <?php if(trim(strtolower($high_bp)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option11" value="no"> No
+                            <input type="radio" name="option11" <?php if(trim(strtolower($high_bp)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -400,10 +395,10 @@
                     <label>13) High cholesterol? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option12" value="yes">Yes
+                            <input type="radio" name="option12" <?php if(trim(strtolower($cholesterol)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option12" value="no"> No
+                            <input type="radio" name="option12" <?php if(trim(strtolower($cholesterol)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -413,10 +408,10 @@
                     <label>14) Diabetes? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option13" value="yes">Yes
+                            <input type="radio" name="option13" <?php if(trim(strtolower($diabetes)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option13" value="no"> No
+                            <input type="radio" name="option13" <?php if(trim(strtolower($diabetes)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -428,10 +423,10 @@
                     <label>15) Have parents or siblings who, prior to age 55 had *</label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option14" value="yes">Yes
+                            <input type="radio" name="option14" <?php if(trim(strtolower($siblings)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option16" value="no"> No
+                            <input type="radio" name="option14" <?php if(trim(strtolower($siblings)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
@@ -441,25 +436,25 @@
                     <label>16) A heart attack? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                            <input type="radio" name="option17" value="yes">Yes
+                            <input type="radio" name="option17" <?php if(trim(strtolower($heart_attack)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option17" value="no"> No
+                            <input type="radio" name="option17" <?php if(trim(strtolower($heart_attack)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                         </label>
                     </div>  
                 </div>
             </div>
-        </div>
+            </div>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
                       <label>17) A stroke? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option18" value="yes">Yes
+                            <input type="radio" name="option18" <?php if(trim(strtolower($stroke)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option1" value="no"> No
+                            <input type="radio" name="option18" <?php if(trim(strtolower($stroke)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -469,10 +464,10 @@
                     <label>18) Known heart disease? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option17" value="yes">Yes
+                            <input type="radio" name="option15" <?php if(trim(strtolower($heart_disease)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option17" value="no"> No
+                            <input type="radio" name="option15" <?php if(trim(strtolower($heart_disease)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -484,10 +479,10 @@
                     <label>19) Rheumatic heart disease? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option18" value="yes">Yes
+                           <input type="radio" name="option16" <?php if(trim(strtolower($rheumatic)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option18" value="no"> No
+                          <input type="radio" name="option16" <?php if(trim(strtolower($rheumatic)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                        </label>
                         </div>  
                     </div>
@@ -497,10 +492,10 @@
                        <label>20) A heart murmur? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option19" value="yes">Yes
+                            <input type="radio" name="option19" <?php if(trim(strtolower($murmur)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option19" value="no"> No
+                            <input type="radio" name="option19" <?php if(trim(strtolower($murmur)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -512,10 +507,10 @@
                     <label>21) Chest pain with exertion? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option20" value="yes">Yes
+                           <input type="radio" name="option20" <?php if(trim(strtolower($chest_pain)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option20" value="no"> No
+                          <input type="radio" name="option20" <?php if(trim(strtolower($chest_pain)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                        </label>
                         </div>  
                     </div>
@@ -525,10 +520,10 @@
                        <label>22) Irregular heart beat or palpitations? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option21" value="yes">Yes
+                            <input type="radio" name="option21" <?php if(trim(strtolower($palpitation)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option21" value="no"> No
+                            <input type="radio" name="option21" <?php if(trim(strtolower($palpitation)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -540,10 +535,10 @@
                     <label>23) Lightheadedness or do you faint? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option22" value="yes">Yes
+                           <input type="radio" name="option22" <?php if(trim(strtolower($lightheadedness)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option22" value="no"> No
+                          <input type="radio" name="option22" <?php if(trim(strtolower($lightheadedness)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                        </label>
                         </div>  
                     </div>
@@ -553,10 +548,10 @@
                        <label>24) Unusual shortness of breath? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option23" value="yes">Yes
+                            <input type="radio" name="option23" <?php if(trim(strtolower($breath)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option23" value="no"> No
+                            <input type="radio" name="option23" <?php if(trim(strtolower($breath)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -568,10 +563,10 @@
                     <label>25) Cramping pains in legs or feet? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option24" value="yes">Yes
+                           <input type="radio" name="option24" <?php if(trim(strtolower($cramping)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option24" value="no"> No
+                          <input type="radio" name="option24" <?php if(trim(strtolower($cramping)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                        </label>
                         </div>  
                     </div>
@@ -581,10 +576,10 @@
                        <label>26) Emphysema? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option25" value="yes">Yes
+                            <input type="radio" name="option25" <?php if(trim(strtolower($emphysema)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option25" value="no"> No
+                            <input type="radio" name="option25" <?php if(trim(strtolower($emphysema)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -596,10 +591,10 @@
                     <label>27) Other metabolic disorders (thyroid, kidney, etc.)? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option26" value="yes">Yes
+                           <input type="radio" name="option26" <?php if(trim(strtolower($metabolic)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option26" value="no"> No
+                          <input type="radio" name="option26" <?php if(trim(strtolower($metabolic)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                        </label>
                         </div>  
                     </div>
@@ -609,10 +604,10 @@
                        <label>28) Epilepsy? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option27" value="yes">Yes
+                            <input type="radio" name="option27" <?php if(trim(strtolower($epilepsy)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option27" value="no"> No
+                            <input type="radio" name="option27" <?php if(trim(strtolower($epilepsy)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -624,10 +619,10 @@
                     <label>29) Asthma? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option28" value="yes">Yes
+                           <input type="radio" name="option28" <?php if(trim(strtolower($astma)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option28" value="no"> No
+                          <input type="radio" name="option28" <?php if(trim(strtolower($astma)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                        </label>
                         </div>  
                     </div>
@@ -637,10 +632,10 @@
                        <label>30) Back pain: upper, middle, lower? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
                             <label class="radio-inline">
-                            <input type="radio" name="option29" value="yes">Yes
+                            <input type="radio" name="option29" <?php if(trim(strtolower($back_pain)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                             </label>
                             <label class="radio-inline">
-                            <input type="radio" name="option29" value="no"> No
+                            <input type="radio" name="option29" <?php if(trim(strtolower($back_pain)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                             </label>
                         </div>  
                     </div>
@@ -652,10 +647,10 @@
                     <label>31) Other joint pain (explain on back of form)? <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">
                         <label class="radio-inline">
-                           <input type="radio" name="option30" value="yes">Yes
+                           <input type="radio" name="option30" <?php if(trim(strtolower($joint_pain)) == trim(strtolower('yes'))) { echo 'Checked';} ?> value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="option30" value="no"> No
+                          <input type="radio" name="option30" <?php if(trim(strtolower($joint_pain)) == trim(strtolower('no'))) { echo 'Checked';} ?> value="no"> No
                        </label>
                         </div>  
                     </div>
@@ -663,15 +658,13 @@
                 <div class="col-lg-6">
                     <div class="form-group">
                         <label>32) Sign Name (Type your name) *</label>
-                        <input type="text" name="sign" id="sign" value="<?php //echo $sign ?>" class="form-control" />
+                        <input type="text" name="sign" id="sign" value="<?php echo $sign ?>" class="form-control" />
                     </div>
                 </div>
             </div>    
-            <br />
             <div class="d-flex justify-content-center mt-4 mb-5">
-                <button class="btn btn-blue btn-sm m-auto" name="medical" type="submit">Submit</button>
+                <button class="btn btn-blue btn-sm m-auto" name="medical_update" type="submit">Update</button>
             </div>
-            <br />
         </div>
         <?php echo form_close(); ?>
     </div>
@@ -688,20 +681,20 @@
                     <div class="card-body rounded-sm">
                         <div class="text-box">
                             <h3 class="text-center mt-3 mb-5">TRAINING FITNESS ASSESSMENT</h3>
-                            <?php echo form_open('pages/tfa',array('class' => 'needs-validation','method' => 'post','novalidate' => 'novalidate'));  ?>
+                            <?php echo form_open('pages/profile',array('class' => 'needs-validation','method' => 'post','novalidate' => 'novalidate'));  ?>
                             <?php echo validation_errors();?>
                             <h5 class="mt-3 mb-4">Measurements: </h5>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="height">Height <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="height" id="height" value="<?php //echo $height; ?>" required>
+                                        <input class="form-control" type="text" name="height" id="height" value="<?php echo $height; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid height is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="weight">Weight <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="weight" id="weight" value="<?php //echo $weight; ?>" required>
+                                        <input class="form-control" type="text" name="weight" id="weight" value="<?php echo $weight; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid weight is required.
                                         </div>
@@ -710,14 +703,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="race">Race <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="race" id="race" value="<?php //echo $race; ?>" required>
+                                        <input class="form-control" type="text" name="race" id="race" value="<?php echo $race; ?>" required>
                                         <div class="invalid-feedback">
                                             Please enter a valid entry.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="fat"> Body Fat <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="fat" id="fat" value="<?php //echo $fat; ?>" required>
+                                        <input class="form-control" type="text" name="fat" id="fat" value="<?php echo $fat; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Body Fat is required.
                                         </div>
@@ -726,14 +719,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="biceps">Biceps <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="biceps" id="biceps" value="<?php //echo $biceps; ?>" required>
+                                        <input class="form-control" type="text" name="biceps" id="biceps" value="<?php echo $biceps; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid biceps is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="upper">Upper Thigh <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="upper" id="upper" value="<?php //echo $upper; ?>" required>
+                                        <input class="form-control" type="text" name="upper" id="upper" value="<?php echo $upper; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid upper is required.
                                         </div>
@@ -742,14 +735,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="mid">Mid-thigh<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="mid" id="mid" value="<?php //echo $mid; ?>" required>
+                                        <input class="form-control" type="text" name="mid" id="mid" value="<?php echo $mid; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Mid-thigh is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="buttocks">Buttocks <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="buttocks" id="buttocks" value="<?php //echo $buttocks; ?>" required>
+                                        <input class="form-control" type="text" name="buttocks" id="buttocks" value="<?php echo $buttocks; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Buttocks is required.
                                         </div>
@@ -758,14 +751,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="hips">Hips <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="hips" id="hips" value="<?php //echo $hips; ?>" required>
+                                        <input class="form-control" type="text" name="hips" id="hips" value="<?php echo $hips; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Hips is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="waist">Waist <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="waist" id="waist" value="<?php //echo $waist; ?>" required>
+                                        <input class="form-control" type="text" name="waist" id="waist" value="<?php echo $waist; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid phone number is required.
                                         </div>
@@ -774,14 +767,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="chest">Chest <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="chest" id="chest" value="<?php //echo $chest; ?>" required>
+                                        <input class="form-control" type="text" name="chest" id="chest" value="<?php echo $chest; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Chest is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="calves">Calves <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="calves" id="calves" value="<?php //echo $calves; ?>" required>
+                                        <input class="form-control" type="text" name="calves" id="calves" value="<?php echo $calves; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid phone number is required.
                                         </div>
@@ -790,14 +783,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="handed">Right/Left Handed <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="handed" id="handed" value="<?php //echo $handed; ?>" required>
+                                        <input class="form-control" type="text" name="handed" id="handed" value="<?php echo $handed; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Right/Left is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="posture">Posture<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="posture" id="posture" value="<?php //echo $posture; ?>" required>
+                                        <input class="form-control" type="text" name="posture" id="posture" value="<?php echo $posture; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Posture is required.
                                         </div>
@@ -806,14 +799,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="body">Body Type <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="body" id="body" value="<?php // echo $body; ?>" required>
+                                        <input class="form-control" type="text" name="body" id="body" value="<?php echo $body; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Body is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="parent">Parent Body Type<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="parent" id="parent" value="<?php //echo $parent; ?>" required>
+                                        <input class="form-control" type="text" name="parent" id="parent" value="<?php echo $parent; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Parent Body Type is required.
                                         </div>
@@ -822,14 +815,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for=" loss">Weight Loss Desired <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="loss" id="loss" value="<?php //echo $loss; ?>" required>
+                                        <input class="form-control" type="text" name="loss" id="loss" value="<?php echo $loss; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Weight Loss is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="problem">Problem Areas<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="problem" id="problem" value="<?php //echo $problem; ?>"  required>
+                                        <input class="form-control" type="text" name="problem" id="problem" value="<?php echo $problem; ?>"  required>
                                         <div class="invalid-feedback">
                                             Valid Problem Areas is required.
                                         </div>
@@ -838,14 +831,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="rockport">Rockport 1-Mile Walking Test <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="rockport" id="rockport" value="<?php //echo $rockport; ?>" required>
+                                        <input class="form-control" type="text" name="rockport" id="rockport" value="<?php echo $rockport; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Rockport is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="step">3-Minute Step Test<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="step" id="step" value="<?php //echo $step; ?>" required>
+                                        <input class="form-control" type="text" name="step" id="step" value="<?php echo $step; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid field is required.
                                         </div>
@@ -854,14 +847,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="resting">Resting Heart Rate<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="resting" id="resting" value="<?php //echo $resting; ?>" required>
+                                        <input class="form-control" type="text" name="resting" id="resting" value="<?php echo $resting; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid fill is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="cardio">Cardio.-Resp. Fitness Desired<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="cardio" id="cardio" value="<?php //echo $cardio; ?>" required>
+                                        <input class="form-control" type="text" name="cardio" id="cardio" value="<?php echo $cardio; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid fill is required.
                                         </div>
@@ -870,14 +863,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="strength">Strength/Endurance Desired<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="strength" id="strength" value="<?php //echo $strength; ?>" required>
+                                        <input class="form-control" type="text" name="strength" id="strength" value="<?php echo $strength; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid fill is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="flexibility">Flexibility Desired<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="flexibility" id="flexibility" value="<?php //echo $flexibility; ?>" required>
+                                        <input class="form-control" type="text" name="flexibility" id="flexibility" value="<?php echo $flexibility; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid fill is required.
                                         </div>
@@ -886,14 +879,14 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="devoted">Time Devoted to Exercise<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="devoted" id="devoted" value="<?php //echo $devoted; ?>" required>
+                                        <input class="form-control" type="text" name="devoted" id="devoted" value="<?php echo $devoted; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid fill is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="current">Current Caloric Intake<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="current" id="current" value="<?php //echo $current; ?>" required>
+                                        <input class="form-control" type="text" name="current" id="current" value="<?php echo $current; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid fill is required.
                                         </div>
@@ -902,14 +895,14 @@
                                 <div class="row">
                                     <div class="col-md-12 mb-3">
                                         <label class="label-input" for="energy">Total Energy Required to Maintain Weight<span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="energy" id="energy" value="<?php //secho $energy; ?>" required>
+                                        <input class="form-control" type="text" name="energy" id="energy" value="<?php echo $energy; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid fill is required.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center mt-3 mb-4">
-                                    <button class="btn btn-blue btn-sm m-auto" name="tfa_button" type="submit">Submit</button>
+                                    <button class="btn btn-blue btn-sm m-auto" name="tfa_update" type="submit">Submit</button>
                                 </div>
                             <?php echo form_close(); ?>
                         </div>
@@ -944,20 +937,20 @@
                 <div class=" mt-5 mb-5 border-0 card-opacity  ">
                     <div class="card-body rounded-sm">
                         <div class="text-box">
-                        <?php echo form_open('pages/ptc',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
+                        <?php echo form_open('pages/profile',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
                         <?php echo validation_errors();?>
                                 <h3 class="text-center mt-3 mb-4">Description of program:</h3>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="investment">Total investment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="number" name="investment" id="investment" value="<?php //echo $investment; ?>" required>
+                                        <input class="form-control" type="number" name="investment" id="investment" value="<?php echo $investment; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Total Investment is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="method">Method of payment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="method" id="method" value="<?php //echo $method; ?>" required>
+                                        <input class="form-control" type="text" name="method" id="method" value="<?php echo $method; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Payment method is required.
                                         </div>
@@ -966,21 +959,21 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="print" id="print" value="<?php //echo $print; ?>" required>
+                                        <input class="form-control" type="text" name="print" id="print" value="<?php echo $print; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Print Name is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="sign" id="sign" value="<?php //echo $sign; ?>" required>
+                                        <input class="form-control" type="text" name="sign" id="sign" value="<?php echo $sign; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Sign Name is required.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center mt-5 mb-3">
-                                    <button class="btn btn-blue btn-sm m-auto" name="ptc_button" type="submit">Submit</button>
+                                    <button class="btn btn-blue btn-sm m-auto" name="ptc_update" type="submit">Submit</button>
                                 </div>
                                 <?php echo form_close(); ?>
                             <h6 class="text-center pt-4 pb-4"> WE ARE EXCITED TO BEGIN WORKING WITH YOU!</h6>
@@ -1003,12 +996,12 @@
                     <div class=" mt-5 mb-5 border-0 card-opacity  ">
                         <div class="card-body rounded-sm">
                             <div class="text-box">
-                                <?php echo form_open('pages/community',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
+                                <?php echo form_open('pages/profile',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
                                 <?php echo validation_errors();?>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="name">YOUR NAME:<span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="name" id="name" value="<?php //echo $name;?>" required>
+                                            <input class="form-control" type="text" name="name" id="name" value="<?php echo $name;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Your Name is required.
                                             </div>
@@ -1019,14 +1012,14 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="full_name1">Full Name <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="full_name1" id="full_name1" value="<?php //echo $full_name1;?>" required>
+                                            <input class="form-control" type="text" name="full_name1" id="full_name1" value="<?php echo $full_name1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Name is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="contact1">Contact Number <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="number" name="contact1" id="contact1" value="<?php //echo $contact1;?>" required>
+                                            <input class="form-control" type="number" name="contact1" id="contact1" value="<?php echo $contact1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid contact is required.
                                             </div>
@@ -1035,14 +1028,14 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="relationship1">Relationship <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="relationship1" id="relationship1" value="<?php //echo $relationship1;?>" required>
+                                            <input class="form-control" type="text" name="relationship1" id="relationship1" value="<?php echo $relationship1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid relationship is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="email1">E-­mail (optional) <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="email" name="email1" id="email1" value="<?php //echo $email1;?>" required>
+                                            <input class="form-control" type="email" name="email1" id="email1" value="<?php echo $email1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Sign Name is required.
                                             </div>
@@ -1053,14 +1046,14 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="full_name2">Full Name <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="full_name2" id="full_name2" value="<?php //echo $full_name2;?>" required>
+                                            <input class="form-control" type="text" name="full_name2" id="full_name2" value="<?php echo $full_name2;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Name is required.
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="label-input" for="contact2">Contact Number <span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="number" name="contact2" id="contact2" value="<?php //echo $contact2;?>" required>
+                                            <input class="form-control" type="number" name="contact2" id="contact2" value="<?php echo $contact2;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid contact number is required.
                                             </div>
@@ -1069,14 +1062,14 @@
                                <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="relationship2">Relationship <span class="text-danger font-weight-medium">*</span></label>
-                                    <input class="form-control" type="text" name="relationship2" id="relationship2" value="<?php //echo $relationship2;?>" required>
+                                    <input class="form-control" type="text" name="relationship2" id="relationship2" value="<?php echo $relationship2;?>" required>
                                     <div class="invalid-feedback">
                                         Valid Relationship is required.
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="email2">E-­mail (optional) <span class="text-danger font-weight-medium">*</span></label>
-                                    <input class="form-control" type="email" name="email2" id="email2" value="<?php //echo $email2;?>" required>
+                                    <input class="form-control" type="email" name="email2" id="email2" value="<?php echo $email2;?>" required>
                                     <div class="invalid-feedback">
                                         Valid Sign Name is required.
                                     </div>
@@ -1084,7 +1077,7 @@
                             </div>
 
                             <div class="d-flex justify-content-center mt-5 mb-3">
-                                <button class="btn btn-blue btn-sm m-auto" name="community_button" type="submit">Submit</button>
+                                <button class="btn btn-blue btn-sm m-auto" name="community_update" type="submit">Submit</button>
                             </div>
                             <?php echo form_close(); ?>
                             <h6 class="text-center pt-4 pb-1"> THANKS FOR HELPING SPREAD THE GIFT OF IMPROVED HEALTH AND FITNESS!</h6>
@@ -1142,27 +1135,27 @@
             training from trainer. You have read and voluntarily signed the waiver and release and further agree that no oral representations, statements, or inducement apart from the foregoing written agreement have been made.</p>
 
 
-        <?php echo form_open('pages/agreement',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
+        <?php echo form_open('pages/profile',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate'));  ?>
         <?php echo validation_errors();?>
         <div class="mt-5 mb-3">
         <div class='row'>
             <div class="col-lg-4 ">
                 <label for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="print" name="print" value="<?php //echo $print;?>"><br>
+                <input type="text" id="print" name="print" value="<?php echo $print;?>"><br>
                 <div class="invalid-feedback">
                     Valid Print Name is required.
                 </div>
             </div>
             <div class="col-lg-4">
                 <label for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="sign" name="sign" value="<?php //echo $sign;?>"><br>
+                <input type="text" id="sign" name="sign" value="<?php echo $sign;?>"><br>
                 <div class="invalid-feedback">
                     Valid Sign Name is required.
                 </div>
             </div>
             <div class="col-lg-4">
                 <label for="name">Full Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="name" name="name" value="<?php //echo $name;?>"><br>
+                <input type="text" id="name" name="name" value="<?php echo $name;?>"><br>
                 <div class="invalid-feedback">
                     Valid Full Name is required.
                 </div>
@@ -1170,7 +1163,7 @@
         </div>
         </div>
             <div class="d-flex justify-content-center mt-5 mb-3">
-                <button class="btn btn-blue btn-sm m-auto" name="agreement_button" type="submit">Submit</button>
+                <button class="btn btn-blue btn-sm m-auto" name="agreement_update" type="submit">Submit</button>
             </div>
             <?php echo form_close(); ?>
             </div>
