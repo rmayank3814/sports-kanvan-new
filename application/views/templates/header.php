@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="<?php echo base_url();?>main/images/sports-kanvan-logo.png" type="image/png" sizes="159x73">
+    <link rel="icon" href="<?php echo base_url();?>main/images/logo/kanvan-sports-logo.png" type="image/png" sizes="159x73">
     <!--Bootstrap css-->
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/bootstrap/css/bootstrap.min.css">
 
@@ -32,7 +32,7 @@
                     <div class="">
                         <div class="col">
                             <nav class="navbar navbar-expand-md navbar-light">
-                                <a class="navbar-brand" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>main/images/sports-kanvan-logo.png" alt="kanvan logo"></a>
+                                <a class="navbar-brand" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>main/images/logo/kanvan-sports-logo.png" alt="kanvan logo" title="Kanvan sports"><span class="logo-title" title="Kanvan sports">Kanvan Sports</span></a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span></button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -65,7 +65,7 @@
                                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >Sports Form</a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/medical">Medical</a>
-                                                <a class="dropdown-item"href="<?php echo base_url();?>index.php/pages/tfa">Training Fitness</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/tfa">Training Fitness</a>
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/ptc">Personal Training</a>
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/community">Fitness Community</a>
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/agreement">Indemnity Agreement</a>

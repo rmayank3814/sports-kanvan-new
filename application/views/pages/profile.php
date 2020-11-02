@@ -1,19 +1,22 @@
 <style>
 .spaces {
-    /* margin-right: 20px; */
     margin-left: 20px;
 }
 .tabbable-panel {
   border:1px solid #eee;
   padding: 10px;
 }
-
+ul.nav.nav-tabs {
+    display: flex;
+    justify-content: center;
+}
 .tabbable-line > .nav-tabs {
   border: none;
   margin: 0px;
 }
 .tabbable-line > .nav-tabs > li {
-  margin-right: 2px;
+  margin-right: 26px;
+  font-weight: bold;
 }
 .tabbable-line > .nav-tabs > li > a {
   border: 0;
@@ -24,7 +27,7 @@
   color: #a6a6a6;
 }
 .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 4px solid rgb(80,144,247);
+  border-bottom: 3px solid rgb(80,144,247);
 }
 .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
   border: 0;
@@ -38,7 +41,7 @@
   margin-top: 0px;
 }
 .tabbable-line > .nav-tabs > li.active {
-  border-bottom: 4px solid #32465B;
+  border-bottom: 3px solid #32465B;
   position: relative;
 }
 .tabbable-line > .nav-tabs > li.active > a {
@@ -49,21 +52,22 @@
   color: #404040;
 }
 .tabbable-line > .tab-content {
-  margin-top: -3px;
+  margin-top: 31px;
   background-color: #fff;
   border: 0;
   border-top: 1px solid #eee;
-  padding: 15px 0;
+  /* padding: 15px 0; */
 }
 .portlet .tabbable-line > .tab-content {
   padding-bottom: 0;
 }
+
 </style>
 
 <div class="container" style="margin-top:120px">
     <div class="row">
         <div class="col-md-12">
-			<div class="tabbable-panel">
+			<div class="tabbable-panel mb-5">
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs ">
 						<li class="active ">
@@ -89,7 +93,7 @@
 	<div class="tab-pane active" id="tab_default_1">
 		<div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-10 both-space">
+                <div class="col-md-12 both-space">
                     <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
                         <div class="card-body rounded-sm">
                             <div class="text-box">
@@ -97,9 +101,9 @@
                             <?php echo form_open('pages/profile',array('method'=>'post','novalidate'=>"novalidate", 'id' =>'registration_form','enctype' => "multipart/form-data")); ?>
                             <?php echo validation_errors(); ?>
 							
-                            <div class="text-center">
+                            <div class="text-center mb-5">
                                 <img src="<?php echo base_url('main/images/avatar.png');?>" class="avatar rounded-circle img-thumbnail" alt="avatar">
-                                <h6>Upload a different photo...</h6>
+                                <h6 class="mt-3 mb-">Upload a different photo...</h6>
                                 <input type="file" name="profile_image" value="<?php //echo $profile_image?>">
                             </div>       
     
@@ -923,7 +927,7 @@
 <div class="tab-pane" id="tab_default_4">
 	<div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-12 both-space">
+            <div class="col-md-10 both-space">
                 <h3 class="text-center mt-5 mb-4">PERSONAL TRAINING CONTRACT / AGREEMENT</h3>
                 <p class=" mt-3 mb-4">Congratulations on your decision to improve your health by participating in a professional exercise program!</p>
                 <p class="">With the help of our Fitness trainer, you greatly improve your ability to accomplish your training goals faster, safer, and with maximum benefits. The education you will learn during these training sessions can be used for a lifetime.</p>
@@ -995,7 +999,7 @@
 <div class="tab-pane" id="tab_default_5">
 	<div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-12 both-space mt-4">
+                <div class="col-md-10 both-space mt-4">
                     <h3 class="text-center mt-3 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
                     <p>We want to build an awesome fitness community here, so we’re asking for your input. Who are your “Plus-­Two” friends, family, co-­workers, or neighbors who could benefit from personal training?</p>
                     <p>Your two referrals (a.k.a. your “Plus-­Two”) will each receive a FREE transformation coaching session for 3 days where Kanvan Sports will help them outline their goals and a path to get there.</p>
@@ -1097,8 +1101,9 @@
 </div>
 
 <div class="tab-pane" id="tab_default_6">
-	<div class="container">
-                <h4 class="text-center"><b>ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</b></h4><br/><br/>
+	<div class="container mt-5 mb-5">
+    <div class="col-md-12 both-space">
+                <h4 class="text-center">ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</h4><br/><br/>
                 <h5>DECLARATIONS:</h5>
                 <p>This Agreement is entered into between Kanvan Sports (“FitnessTrainer”) and the undersigned (“Client”). The provision of personal training services by Trainer to Client, and Client’s use of any premises, facilities or equipment are
                     contingent upon this Agreement.</p>
@@ -1169,12 +1174,13 @@
             </div>
         </div>
         </div>
-            <div class="d-flex justify-content-center mt-5 mb-3">
-                <button class="btn btn-blue btn-sm m-auto" name="agreement_button" type="submit">Submit</button>
+            <div class="d-flex justify-content-center mt-5 pb-5">
+                <button class="btn btn-blue btn-sm m-auto pb-4" name="agreement_button" type="submit">Submit</button>
             </div>
             <?php echo form_close(); ?>
             </div>
-		</div>
+        </div>
+        </div>
 	</div>
 </div>
 </div>
