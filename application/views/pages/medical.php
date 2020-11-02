@@ -264,7 +264,7 @@
                             <input type="radio" name="option14" value="yes">Yes
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="option14" alue="no"> No
+                            <input type="radio" name="option14" value="no"> No
                         </label>
                         <?php echo form_error('option14', '<div class="error ml-2">', '</div>'); ?>
                     </div>  

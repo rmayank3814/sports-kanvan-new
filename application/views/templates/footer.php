@@ -55,7 +55,7 @@
                     <div class="col-md-3 col-sm-4 ">
                         <div class="contact-widget wow fadeInDown" data-wow-delay="0.4s">
                             <h4 class="footer-widget-title border-link">CONTACT US</h4>
-                            <p><i class="fas fa-map-marked"></i>&nbsp; B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
+                            <p><i class="fas fa-map-marked-alt"></i>&nbsp; B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
                             <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9871587820</p>
                             <p>
                                 <i class="fas fa-globe-americas"></i>

@@ -12,7 +12,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
 									<label class="label-input" for="old_pass">Old Password <span class="text-danger font-weight-medium">*</span></label>
-				                 	<input class="form-control form-control-lg"  type="password" name="old_pass"><br /><br />
+				                 	<input class="form-control form-control-lg"  type="password" name="old_pass" id="old_pass"><br /><br />
                                         <div class="invalid-feedback">
                                             Valid Old Password is required.
                                         </div>
@@ -22,7 +22,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
 									<label  class="label-input" for="new_pass">New Password <span class="text-danger font-weight-medium">*</span></label>
-				                  	<input class="form-control form-control-lg"  type="password" name="new_pass"><br/><br />
+				                  	<input class="form-control form-control-lg"  type="password" name="new_pass" id="new_pass"><br/><br />
                                         <div class="invalid-feedback">
                                             Valid New Password is required.
                                         </div>
@@ -32,7 +32,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
 									<label  class="label-input" for="confirm_pass">Confirm Password <span class="text-danger font-weight-medium">*</span></label>
-					                <input class="form-control form-control-lg" type="password" name="confirm_pass"><br/><br />
+					                <input class="form-control form-control-lg" type="password" name="confirm_pass" id="confirm_pass"><br/><br />
                                     <div class="invalid-feedback">
                                         Valid Confirm Password is required.
                                     </div>

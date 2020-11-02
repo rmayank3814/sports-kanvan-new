@@ -16,6 +16,7 @@ class Pages extends CI_Controller {
 		$this->load->view('pages/home');
 		$this->load->view('templates/footer');
 	}
+	
 
 	function registration() {
 		$this->load->view('templates/header');
@@ -131,6 +132,11 @@ class Pages extends CI_Controller {
 	function privacy_policy(){
 		$this->load->view('templates/header');
 		$this->load->view('pages/privacy_policy');
+		$this->load->view('templates/footer');
+	}
+	function blog(){
+		$this->load->view('templates/header');
+		$this->load->view('pages/blog');
 		$this->load->view('templates/footer');
 	}
 	function testimonial(){
