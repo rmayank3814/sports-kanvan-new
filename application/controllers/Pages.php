@@ -91,7 +91,9 @@ class Pages extends CI_Controller {
 	
 	function logout(){
 		$this->session->sess_destroy();
-		redirect();
+		// $this->session->set_flashdata('success','You have successfully logged out!');
+		// $this->session->set_flashdata('failed','You have successfully logged out!');
+		redirect(base_url());
 	}
 	   
 	function login(){
@@ -322,8 +324,16 @@ class Pages extends CI_Controller {
 					$this->users_model->profile_update($sess_id);
 				}
 		    }
-	    }
+		}
+		$this->load->view('pages/profile', $data);
+		$this->load->view('templates/footer');	
+	}
 
+	function forms(){
+		$this->load->view('templates/header');
+		$sess_id = $this->session->userdata('id');
+		$data = $this->fetch_user_profile_details($sess_id);
+		
 		if(isset($_POST['medical_update'])){
             $this->form_validation->set_rules('option1', 'Field-1','required');
 			$this->form_validation->set_rules('physical_examination', 'Field-2','required');
@@ -432,21 +442,22 @@ class Pages extends CI_Controller {
 			}
 		}
 		
-		$this->load->view('pages/profile', $data);
+		$this->load->view('pages/forms',$data);
 		$this->load->view('templates/footer');
 	}
 
 	function fetch_user_profile_details($sess_id) {
-		if($sess_id !== '') {
 			$this->db->select('*');
-			$this->db->from('users, medical,tfa,ptc,community,agreement');
-			$this->db->where('medical.sess_id = users.id');
-			$this->db->where('tfa.sess_id = medical.sess_id');
-			$this->db->where('ptc.sess_id = tfa.sess_id');
-			$this->db->where('community.sess_id = ptc.sess_id');
-			$this->db->where('agreement.sess_id = community.sess_id');
+			$this->db->from('users as u');
+			$this->db->join('medical as m', 'm.sess_id = u.id', 'left');
+			$this->db->join('tfa as t', 't.sess_id = u.id', 'left');
+			$this->db->join('ptc as p', 'p.sess_id = u.id', 'left');
+			$this->db->join('community as c', 'c.sess_id = u.id', 'left');
+			$this->db->join('agreement as a', 'a.sess_id = u.id', 'left');
+			$this->db->where('u.id',$sess_id);
 			$query = $this->db->get();
 			return $query->row_array();
-		}
 	}
+
+	
 }
