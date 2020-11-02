@@ -42,60 +42,6 @@ class Pages extends CI_Controller {
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');
 	}
-	
-	function medical(){
-		$sess_id = $this->session->userdata('id');
-		$this->load->view('templates/header');
-		$this->form_validation->set_rules('option1', 'Field-1','required');
-		$this->form_validation->set_rules('physical_examination', 'Field-2','required');
-		$this->form_validation->set_rules('option2', 'Field-3','required');
-		$this->form_validation->set_rules('option4', 'Field-4','required');
-		$this->form_validation->set_rules('option5', 'Field-5','required');
-		$this->form_validation->set_rules('option6', 'Field-6','required');
-		$this->form_validation->set_rules('option7', 'Field-7','required');
-		$this->form_validation->set_rules('option8', 'Field-8','required');
-		$this->form_validation->set_rules('option9', 'Field-9','required');
-		$this->form_validation->set_rules('option10', 'Field-10','required');
-		$this->form_validation->set_rules('option11', 'Field-11','required');
-		$this->form_validation->set_rules('option12', 'Field-12','required');
-		$this->form_validation->set_rules('option13', 'Field-13','required');
-		$this->form_validation->set_rules('option14', 'Field-14','required');
-		$this->form_validation->set_rules('option15', 'Field-15','required');
-		$this->form_validation->set_rules('option16', 'Field-16','required');
-		$this->form_validation->set_rules('option17', 'Field-17','required');
-		$this->form_validation->set_rules('option18', 'Field-18','required');
-		$this->form_validation->set_rules('option19', 'Field-19','required');
-		$this->form_validation->set_rules('option20', 'Field-20','required');
-		$this->form_validation->set_rules('option21', 'Field-21','required');
-		$this->form_validation->set_rules('option22', 'Field-22','required');
-		$this->form_validation->set_rules('option23', 'Field-23','required');
-		$this->form_validation->set_rules('option24', 'Field-24','required');
-		$this->form_validation->set_rules('option25', 'Field-25','required');
-		$this->form_validation->set_rules('option26', 'Field-26','required');
-		$this->form_validation->set_rules('option27', 'Field-27','required');
-		$this->form_validation->set_rules('option28', 'Field-28','required');
-		$this->form_validation->set_rules('option29', 'Field-29','required');
-		$this->form_validation->set_rules('option30', 'Field-30','required');
-		$this->form_validation->set_rules('option31', 'Field-31','required');
-		$this->form_validation->set_rules('sign', 'Sign name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-
-		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->form_validation->set_message('required', 'Enter %s');
-		
-		if(isset($_POST['medical']) && $this->form_validation->run()){
-			$this->users_model->medical_data($sess_id);
-			redirect('pages/tfa');
-		}
-		$this->load->view('pages/medical');
-		$this->load->view('templates/footer');
-	}
-	
-	function logout(){
-		$this->session->sess_destroy();
-		// $this->session->set_flashdata('success','You have successfully logged out!');
-		// $this->session->set_flashdata('failed','You have successfully logged out!');
-		redirect(base_url());
-	}
 	   
 	function login(){
 		$this->load->view('templates/header');
@@ -127,6 +73,11 @@ class Pages extends CI_Controller {
 			$this->form_validation->set_message('validateUser', 'Invalid %s or Password');
 			return FALSE;
 		}
+	}
+
+	function logout(){
+		$this->session->sess_destroy();
+		redirect(base_url());
 	}
 	   
 	function privacy_policy(){
@@ -183,7 +134,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 	
-	function oldPassCheck($old_pass){
+	function oldPassCheck($old_pass) {
 		$session_id = $this->session->userdata('id');
 		$this->db->where('id', $session_id);
 		$query = $this->db->get('users');
@@ -191,111 +142,6 @@ class Pages extends CI_Controller {
 		if($row['password'] == md5($old_pass)){
 			return true;
 		}
-	}
-	
-	function tfa() {
-		$sess_id = $this->session->userdata('id');
-		
-		$this->load->view('templates/header');
-		$this->form_validation->set_rules('height', 'Field-1','required');
-		$this->form_validation->set_rules('weight', 'Field-2','required');
-		$this->form_validation->set_rules('race', 'Field-3','required');
-		$this->form_validation->set_rules('fat', 'Field-4','required');
-		$this->form_validation->set_rules('biceps', 'Field-5','required');
-		$this->form_validation->set_rules('upper', 'Field-6','required');
-		$this->form_validation->set_rules('mid', 'Field-7','required');
-		$this->form_validation->set_rules('buttocks', 'Field-8','required');
-		$this->form_validation->set_rules('hips', 'Field-9','required');
-		$this->form_validation->set_rules('waist', 'Field-10','required');
-		$this->form_validation->set_rules('chest', 'Field-11','required');
-		$this->form_validation->set_rules('calves', 'Field-12','required');
-		$this->form_validation->set_rules('handed', 'Field-13','required');
-		$this->form_validation->set_rules('posture', 'Field-14','required');
-		$this->form_validation->set_rules('body', 'Field-15','required');
-		$this->form_validation->set_rules('parent', 'Field-16','required');
-		$this->form_validation->set_rules('loss', 'Field-17','required');
-		$this->form_validation->set_rules('problem', 'Field-18','required');
-		$this->form_validation->set_rules('rockport', 'Field-19','required');
-		$this->form_validation->set_rules('step', 'Field-20','required');
-		$this->form_validation->set_rules('resting', 'Field-17','required');
-		$this->form_validation->set_rules('cardio', 'Field-18','required');
-		$this->form_validation->set_rules('strength', 'Field-19','required');
-		$this->form_validation->set_rules('flexibility', 'Field-20','required');
-		$this->form_validation->set_rules('devoted', 'Field-17','required');
-		$this->form_validation->set_rules('current', 'Field-18','required');
-		$this->form_validation->set_rules('energy', 'Field-19','required');
-
-		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->form_validation->set_message('required', 'Enter %s');
-
-		if(isset($_POST['tfa_button']) && $this->form_validation->run()){
-			$this->users_model->tfa_insert($sess_id);
-			redirect('pages/ptc');
-		}
-		$this->load->view('pages/tfa');
-		$this->load->view('templates/footer');
-	}
-
-	function ptc() {
-		$sess_id = $this->session->userdata('id');
-		$this->load->view('templates/header');
-
-		$this->form_validation->set_rules('investment', 'Total Investment','required');
-		$this->form_validation->set_rules('method', 'Method of Payment','required');
-		$this->form_validation->set_rules('print1', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-		$this->form_validation->set_rules('sign1', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-		
-		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->form_validation->set_message('required', 'Enter %s');
-
-		if(isset($_POST['ptc_button']) && $this->form_validation->run()){
-			$this->users_model->ptc_insert($sess_id);
-			redirect('pages/community');
-		}
-		$this->load->view('pages/ptc');
-		$this->load->view('templates/footer');
-	}
-
-	function community() {
-		$sess_id = $this->session->userdata('id');
-		$this->load->view('templates/header');
-		$this->form_validation->set_rules('name1', 'Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
-		$this->form_validation->set_rules('full_name1', 'Plus-One Full Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
-		$this->form_validation->set_rules('contact1', 'Plus-One Contact Number','required|regex_match[/^[0]?[6789]\d{9}$/]');
-		$this->form_validation->set_rules('relationship1', 'Plus-One Relationship','required');
-		//$this->form_validation->set_rules('email1', 'Plus-One Email','regex_match[/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/]');
-		$this->form_validation->set_rules('full_name2', 'Plus-One Full Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
-		$this->form_validation->set_rules('contact2', 'Plus-One Contact Number','required|regex_match[/^[0]?[6789]\d{9}$/]');
-		$this->form_validation->set_rules('relationship2', 'Plus-One Relationship','required');
-		//$this->form_validation->set_rules('email2', 'Plus-One Email','regex_match[/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/]');
-
-		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->form_validation->set_message('required', 'Enter %s');
-
-		if(isset($_POST['community_button']) && $this->form_validation->run()){
-			$this->users_model->community_insert($sess_id);
-			redirect('pages/agreement');
-		}
-		$this->load->view('pages/community');
-		$this->load->view('templates/footer');	
-	}
-
-	function agreement() {
-		$sess_id = $this->session->userdata('id');
-		$this->load->view('templates/header');
-		$this->form_validation->set_rules('name2', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
-		$this->form_validation->set_rules('print2', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-		$this->form_validation->set_rules('sign2', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-
-		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->form_validation->set_message('required', 'Enter %s');
-
-		if(isset($_POST['agreement_button']) && $this->form_validation->run()){
-			$this->users_model->agreement_insert($sess_id);
-			redirect(base_url());
-		}
-		$this->load->view('pages/agreement');
-		$this->load->view('templates/footer');	
 	}
 
 	function profile(){
@@ -313,6 +159,9 @@ class Pages extends CI_Controller {
 			$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
 			$this->form_validation->set_rules('shift', 'Shift','required');
 			$this->form_validation->set_rules('address1', 'Address','required');
+
+			$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+			$this->form_validation->set_message('required', 'Enter %s');
 
 			if($this->form_validation->run()){
 				$config['upload_path'] = './main/images/';
@@ -373,7 +222,8 @@ class Pages extends CI_Controller {
 			$this->form_validation->set_rules('option30', 'Field-30','required');
 			$this->form_validation->set_rules('option31', 'Field-31','required');
 			$this->form_validation->set_rules('sign', 'Sign name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-
+			$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+			$this->form_validation->set_message('required', 'Enter %s');
 			if($this->form_validation->run()){
 				$this->users_model->medical_data($sess_id);
 			}
@@ -407,7 +257,8 @@ class Pages extends CI_Controller {
 			$this->form_validation->set_rules('devoted', 'Field-17','required');
 			$this->form_validation->set_rules('current', 'Field-18','required');
 			$this->form_validation->set_rules('energy', 'Field-19','required');
-
+			$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+			$this->form_validation->set_message('required', 'Enter %s');
 			if($this->form_validation->run()){
 				$this->users_model->tfa_insert($sess_id);
 			}
@@ -418,7 +269,8 @@ class Pages extends CI_Controller {
 			$this->form_validation->set_rules('method', 'Method of Payment','required');
 			$this->form_validation->set_rules('print1', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 			$this->form_validation->set_rules('sign1', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-
+			$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+			$this->form_validation->set_message('required', 'Enter %s');
 			if($this->form_validation->run()){
 				$this->users_model->ptc_insert($sess_id);
 			}
@@ -432,7 +284,8 @@ class Pages extends CI_Controller {
 			$this->form_validation->set_rules('full_name2', 'Plus-One Full Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
 			$this->form_validation->set_rules('contact2', 'Plus-One Contact Number','required|regex_match[/^[0]?[6789]\d{9}$/]');
 			$this->form_validation->set_rules('relationship2', 'Plus-One Relationship','required');
-
+			$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+			$this->form_validation->set_message('required', 'Enter %s');
 			if($this->form_validation->run()){
 				$this->users_model->community_insert($sess_id);
 			}
@@ -442,7 +295,8 @@ class Pages extends CI_Controller {
 			$this->form_validation->set_rules('name2', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
 			$this->form_validation->set_rules('print2', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 			$this->form_validation->set_rules('sign2', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
- 
+			$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+			$this->form_validation->set_message('required', 'Enter %s');
 			if($this->form_validation->run()){
 				$this->users_model->agreement_insert($sess_id);
 			}
@@ -464,6 +318,5 @@ class Pages extends CI_Controller {
 			$query = $this->db->get();
 			return $query->row_array();
 	}
-
 	
 }

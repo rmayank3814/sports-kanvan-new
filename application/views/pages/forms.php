@@ -66,7 +66,7 @@
 			<div class="tabbable-panel">
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs ">
-						<li class = "active">
+						<li class='active'>
 							<a href="#tab_default_1" data-toggle="tab" >Medical </a>
 						</li>
 						<li>
@@ -84,7 +84,7 @@
 					</ul>
 
 <div class="tab-content">
-<div class="tab-pane" id="tab_default_1">
+<div class="tab-pane active" id="tab_default_1">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
