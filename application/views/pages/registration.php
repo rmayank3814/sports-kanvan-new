@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<!-- <div style="margin-top:100px"> -->
     <div class="py-5 global-container" id="section-quote">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -101,4 +101,4 @@
     </div>
 </div>
 </div>
-</div>
+<!-- </div> -->

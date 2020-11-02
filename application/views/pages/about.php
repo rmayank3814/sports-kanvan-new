@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<!-- <div style="margin-top:100px"> -->
 <section class="mt-5 mb-5">
     <div class="py-1">
         <div class="container">
@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="col-md-5 col-md-5">
-                    <img src="<?php echo base_url();?>main/images/sports-1.jpg" alt=".." class="img-fluid" />
+                    <img src="<?php echo base_url();?>main/images/sports-1.jpg" alt="sports-fitness" class="img-fluid" />
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                                 <h3 class="heading-title text-center pb-5">What  Choose ?</h3>
                             </div>
                             <div class="col-md-6">
-                        <img src="<?php echo base_url();?>main/images/fit.gif" alt=".." class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
+                        <img src="<?php echo base_url();?>main/images/fit.gif" alt="up and down sports" class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
                         </div>
                         <div class="col-md-6 align-self-center wow fadeInRight" data-wow-delay="0.2s">
                             <h3 class="my-2 heading-terinary">Awesome with Ordinary Flexibility</h3>
@@ -113,4 +113,4 @@
             </div>
         </div>
     </div>
-</div>
+<!-- </div> -->

@@ -1,4 +1,4 @@
-<div class="image-about-banner" style="margin-top:120px">
+<div class="image-about-banner">
 <div class="global-container" id="section-quote">
     <div class="container">
         <div class="row d-flex justify-content-center">

@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<!-- <div style="margin-top:100px"> -->
 
     <div class="py-5 mt-3 global-container">
         <div class="container">
@@ -72,5 +72,5 @@
             <?php echo form_close(); ?>
         </div>
     </div>
-</div>
+<!-- </div> -->
 

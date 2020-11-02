@@ -2855,10 +2855,21 @@ button {
                         font-size: 16px;
                         font-weight: 600;
                     }
-                    .profile_size{
-                        width:230px;
-                        height:230px;
+                    
+                    .profile_size {
+                        width: 230px;
+                        height: 230px;
                     }
-                    .top_space{
-                        margin-top:120px;
+                    
+                    .top_space {
+                        margin-top: 120px;
+                    }
+                    
+                    .top {
+                        padding-top: 100px;
+                        padding-bottom: 100px
+                    }
+                    
+                    .image-about-banner {
+                        margin-top: 30px;
                     }

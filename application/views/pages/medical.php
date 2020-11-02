@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<!-- <div style="margin-top:100px"> -->
 <div class="global-container">
     <div class="container">
         <div class="row">
@@ -529,5 +529,5 @@
 </div>
 </div>
 </div>
-</div>
+<!-- </div> -->
            

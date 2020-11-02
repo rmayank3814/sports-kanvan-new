@@ -6,7 +6,7 @@
 
     </style>
 
-<div class="image-about-banner" style="margin-top:100px">
+<div class="image-about-banner">
 <div class="global-container ">
 <section class="our-blog mt-5 pb-5">
         <div class="container">
@@ -17,7 +17,7 @@
             <div class="row mt-5">
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="card">
-                        <img src="<?php echo base_url();?>main/images/forwad.gif" alt=".." class="img-fluid ">
+                        <img src="<?php echo base_url();?>main/images/blog-4.gif" alt="forward exercise sports" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -34,7 +34,7 @@
 
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="card">
-                        <img src="<?php echo base_url();?>main/images/exercise-2.gif" alt=".." class="img-fluid ">
+                        <img src="<?php echo base_url();?>main/images/exercise-2.gif" alt="pushup sports" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -51,7 +51,7 @@
 
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="card">
-                        <img src="<?php echo base_url();?>main/images/forwad.gif" alt=".." class="img-fluid ">
+                        <img src="<?php echo base_url();?>main/images/forwad.gif" alt="finess exercise" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="card">
-                        <img src="<?php echo base_url();?>main/images/fit.gif" alt=".." class="img-fluid ">
+                        <img src="<?php echo base_url();?>main/images/fit.gif" alt="fitness player" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -110,7 +110,7 @@
                                     11 March 2020 <span class="author">By Abbos</span>
                                 </p>
                                 <p class="card-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vero eaque animi pariatur fugit excepturi, fuga delectus facere provident beatae.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vero eaque animi pariatur fugit excepturi, fuga delectus facere provident beatae.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vero eaque animi pariatur.vero eaque animi pariatur 
                                 </p>
                             </div>
                         </div>

@@ -44,23 +44,23 @@ ul.nav.nav-tabs {
   border-bottom: 3px solid #32465B;
   position: relative;
 }
-.tabbable-line > .nav-tabs > li.active > a {
+/* .tabbable-line > .nav-tabs > li.active > a {
   border: 0;
   color: #333333;
-}
-.tabbable-line > .nav-tabs > li.active > a > i {
+} */
+/* .tabbable-line > .nav-tabs > li.active > a > i {
   color: #404040;
-}
+} */
 .tabbable-line > .tab-content {
   margin-top: 31px;
-  background-color: #fff;
+  /* background-color: #fff;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #eee; */
   /* padding: 15px 0; */
 }
-.portlet .tabbable-line > .tab-content {
+/* .portlet .tabbable-line > .tab-content {
   padding-bottom: 0;
-}
+} */
 
 </style>
 
@@ -933,8 +933,6 @@ ul.nav.nav-tabs {
                     <li><b>2.</b> Clients arriving late will receive the remaining scheduled session time, unless other arrangements have been previously made with the trainer.</li>
                     <li><b>3.</b> No personal & group training refunds will be issued for any reason, including but not limited to relocation, illness, and unused sessions.
                     </li>
-                    <li></li>
-                    <li></li>
                 </ol>
                 <p></p>
                 <p></p>

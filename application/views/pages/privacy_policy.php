@@ -1,4 +1,4 @@
- <div class="image-about-banner" style="margin-top:100px">
+ <div class="image-about-banner">
     <div class="container">
     <div class="pt-5 pb-5">
         <h4 class="mb-3">This privacy policy discloses the privacy practices for (Kanvan Sports powered by Kanvan Business Solutions Pvt Ltd). This privacy policy applies solely to information collected by this web site. It will notify you of the following</h4>

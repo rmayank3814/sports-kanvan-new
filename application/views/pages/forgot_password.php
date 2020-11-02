@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<div class="image-about-banner" style="margin-top:100px">
+<!-- <div class="image-about-banner" style="margin-top:100px"> -->
 <div id="main">
 <div id="login">
 <?php echo @$error; ?>
@@ -20,6 +20,6 @@
 </form>
 </div>
 </div>
-</div>
+<!-- </div> -->
 </body>
 </html>

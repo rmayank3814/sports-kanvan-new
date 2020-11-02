@@ -9,10 +9,10 @@
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.2s">
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">INFORMATION</h4>
-                                <a href="<?php echo base_url();?>index.php/pages/about">About Us</a>
-                                <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonials</a>
-                                <a href="<?php echo base_url();?>index.php/pages/contact">Contact Us</a>
-                                <a href="<?php echo base_url();?>index.php/pages/faq">FAQ</a>
+                                <a href="<?php echo base_url();?>index.php/pages/about" title="about us">About Us</a>
+                                <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonials">Testimonials</a>
+                                <a href="<?php echo base_url();?>index.php/pages/contact" title="contact us">Contact Us</a>
+                                <a href="<?php echo base_url();?>index.php/pages/faq" title="faq">FAQ</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -24,9 +24,9 @@
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.2s">
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">POLICIES</h4>
-                                <a href="<?php echo base_url();?>index.php/pages/privacy_policy">Privacy Policy</a>
-                                <a href="<?php echo base_url();?>index.php/pages/testimonial">Testimonial</a>
-                                <a href="#">What we do</a>
+                                <a href="<?php echo base_url();?>index.php/pages/privacy_policy" title="privacy policy">Privacy Policy</a>
+                                <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonial">Testimonial</a>
+                                <a href="<?php echo base_url();?>index.php/pages/blog" title="blog">Blog</a>
                                 <a href="#">Careers</a>
                             </div>
                             <!-- end /.footer-menu -->
@@ -39,12 +39,13 @@
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.3s">
                             <div class="footer-menu ">
                                 <h4 class="footer-widget-title border-link">SPORTS FORMS</h4>
-                                <a href="<?php echo base_url();?>index.php/pages/registration">Registration</a>
-                                <a href="<?php echo base_url();?>index.php/pages/medical">Medical </a>
-                                <a href="<?php echo base_url();?>index.php/pages/tfa">Training Fitness</a>
-                                <a href="<?php echo base_url();?>index.php/pages/ptc">Personal Training</a>
-                                <a href="<?php echo base_url();?>index.php/pages/community">Fitness Community</a>
-                                <a href="<?php echo base_url();?>index.php/pages/agreement">Indemnity Agreement</a>
+                                <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonial">Testimonial</a>
+                                <a href="<?php echo base_url();?>index.php/pages/registration" title="registration">Registration</a>
+                                <a href="<?php echo base_url();?>index.php/pages/medical" title="medical">Medical </a>
+                                <a href="<?php echo base_url();?>index.php/pages/tfa" title="tranning fitness">Training Fitness</a>
+                                <a href="<?php echo base_url();?>index.php/pages/ptc" title="personal traning">Personal Training</a>
+                                <a href="<?php echo base_url();?>index.php/pages/community" title="fitness community">Fitness Community</a>
+                                <a href="<?php echo base_url();?>index.php/pages/agreement" title="indemnity aggrement">Indemnity Agreement</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -55,15 +56,16 @@
                     <div class="col-md-3 col-sm-4 ">
                         <div class="contact-widget wow fadeInDown" data-wow-delay="0.4s">
                             <h4 class="footer-widget-title border-link">CONTACT US</h4>
-                            <p><i class="fas fa-map-marked-alt"></i>&nbsp; B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
+                            <p><i class="fas fa-map-marked-alt" title="B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307"></i>&nbsp; B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
                             <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9871587820</p>
+                            <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9911445549</p>
                             <p>
                                 <i class="fas fa-globe-americas"></i>
-                                <a href="#" class="social-linking">&nbsp; www.kanvan.in</a>
+                                <a href="#" class="social-linking" title="kanvan.in">&nbsp; www.kanvan.in</a>
                             </p>
                             <p>
                                 <i class="fas fa-envelope-open-text"></i>
-                                <a href="#" class="social-linking">&nbsp; info@kanvan.in</a>
+                                <a href="#" class="social-linking" title="info@kanvan.in">&nbsp; info@kanvan.in</a>
                             </p>
                         </div>
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.5s">
@@ -91,7 +93,7 @@
                 <div class="copyright-text wow fadeInDown" data-wow-delay="0.5s " style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
                     <p>© <?php echo date('Y'); ?> . All rights reserved.
                     </p>
-                    <p class="love">Made with <i class="fas fa-heart"></i> .<a href="#" class="text-footer" target="_blank"> Designed by Kanvan Business Solution</a></p>
+                    <p class="love">Made with <i class="fas fa-heart"></i> .<a href="http://www.kanvan.in/" class="text-footer" target="_blank" title="Kanvan Business Solution"> Designed by Kanvan Business Solution</a></p>
                 </div>
             </div>
         </div>

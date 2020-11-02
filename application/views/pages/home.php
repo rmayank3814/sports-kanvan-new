@@ -1,4 +1,4 @@
-           <div class="image-about-banner" style="margin-top:100px">
+           <!-- <div class="image-about-banner" style="margin-top:100px"> -->
            
                 <!-- <div class=""> -->
                     <div class="row">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 <!-- </div> -->
-            </div>
+            <!-- </div> -->
             <marquee class="latest-updates" style="" ><i>Hence, Kanvan Sports Events incorporated with multi Sports players, Gamers, Sports activist, Fitness players, Finest Yoga teachers & all those who can contribute their time, talent, potential & effort in order to help all our Indian Corporate people to feel the pleasure & inner satisfaction just by taking out 1-2 hours on weekends to become a healthy child again & feel the same enthusiasm & energy which were lost somewhere due to daily hectic life.</i></marquee>
             <!-- <marquee behavior="scroll" direction="up" scrollamount="1">Slow Scrolling</marquee> -->
 <!-- <marquee behavior="scroll" direction="right" scrollamount="12">Little Fast Scrolling It is being noticed that we are not taking time towards maintaining our health & peace of our mind due to many rigorous responsibilities</marquee>

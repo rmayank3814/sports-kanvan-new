@@ -59,26 +59,26 @@
                                  
                                     <?php } else { ?>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>">Home</a>
+                                            <a class="nav-link" alt="kanvan sports" href="<?php echo base_url();?>">Home</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >Sports Form</a>
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" alt="Sports" >Sports Form</a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/medical">Medical</a>
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/tfa">Training Fitness</a>
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/ptc">Personal Training</a>
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/community">Fitness Community</a>
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/agreement">Indemnity Agreement</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/medical"  title="medical">Medical</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/tfa" title="Fitness">Training Fitness</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/ptc"  title="Personal Training">Personal Training</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/community"  title="Fitness Community">Fitness Community</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/agreement" title="Indemnity Agreement">Indemnity Agreement</a>
                                             </div>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
+                                            <a class="nav-link" title="Change Password" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
                                         </li>
 
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >My Account</a>
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="<?php echo base_url();?>index.php/pages/login" >My Account</a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
+                                                <a class="dropdown-item" title="view profile" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
                                             </div>
                                         </li>
