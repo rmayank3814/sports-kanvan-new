@@ -111,7 +111,7 @@ class Pages extends CI_Controller {
 			$user = $query->row_array();
 			if(!empty($user)) {
 				$this->session->set_userdata($user);
-				redirect('pages/medical');
+				redirect(base_url());
 			} 	
 		}
 		$this->load->view('pages/login');
@@ -175,7 +175,7 @@ class Pages extends CI_Controller {
 			$session_id = $this->session->userdata('id');
 			$new_pass = md5($this->input->post('new_pass'));
 			$this->users_model->change_pass($session_id,$new_pass);
-			redirect();
+			redirect(base_url(),'refresh');
 		}
 		$this->load->view('pages/change_password');
 		$this->load->view('templates/footer');
@@ -240,8 +240,8 @@ class Pages extends CI_Controller {
 
 		$this->form_validation->set_rules('investment', 'Total Investment','required');
 		$this->form_validation->set_rules('method', 'Method of Payment','required');
-		$this->form_validation->set_rules('print', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-		$this->form_validation->set_rules('sign', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('print1', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('sign1', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 		
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$this->form_validation->set_message('required', 'Enter %s');
@@ -257,7 +257,7 @@ class Pages extends CI_Controller {
 	function community() {
 		$sess_id = $this->session->userdata('id');
 		$this->load->view('templates/header');
-		$this->form_validation->set_rules('name', 'Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
+		$this->form_validation->set_rules('name1', 'Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
 		$this->form_validation->set_rules('full_name1', 'Plus-One Full Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
 		$this->form_validation->set_rules('contact1', 'Plus-One Contact Number','required|regex_match[/^[0]?[6789]\d{9}$/]');
 		$this->form_validation->set_rules('relationship1', 'Plus-One Relationship','required');
@@ -281,9 +281,9 @@ class Pages extends CI_Controller {
 	function agreement() {
 		$sess_id = $this->session->userdata('id');
 		$this->load->view('templates/header');
-		$this->form_validation->set_rules('name', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
-		$this->form_validation->set_rules('print', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-		$this->form_validation->set_rules('sign', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('name2', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
+		$this->form_validation->set_rules('print2', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('sign2', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$this->form_validation->set_message('required', 'Enter %s');
@@ -406,8 +406,8 @@ class Pages extends CI_Controller {
 		if(isset($_POST['ptc_update'])){
 			$this->form_validation->set_rules('investment', 'Total Investment','required');
 			$this->form_validation->set_rules('method', 'Method of Payment','required');
-			$this->form_validation->set_rules('print', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-			$this->form_validation->set_rules('sign', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+			$this->form_validation->set_rules('print1', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+			$this->form_validation->set_rules('sign1', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 
 			if($this->form_validation->run()){
 				$this->users_model->ptc_insert($sess_id);
@@ -415,7 +415,7 @@ class Pages extends CI_Controller {
 		}
 
 		if(isset($_POST['community_update'])){
-			$this->form_validation->set_rules('name', 'Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
+			$this->form_validation->set_rules('name1', 'Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
 			$this->form_validation->set_rules('full_name1', 'Plus-One Full Name','required|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
 			$this->form_validation->set_rules('contact1', 'Plus-One Contact Number','required|regex_match[/^[0]?[6789]\d{9}$/]');
 			$this->form_validation->set_rules('relationship1', 'Plus-One Relationship','required');
@@ -429,9 +429,9 @@ class Pages extends CI_Controller {
 		}
 
 		if(isset($_POST['agreement_update'])){
-			$this->form_validation->set_rules('name', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
-			$this->form_validation->set_rules('print', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-			$this->form_validation->set_rules('sign', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+			$this->form_validation->set_rules('name2', 'Full Name','required|min_length[2]|max_length[50]|regex_match[/^[a-zA-Z]+(?:\s[a-zA-Z]+)+$/]');
+			$this->form_validation->set_rules('print2', 'Print Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+			$this->form_validation->set_rules('sign2', 'Sign Name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
  
 			if($this->form_validation->run()){
 				$this->users_model->agreement_insert($sess_id);
@@ -447,10 +447,10 @@ class Pages extends CI_Controller {
 			$this->db->select('*');
 			$this->db->from('users, medical,tfa,ptc,community,agreement');
 			$this->db->where('medical.sess_id = users.id');
-			$this->db->where('tfa.sess_id = users.id');
-			$this->db->where('ptc.sess_id = users.id');
-			$this->db->where('community.sess_id = users.id');
-			$this->db->where('agreement.sess_id = users.id');
+			$this->db->where('tfa.sess_id = medical.sess_id');
+			$this->db->where('ptc.sess_id = tfa.sess_id');
+			$this->db->where('community.sess_id = ptc.sess_id');
+			$this->db->where('agreement.sess_id = community.sess_id');
 			$query = $this->db->get();
 			return $query->row_array();
 		}

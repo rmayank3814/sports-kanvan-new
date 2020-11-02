@@ -14,8 +14,8 @@
                                 <?php echo validation_errors();?>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
-                                            <label class="label-input" for="name">YOUR NAME:<span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="name" id="name" value="<?php //echo $name;?>" required>
+                                            <label class="label-input" for="name1">YOUR NAME:<span class="text-danger font-weight-medium">*</span></label>
+                                            <input class="form-control" type="text" name="name1" id="name1" value="<?php echo $name1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Your Name is required.
                                             </div>

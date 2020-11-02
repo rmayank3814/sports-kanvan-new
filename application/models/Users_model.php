@@ -143,8 +143,8 @@ class Users_model extends CI_Model {
             'sess_id' => $sess_id,
             'investment' => $this->input->post('investment'),
             'method' => $this->input->post('method'),
-            'print' => $this->input->post('print'),
-            'sign' => $this->input->post('sign'),
+            'print1' => $this->input->post('print1'),
+            'sign1' => $this->input->post('sign1'),
         );
         $this->db->select("*");
         $this->db->from('ptc');
@@ -164,9 +164,9 @@ class Users_model extends CI_Model {
     function agreement_insert($sess_id){
         $data = array(
             'sess_id' => $sess_id,
-            'print' => $this->input->post('print'),
-            'sign' => $this->input->post('sign'),
-            'name' => $this->input->post('name')
+            'print2' => $this->input->post('print2'),
+            'sign2' => $this->input->post('sign2'),
+            'name2' => $this->input->post('name2')
         );
         $this->db->select("*");
         $this->db->from('agreement');
@@ -186,7 +186,7 @@ class Users_model extends CI_Model {
     function community_insert($sess_id){
         $data = array(
             'sess_id' => $sess_id,
-            'name' => $this->input->post('name'),
+            'name1' => $this->input->post('name1'),
             'full_name1' => $this->input->post('full_name1'),
             'contact1' => $this->input->post('contact1'),
             'relationship1' => $this->input->post('relationship1'),
