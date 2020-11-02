@@ -225,15 +225,11 @@ class Users_model extends CI_Model {
             'gender' => $this->input->post('gender'),
             'profile_image' => $this->input->post('profile_image')
         );  
-
         $this->db->select("*");
         $this->db->from('users');
         $this->db->where('id', $sess_id);
+        $this->db->set($data);
         return $this->db->update('users',$data);
-    }
-
-    function medical_update($sess_id){
-
     }
 
 }

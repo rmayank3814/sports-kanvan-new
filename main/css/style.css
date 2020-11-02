@@ -2855,3 +2855,7 @@ button {
                         font-size: 16px;
                         font-weight: 600;
                     }
+                    .profile_size{
+                        width:230px;
+                        height:230px;
+                    }
