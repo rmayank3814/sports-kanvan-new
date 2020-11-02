@@ -29,7 +29,7 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="investment">Total investment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="number" name="investment" id="investment" value="<?php //echo $investment; ?>" required>
+                                        <input class="form-control" type="number" name="investment" id="investment" value="<?php echo $investment; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Total Investment is required.
                                         </div>

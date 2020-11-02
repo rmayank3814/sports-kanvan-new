@@ -70,7 +70,7 @@ ul.nav.nav-tabs {
 			<div class="tabbable-panel">
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs ">
-						<li class = "active">
+						<li class='active'>
 							<a href="#tab_default_1" data-toggle="tab" >Medical </a>
 						</li>
 						<li>

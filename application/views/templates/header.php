@@ -21,9 +21,7 @@
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
      <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> 
-     <!-- Bootstrap Date-Picker Plugin -->
-    <!-- <script src="<?php echo base_url();?>others/js/jquery-validation.js "></script>
-    <script src="<?php echo base_url();?>others/js/jquery-3.1.1.js "></script> -->
+  
 </head>
     <body>
         <div class="hero-anime">
@@ -65,13 +63,10 @@
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/forms">Sport Forms</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="Change Password" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
-                                        </li>
-
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" >My Account</a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" title="view profile" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/change_password"> Change Password</a>
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
                                             </div>
                                         </li>
