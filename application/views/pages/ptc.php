@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label class="label-input" for="method">Method of payment <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="method" id="method" value="<?php //echo $method; ?>" required>
+                                        <input class="form-control" type="text" name="method" id="method" value="<?php echo $method; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Payment method is required.
                                         </div>
@@ -44,15 +44,15 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="print" id="print" value="<?php //echo $print; ?>" required>
+                                        <label class="label-input" for="print1">Print Name <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="text" name="print1" id="print1" value="<?php echo $print1; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Print Name is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="sign" id="sign" value="<?php //echo $sign; ?>" required>
+                                        <label class="label-input" for="sign1">Sign Name <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="text" name="sign1" id="sign1" value="<?php echo $sign1; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Sign Name is required.
                                         </div>

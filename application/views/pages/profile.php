@@ -657,7 +657,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label>32) Sign Name (Type your name) *</label>
+                        <label>32) Sign Name (Type your name) <span class="error-medical"> *</span></label>
                         <input type="text" name="sign" id="sign" value="<?php echo $sign ?>" class="form-control" />
                     </div>
                 </div>
@@ -958,15 +958,15 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="print" id="print" value="<?php echo $print; ?>" required>
+                                        <label class="label-input" for="print1">Print Name <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="text" name="print1" id="print1" value="<?php echo $print1 ; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Print Name is required.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                                        <input class="form-control" type="text" name="sign" id="sign" value="<?php echo $sign; ?>" required>
+                                        <label class="label-input" for="sign1">Sign Name <span class="text-danger font-weight-medium">*</span></label>
+                                        <input class="form-control" type="text" name="sign1" id="sign1" value="<?php echo $sign1 ; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Sign Name is required.
                                         </div>
@@ -1000,8 +1000,8 @@
                                 <?php echo validation_errors();?>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
-                                            <label class="label-input" for="name">YOUR NAME:<span class="text-danger font-weight-medium">*</span></label>
-                                            <input class="form-control" type="text" name="name" id="name" value="<?php echo $name;?>" required>
+                                            <label class="label-input" for="name1">YOUR NAME:<span class="text-danger font-weight-medium">*</span></label>
+                                            <input class="form-control" type="text" name="name1" id="name1" value="<?php echo $name1;?>" required>
                                             <div class="invalid-feedback">
                                                 Valid Your Name is required.
                                             </div>
@@ -1140,22 +1140,22 @@
         <div class="mt-5 mb-3">
         <div class='row'>
             <div class="col-lg-4 ">
-                <label for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="print" name="print" value="<?php echo $print;?>"><br>
+                <label for="print2">Print Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="print2" name="print2" value="<?php echo $print2;?>"><br>
                 <div class="invalid-feedback">
                     Valid Print Name is required.
                 </div>
             </div>
             <div class="col-lg-4">
-                <label for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="sign" name="sign" value="<?php echo $sign;?>"><br>
+                <label for="sign2">Sign Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="sign2" name="sign2" value="<?php echo $sign2;?>"><br>
                 <div class="invalid-feedback">
                     Valid Sign Name is required.
                 </div>
             </div>
             <div class="col-lg-4">
-                <label for="name">Full Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="name" name="name" value="<?php echo $name;?>"><br>
+                <label for="name2">Full Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="name2" name="name2" value="<?php echo $name2;?>"><br>
                 <div class="invalid-feedback">
                     Valid Full Name is required.
                 </div>

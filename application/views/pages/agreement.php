@@ -49,19 +49,19 @@
         <div class="mt-5 mb-3">
         <div class='row'>
             <div class="col-lg-4 ">
-                <?php echo form_error('print', '<div class="error text-center pb-2">', '</div>'); ?>
-                <label for="print">Print Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="print" name="print" value="<?php //echo $print;?>"><br>
+                <?php echo form_error('print2', '<div class="error text-center pb-2">', '</div>'); ?>
+                <label for="print2">Print Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="print2" name="print2" value="<?php echo $print2 ;?>"><br>
             </div>
             <div class="col-lg-4">
-                <?php echo form_error('sign', '<div class="error text-center pb-2">', '</div>'); ?>
-                <label for="sign">Sign Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="sign" name="sign" value="<?php //echo $sign;?>"><br>
+                <?php echo form_error('sign2', '<div class="error text-center pb-2">', '</div>'); ?>
+                <label for="sign2">Sign Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="sign2" name="sign2" value="<?php echo $sign2 ;?>"><br>
             </div>
             <div class="col-lg-4">
-                <?php echo form_error('name', '<div class="error text-center pb-2">', '</div>'); ?>
-                <label for="name">Full Name <span class="text-danger font-weight-medium">*</span></label>
-                <input type="text" id="name" name="name" value="<?php //echo $name;?>"><br>
+                <?php echo form_error('name2', '<div class="error text-center pb-2">', '</div>'); ?>
+                <label for="name2">Full Name <span class="text-danger font-weight-medium">*</span></label>
+                <input type="text" id="name2" name="name2" value="<?php echo $name2 ;?>"><br>
             </div>
         </div>
         </div>

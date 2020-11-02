@@ -74,9 +74,7 @@
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
                                         </li>
-                                        <!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php// echo base_url();?>index.php/pages/logout">Logout</a>
-                                        </li> -->
+
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>index.php/pages/login" >My Account</a>
                                             <div class="dropdown-menu">
@@ -93,4 +91,14 @@
                 </div>
             </div>
         </div>
-            
+
+<div class="top_space">
+
+<div class="alert alert-success" role="alert">
+  This is a success alert—check it out!
+</div>
+<div class="alert alert-danger" role="alert">
+  This is a danger alert—check it out!
+</div>
+
+</div>
