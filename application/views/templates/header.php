@@ -63,13 +63,10 @@
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/forms">Sport Forms</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php echo base_url();?>index.php/pages/change_password">Change Password</a>
-                                        </li>
-
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" >My Account</a>
                                             <div class="dropdown-menu">
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
+                                                <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/change_password"> Change Password</a>
                                                 <a class="dropdown-item" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
                                             </div>
                                         </li>
