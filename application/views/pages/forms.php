@@ -1,7 +1,5 @@
 <style>
-.spaces {
-    margin-left: 20px;
-}
+
 .tabbable-panel {
   border:1px solid #eee;
   padding: 10px;
@@ -19,15 +17,11 @@ ul.nav.nav-tabs {
   font-weight: bold;
 }
 .tabbable-line > .nav-tabs > li > a {
-  border: 0;
-  margin-right: 0;
+
   color: #737373;
 }
-.tabbable-line > .nav-tabs > li > a > i {
-  color: #a6a6a6;
-}
 .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 3px solid rgb(80,144,247);
+  border-bottom: 2px solid #32c3f1;
 }
 .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
   border: 0;
@@ -41,32 +35,19 @@ ul.nav.nav-tabs {
   margin-top: 0px;
 }
 .tabbable-line > .nav-tabs > li.active {
-  border-bottom: 3px solid #32465B;
+  border-bottom: 2px solid #32465B;
   position: relative;
 }
-/* .tabbable-line > .nav-tabs > li.active > a {
-  border: 0;
-  color: #333333;
-} */
-/* .tabbable-line > .nav-tabs > li.active > a > i {
-  color: #404040;
-} */
 .tabbable-line > .tab-content {
   margin-top: 31px;
-  /* background-color: #fff;
-  border: 0;
-  border-top: 1px solid #eee; */
-  /* padding: 15px 0; */
 }
-/* .portlet .tabbable-line > .tab-content {
-  padding-bottom: 0;
-} */
 
 </style>
 
 <div class="container" style="margin-top:120px">
     <div class="row">
         <div class="col-md-12">
+        <div class="mb-5">
 			<div class="tabbable-panel">
 				<div class="tabbable-line">
 					<ul class="nav nav-tabs ">
@@ -1084,6 +1065,7 @@ ul.nav.nav-tabs {
 		</div>
         </div>
 	</div>
+</div>
 </div>
 </div>
 </div>

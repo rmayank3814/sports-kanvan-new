@@ -10,6 +10,7 @@
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
+                                            <a class="btn-text" href="" title="">View more</a>
                                         </div>
                                         
                                     </div>
@@ -17,6 +18,7 @@
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
+                                            <a class="btn-text" href="" title="">View more</a>
                                         </div>
                                         
                                     </div>
@@ -24,35 +26,28 @@
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item" style="background: #52c;">
-                                        <div class="caption">
-                                            <h1>Something and share your whatever</h1>
-                                            <h2>Else it easy for you to do whatever this thing does.</h2>
-
-                                            <a class="big-button" href="" title="">Create Project</a>
-                                            <div class="clear"></div>
-                                            <a class="view-demo" href="" title="">View Demo</a>
+                                            <a class="btn-text" href="" title="">View more</a>
                                         </div>
                                     </div>
                                     <div class="carousel-item" style="background-image: url('main/images/banner-4.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
+                                            <a class="btn-text" href="" title="">View more</a>
                                         </div>
                                     </div>
                                     <div class="carousel-item" style="background-image: url('main/images/banner-5.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
+                                            <a class="btn-text" href="" title="">View more</a>
                                         </div>
                                     </div>
                                     <div class="carousel-item" style="background-image: url('main/images/banner-2.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
+                                            <a class="btn-text" href="" title="">View more</a>
                                         </div>
                                         
                                     </div>
@@ -178,12 +173,6 @@
                 </div>
 
             </div>
-            <div class="service-half section-gr">
-                <div class="container py-1">
-                    <div class="row">
-                        
-                    </div>
-                </div>
-            </div>
+        
 
    
