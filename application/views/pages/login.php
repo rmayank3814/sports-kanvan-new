@@ -9,11 +9,11 @@
 		<div class="card-text">
 				<div class="form-group">
 					<label for="email">Email address</label>
-					<input type="email" class="form-control form-control-lg" name="email" id="email" aria-describedby="emailHelp" required>
+					<input type="email" class="form-control form-control-lg" name="email" id="email">
 				</div>
 				<div class="form-group">
 					<label for="password">Password</label>
-					<input type="password" name="password" class="form-control form-control-lg" id="password" required>
+					<input type="password" name="password" class="form-control form-control-lg" id="password">
                 </div>
                 <a href="<?php echo base_url();?>index.php/pages/forgot_password" style="float:right;padding-bottom:17px">Forgot password?</a>
 				<br><br>
@@ -23,7 +23,6 @@
 				<div class="sign-up">
 					Don't have an account? <a href="<?php echo base_url();?>index.php/pages/registration">Sign up</a>
 				</div>
-			</form>
         </div>
         <?php echo form_close(); ?>
 	</div>

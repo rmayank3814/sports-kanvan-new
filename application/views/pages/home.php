@@ -1,24 +1,22 @@
            <!-- <div class="image-about-banner" style="margin-top:100px"> -->
-           
-                <!-- <div class=""> -->
                     <div class="row">
                         <div class="col">
                             <br/>
                             <div id="carousel" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item" style="background-image: url('main/images/banner-7.jpg'); background-size: cover;">
+                                <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-7.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more</a>
+                                            <a class="btn-text" href="" title="">View more <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                         
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('main/images/sports-8.gif'); background-size: cover;">
+                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/sports-8.gif'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more</a>
+                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                         
                                     </div>
@@ -26,28 +24,35 @@
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more</a>
+                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('main/images/banner-4.jpg'); background-size: cover;">
+                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/happy-diwali.gif'); background-size: cover;">
+                                        <div class="caption">
+                                            <!-- <h1>Create and share your whatever</h1>
+                                            <h2>Make it easy for you to do whatever this thing does.</h2> -->
+                                            <!-- <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-4.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more</a>
+                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('main/images/banner-5.jpg'); background-size: cover;">
+                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-5.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more</a>
+                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('main/images/banner-2.jpg'); background-size: cover;">
+                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-2.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more</a>
+                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                         
                                     </div>
@@ -69,13 +74,10 @@
                     </div>
                 <!-- </div> -->
             <!-- </div> -->
-            <marquee class="latest-updates" style="" ><i>Hence, Kanvan Sports Events incorporated with multi Sports players, Gamers, Sports activist, Fitness players, Finest Yoga teachers & all those who can contribute their time, talent, potential & effort in order to help all our Indian Corporate people to feel the pleasure & inner satisfaction just by taking out 1-2 hours on weekends to become a healthy child again & feel the same enthusiasm & energy which were lost somewhere due to daily hectic life.</i></marquee>
-            <!-- <marquee behavior="scroll" direction="up" scrollamount="1">Slow Scrolling</marquee> -->
-<!-- <marquee behavior="scroll" direction="right" scrollamount="12">Little Fast Scrolling It is being noticed that we are not taking time towards maintaining our health & peace of our mind due to many rigorous responsibilities</marquee>
-<marquee behavior="scroll" direction="left" scrollamount="20"> It is being noticed that we are not taking time towards maintaining our health & peace of our mind due to many rigorous responsibilities</marquee> -->
-<marquee behavior="alternate" scrollamount="13">Your bouncing text goes here</marquee>           
-<!--single half section-->
-              <div class="service-half section-gr">
+            <marquee class="latest-updates"><i>Hence, Kanvan Sports Events incorporated with multi Sports players, Gamers, Sports activist, Fitness players, Finest Yoga teachers & all those who can contribute their time, talent, potential & effort in order to help all our Indian Corporate people to feel the pleasure & inner satisfaction just by taking out 1-2 hours on weekends to become a healthy child again & feel the same enthusiasm & energy which were lost somewhere due to daily hectic life.</i></marquee>
+            <marquee behavior="alternate" scrollamount="13">Your bouncing text goes here</marquee>           
+          <!--single half section-->
+              <div class="service-half comman-gr">
                 <div class="container py-1">
                     <div class="row ">
                     <div class="section-head col-sm-12">
@@ -96,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="service-half section-gr">
+            <div class="service-half comman-gr">
                 <div class="container py-1">
                     <div class="row ">
                     <div class="section-head col-sm-12">
@@ -113,13 +115,13 @@
                             <a href="" class="btn-text">View Details →</a>
                         </div>
                         <div class="col-md-5">
-                            <img src="main/images/fitness.gif" alt=".." class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
+                            <img src="main/images/inner-page/fitness.gif" alt=".." class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="service-half section-gr">
+            <div class="service-half comman-gr">
                 <div class="container py-1">
                     <div class="row">
                             <div class="section-head col-sm-12">

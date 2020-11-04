@@ -12,16 +12,17 @@
 
     <!--Custom css-->
     <link rel="stylesheet" href="<?php echo base_url();?>main/css/style.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>vendor/others/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>vendor/others/css/animate.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/others/css/owl.theme.default.min.css">
     
     <!--Font family-->
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/font-family/font-family.css">
     <link rel="stylesheet" href="<?php echo base_url();?>vendor/fonts/Font-Awesome/css/all.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url();?>main/others/css/Font-awesome.css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
-     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script> 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>  -->
      
   
 </head>
@@ -32,7 +33,7 @@
                     <div class="">
                         <div class="col">
                             <nav class="navbar navbar-expand-md navbar-light">
-                                <a class="navbar-brand" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>main/images/logo/kanvan-sports-logo.png" alt="kanvan logo"><span class="logo-title" title="Kanvan sports">Kanvan Sports</span></a>
+                                <a class="navbar-brand"  href="<?php echo base_url();?>"><img src="<?php echo base_url();?>main/images/logo/kanvan-sports-logo-1.svg" alt="kanvan sports logo"><span class="logo-title" title="Kanvan sports">Kanvan Sports</span></a>
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span></button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -59,7 +60,7 @@
                                  
                                     <?php } else { ?>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link"  alt="kanvan logo" href="<?php echo base_url();?>">Home</a>
+                                            <a class="nav-link" href="<?php echo base_url();?>">Home</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" href="<?php echo base_url();?>index.php/pages/forms">Sport Forms</a>

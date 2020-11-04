@@ -1,7 +1,8 @@
 <style>
 
 .tabbable-panel {
-  border:1px solid #eee;
+  /* border:1px solid #eee; */
+  
   padding: 10px;
 }
 ul.nav.nav-tabs {
@@ -43,8 +44,8 @@ ul.nav.nav-tabs {
 }
 
 </style>
-
-<div class="container" style="margin-top:120px">
+<div class="py-5 global-container" id="section-quote">
+<div class="container" >
     <div class="row">
         <div class="col-md-12">
         <div class="mb-5">
@@ -71,7 +72,7 @@ ul.nav.nav-tabs {
 <div class="tab-content">
 <div class="tab-pane active" id="tab_default_1">
     <div class="container">
-        <div class="row">
+        <div class="row card">
             <div class="col-lg-12">
             <h3 class="card text-center mt-5 mb-5">MEDICAL DETAILS</h3>
             <?php echo form_open('pages/forms',array('method' => 'post','novalidate'=>'novalidate')); ?>
@@ -100,9 +101,9 @@ ul.nav.nav-tabs {
         </div>
         <div class="row">
         <div class="col-lg-6">
-                <div class="form-group hidden"  id="explain">
-                    <label for="explain">If yes, explain <span class="error-medical"> *</span></label>
-                    <input type="text" name="explain" id="explain" class="form-control"/>
+                <div class="form-group hidden">
+                    <label>If yes, explain <span class="error-medical"> *</span></label>
+                    <input type="text" name="explain" class="form-control"/>
                 </div>
             </div>
         </div>
@@ -708,7 +709,7 @@ ul.nav.nav-tabs {
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
-                                        <label class="label-input" for=" loss">Weight Loss Desired <span class="text-danger font-weight-medium">*</span></label>
+                                        <label class="label-input" for="loss">Weight Loss Desired<span class="text-danger font-weight-medium">*</span></label>
                                         <input class="form-control" type="text" name="loss" id="loss" value="<?php echo $loss; ?>" required>
                                         <div class="invalid-feedback">
                                             Valid Weight Loss is required.
@@ -810,7 +811,7 @@ ul.nav.nav-tabs {
 <div class="tab-pane" id="tab_default_3">
 	<div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-12 both-space">
+            <div class="col-md-12 card both-space">
                 <h3 class="text-center mt-5 mb-4">PERSONAL TRAINING CONTRACT / AGREEMENT</h3>
                 <p class=" mt-3 mb-4">Congratulations on your decision to improve your health by participating in a professional exercise program!</p>
                 <p class="">With the help of our Fitness trainer, you greatly improve your ability to accomplish your training goals faster, safer, and with maximum benefits. The education you will learn during these training sessions can be used for a lifetime.</p>
@@ -882,8 +883,8 @@ ul.nav.nav-tabs {
 <div class="tab-pane" id="tab_default_4">
 	<div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-12 both-space mt-4">
-                    <h3 class="text-center mt-3 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
+                <div class="col-md-12 both-space card">
+                    <h3 class="text-center mt-5 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
                     <p>We want to build an awesome fitness community here, so we’re asking for your input. Who are your “Plus-­Two” friends, family, co-­workers, or neighbors who could benefit from personal training?</p>
                     <p>Your two referrals (a.k.a. your “Plus-­Two”) will each receive a FREE transformation coaching session for 3 days where Kanvan Sports will help them outline their goals and a path to get there.</p>
                     <p>So, who comes to mind when you think of your Plus‐Two?</p>
@@ -984,9 +985,9 @@ ul.nav.nav-tabs {
 </div>
 
 <div class="tab-pane" id="tab_default_5">
-	<div class="container">
-    <div class="col-md-12 both-space mt-4">
-                <h4 class="text-center pt-4 pb-2">ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</h4><br/><br/>
+	<div class="">
+    <div class="col-md-12 both-space mt-4 card">
+                <h4 class="text-center pt-5 pb-2">ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</h4><br/><br/>
                 <h5>DECLARATIONS:</h5>
                 <p>This Agreement is entered into between Kanvan Sports (“FitnessTrainer”) and the undersigned (“Client”). The provision of personal training services by Trainer to Client, and Client’s use of any premises, facilities or equipment are
                     contingent upon this Agreement.</p>
@@ -1071,8 +1072,8 @@ ul.nav.nav-tabs {
 </div>
 </div>
 </div>
-
-<script type="text/javascript">
+</div>
+<script>
       $("body").on("click",".btn-image-upload",function(e){
        $(this).parents("form").ajaxForm(options);
       });
