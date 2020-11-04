@@ -75,7 +75,7 @@ class Users_model extends CI_Model {
     }
 
     function login_process($email , $password) {
-        $this->db->select("id , email , fname");
+        $this->db->select("id , email , fname, role_id");
         $this->db->from('users');
         $this->db->where(array('email'=>$email,'password'=> $password));
         $query = $this->db->get();

@@ -1,9 +1,9 @@
-<!-- <div style="margin-top:100px"> -->
+<div style="margin-top:100px">
 <div class="py-5 " id="section-quote">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-8 both-space">
-                <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
+                <div class="card mb-5 border-0 card-opacity shadow ">
                     <div class="card-body rounded-sm">
                         <div class="text-box">
                             <h3 class="text-center mt-3 mb-4">Change Password</h3>

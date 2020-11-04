@@ -1,4 +1,4 @@
-<!-- <div style="margin-top:100px"> -->
+<div style="margin-top:100px">
 <div class="global-container pt-5 pb-5">
 <div class="col-lg-6 col-sm-6 col-xs-12">
 	<div class="card login-form" >
@@ -23,7 +23,6 @@
 				<div class="sign-up">
 					Don't have an account? <a href="<?php echo base_url();?>index.php/pages/registration">Sign up</a>
 				</div>
-			</form>
         </div>
         <?php echo form_close(); ?>
 	</div>

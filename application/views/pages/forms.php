@@ -594,7 +594,7 @@ ul.nav.nav-tabs {
                     <div class="card-body rounded-sm">
                         <div class="text-box">
                             <h3 class="text-center mt-3 mb-5">TRAINING FITNESS ASSESSMENT</h3>
-                            <?php echo form_open('pages/forms',array('class' => 'needs-validation','method' => 'post','novalidate' => 'novalidate'));  ?>
+                            <?php echo form_open('pages/forms',array('id' => 'tfa','class' => 'needs-validation','method' => 'post','novalidate' => 'novalidate'));  ?>
                             <?php echo validation_errors();?>
                             <h5 class="mt-3 mb-4">Measurements: </h5>
                                 <div class="row">

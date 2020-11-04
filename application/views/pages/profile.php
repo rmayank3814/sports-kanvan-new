@@ -1,8 +1,8 @@
-
+<div style="margin-top:100px">
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="col-md-12 both-space">
-            <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
+            <div class="card mt-3 mb-5 border-0 card-opacity shadow ">
                 <div class="card-body rounded-sm">
                     <div class="text-box">
                     <h3 class="text-center mt-4 mb-5">PERSONAL DETAILS</h3>
@@ -13,9 +13,10 @@
                     } ?>
                     <div class="text-center">
                         <img src="<?php echo base_url();?>/main/images/<?php echo $profile_image; ?>" class="avatar rounded-circle profile_size img-thumbnail" alt="avatar">
-                        <h6>Upload a different photo...</h6>
-                        <input type="file" name="profile_image" >
-                    </div>       
+                    </div>  
+                    <div class="text-center">
+                        <input type="file" name="profile_image" />  
+                    </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="label-input" for="fname">First Name: <span class="text-danger font-weight-medium">*</span></label>

@@ -6,7 +6,7 @@
 
     </style>
 
-<div class="image-about-banner">
+<div style="margin-top:100px">
 <div class="global-container ">
 <section class="our-blog mt-5 pb-5">
         <div class="container">

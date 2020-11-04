@@ -1,4 +1,4 @@
-<!-- <div style="margin-top:100px"> -->
+<div style="margin-top:100px">
     <div class="py-5 global-container" id="section-quote">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -13,9 +13,6 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="fname">First Name: <span class="text-danger font-weight-medium">*</span></label>
                                     <input class="form-control" type="text" name="fname" id="fname">
-                                    <div class="invalid-feedback">
-                                        Valid height is required.
-                                    </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="lname">Last Name: <span class="text-danger font-weight-medium">*</span></label>
