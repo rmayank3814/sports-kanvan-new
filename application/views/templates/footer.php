@@ -10,8 +10,8 @@
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">INFORMATION</h4>
                                 <a href="<?php echo base_url();?>index.php/pages/about" title="about us">About Us</a>
-                                <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonials">Testimonials</a>
                                 <a href="<?php echo base_url();?>index.php/pages/contact" title="contact us">Contact Us</a>
+                                <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonials">Testimonials</a>
                                 <a href="<?php echo base_url();?>index.php/pages/faq" title="faq">FAQ</a>
                             </div>
                             <!-- end /.footer-menu -->
@@ -41,11 +41,6 @@
                                 <h4 class="footer-widget-title border-link">SPORTS FORMS</h4>
                                 <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonial">Testimonial</a>
                                 <a href="<?php echo base_url();?>index.php/pages/registration" title="registration">Registration</a>
-                                <a href="<?php echo base_url();?>index.php/pages/medical" title="medical">Medical </a>
-                                <a href="<?php echo base_url();?>index.php/pages/tfa" title="tranning fitness">Training Fitness</a>
-                                <a href="<?php echo base_url();?>index.php/pages/ptc" title="personal traning">Personal Training</a>
-                                <a href="<?php echo base_url();?>index.php/pages/community" title="fitness community">Fitness Community</a>
-                                <a href="<?php echo base_url();?>index.php/pages/agreement" title="indemnity aggrement">Indemnity Agreement</a>
                             </div>
                             <!-- end /.footer-menu -->
                         </div>
@@ -76,11 +71,9 @@
                             <a href="#" class="icon-button skype" title="Skype"><i class="fab fa-skype"></i><span></span></a>
                             <a href="https://www.youtube.com/channel/UCvli4ZZsTLPH_tt6EXnGLdw/" class="icon-button youtube" title="Youtube"><i class="fab fa-youtube"></i><span></span></a>
                         </div>
-
                         <!-- Ends: .footer-widget -->
                     </div>
                     <!-- Ends: .col-lg-3 -->
-
                 </div>
                 <!-- end /.row -->
             </div>
@@ -91,8 +84,7 @@
         <div class="mini-footer ">
             <div class="container ">
                 <div class="copyright-text wow fadeInDown" data-wow-delay="0.5s " style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-                    <p>© <?php echo date('Y'); ?> . All rights reserved.
-                    </p>
+                    <p>&copy<?php echo date('Y'); ?> . All rights reserved.</p>
                     <p class="love">Made with <i class="fas fa-heart"></i> .<a href="http://www.kanvan.in/" class="text-footer" target="_blank" title="Kanvan Business Solution"> Designed by Kanvan Business Solution</a></p>
                 </div>
             </div>
