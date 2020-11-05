@@ -44,6 +44,7 @@ ul.nav.nav-tabs {
 }
 
 </style>
+<div style="margin-top:100px">
 <div class="py-5 global-container" id="section-quote">
 <div class="container" >
     <div class="row">
@@ -1073,23 +1074,4 @@ ul.nav.nav-tabs {
 </div>
 </div>
 </div>
-<script>
-      $("body").on("click",".btn-image-upload",function(e){
-       $(this).parents("form").ajaxForm(options);
-      });
-
-
-     var options = { 
-       complete: function(response) 
-       {
-         if($.isEmptyObject(response.responseJSON.error)){
-            alert('Image Upload Successfully.');
-            $(".preview").css("display","block");
-            $(".preview").find("img").attr("src",".main/images/"+response.responseJSON.success);
-         }else{
-            alert(response.responseJSON.error);
-         }
-       }
-     };
-
-   </script>
+</div>
