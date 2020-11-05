@@ -14,46 +14,33 @@
                                 <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonials">Testimonials</a>
                                 <a href="<?php echo base_url();?>index.php/pages/faq" title="faq">FAQ</a>
                             </div>
-                            <!-- end /.footer-menu -->
                         </div>
-                        <!-- Ends: .footer-widget -->
                     </div>
-                    <!-- end /.col-md-3 -->
-                    <!-- end /.col-md-4 -->
                     <div class="col-md-3 col-sm-4">
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.2s">
                             <div class="footer-menu footer-menu--1 ">
                                 <h4 class=" footer-widget-title border-link">POLICIES</h4>
                                 <a href="<?php echo base_url();?>index.php/pages/privacy_policy" title="privacy policy">Privacy Policy</a>
-                                <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonial">Testimonial</a>
                                 <a href="<?php echo base_url();?>index.php/pages/blog" title="blog">Blog</a>
-                                <a href="#">Careers</a>
+                                <a href="#" title="career">Career</a>
                             </div>
-                            <!-- end /.footer-menu -->
                         </div>
-                        <!-- Ends: .footer-widget -->
                     </div>
-                    <!-- end /.col-md-3 -->
-
                     <div class="col-md-3 col-sm-4 ">
                         <div class="footer-widget wow fadeInDown" data-wow-delay="0.3s">
                             <div class="footer-menu ">
                                 <h4 class="footer-widget-title border-link">SPORTS FORMS</h4>
-                                <a href="<?php echo base_url();?>index.php/pages/testimonial" title="testimonial">Testimonial</a>
+                                <a href="#" title="terms & conditions">Terms & Conditions</a>
                                 <a href="<?php echo base_url();?>index.php/pages/registration" title="registration">Registration</a>
                             </div>
-                            <!-- end /.footer-menu -->
                         </div>
-                        <!-- Ends: .footer-widget -->
                     </div>
-                    <!-- end /.col-lg-3 -->
-
                     <div class="col-md-3 col-sm-4 ">
                         <div class="contact-widget wow fadeInDown" data-wow-delay="0.4s">
                             <h4 class="footer-widget-title border-link">CONTACT US</h4>
-                            <p><i class="fas fa-map-marked-alt" title="B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307"></i>&nbsp; B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
-                            <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9871587820</p>
-                            <p><i class="fas fa-phone-alt"></i>&nbsp; +91-9911445549</p>
+                            <p title="B-9, Udaigiri – II, Sector – 34, Noida, G.B. Nagar, Uttar Pradesh, India – 201307"><i class="fas fa-map-marked-alt"></i> &nbsp; B-9, Udaigiri – II, Sector – 34,Noida, G.B. Nagar, Uttar Pradesh, India – 201307</p>
+                            <p title="+91-9871587820"><i class="fas fa-phone-alt"></i>&nbsp; +91-9871587820</p>
+                            <p title="+91-9911445549"><i class="fas fa-phone-alt"></i>&nbsp; +91-9911445549</p>
                             <p>
                                 <i class="fas fa-globe-americas"></i>
                                 <a href="#" class="social-linking" title="kanvan.in">&nbsp; www.kanvan.in</a>
@@ -71,16 +58,10 @@
                             <a href="#" class="icon-button skype" title="Skype"><i class="fab fa-skype"></i><span></span></a>
                             <a href="https://www.youtube.com/channel/UCvli4ZZsTLPH_tt6EXnGLdw/" class="icon-button youtube" title="Youtube"><i class="fab fa-youtube"></i><span></span></a>
                         </div>
-                        <!-- Ends: .footer-widget -->
                     </div>
-                    <!-- Ends: .col-lg-3 -->
                 </div>
-                <!-- end /.row -->
             </div>
-            <!-- end /.container -->
         </div>
-        <!-- end /.footer-big -->
-
         <div class="mini-footer ">
             <div class="container ">
                 <div class="copyright-text wow fadeInDown" data-wow-delay="0.5s " style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
@@ -93,9 +74,7 @@
 
     <!--Scripts-->
     <script src="<?php echo base_url();?>vendor/others/js/jquery.min.js"></script>
-    <!-- <script src="<?php echo base_url();?>vendor/js/custom.js "></script> -->
-    <script src="<?php echo base_url();?>vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url();?>vendor/others/js/owl.carousel.js"></script>
+    <script src="<?php echo base_url();?>vendor/bootstrap/js/bootstrap.min.js"></script> 
     <script src="<?php echo base_url();?>vendor/others/js/wow.min.js"></script>
     <script src="<?php echo base_url();?>vendor/others/js/lazyload.min.js"></script>
     <script src="<?php echo base_url();?>vendor/others/js/sweetalert.js"></script>

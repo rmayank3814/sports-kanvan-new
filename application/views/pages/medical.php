@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
         <div class="col-lg-12">
-         <h3 class="text-center mt-5 mb-5">MEDICAL DETAILS</h3>
+         <h3 class="heading-title text-center mt-5 mb-5">MEDICAL DETAILS</h3>
          <?php echo form_open('pages/medical',array('method' => 'post','novalidate'=>'novalidate')); ?>
          <?php //echo validation_errors(); ?>
         <div class="panel-body">
@@ -520,7 +520,7 @@
             </div>    
             <br />
             <div class="d-flex justify-content-center mt-4 mb-5">
-                <button class="btn btn-blue btn-sm m-auto" name="medical" type="submit">Submit</button>
+                <button class="btn btn-blue btn-sm m-auto" name="medical" title="submit" type="submit">Submit</button>
             </div>
             <br />
         </div>

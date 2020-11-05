@@ -1,3 +1,4 @@
+<div style="margin-top:100px">
 <div class="image-about-banner">
  <div class="global-container ">
     <section class="our-blog mt-5 pb-5">
@@ -111,4 +112,5 @@
             </div>
         </section>
     </div>
+</div>
 </div>

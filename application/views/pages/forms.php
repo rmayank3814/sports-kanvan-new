@@ -74,7 +74,7 @@ ul.nav.nav-tabs {
     <div class="container">
         <div class="row card">
             <div class="col-lg-12">
-            <h3 class="card text-center mt-5 mb-5">MEDICAL DETAILS</h3>
+            <h3 class="card text-center heading-title mt-5 mb-5">MEDICAL DETAILS</h3>
             <?php echo form_open('pages/forms',array('method' => 'post','novalidate'=>'novalidate')); ?>
             <?php echo validation_errors(); ?>
             <div class="panel-body">
@@ -575,7 +575,7 @@ ul.nav.nav-tabs {
                 <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
                     <div class="card-body rounded-sm">
                         <div class="text-box">
-                            <h3 class="text-center mt-3 mb-5">TRAINING FITNESS ASSESSMENT</h3>
+                            <h3 class="heading-title text-center mt-3 mb-5">TRAINING FITNESS ASSESSMENT</h3>
                             <?php echo form_open('pages/forms',array('id' => 'tfa','class' => 'needs-validation','method' => 'post','novalidate' => 'novalidate'));  ?>
                             <?php echo validation_errors();?>
                             <h5 class="mt-3 mb-4">Measurements: </h5>
@@ -812,7 +812,7 @@ ul.nav.nav-tabs {
 	<div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 card both-space">
-                <h3 class="text-center mt-5 mb-4">PERSONAL TRAINING CONTRACT / AGREEMENT</h3>
+                <h3 class="heading-title text-center mt-5 mb-4">PERSONAL TRAINING CONTRACT / AGREEMENT</h3>
                 <p class=" mt-3 mb-4">Congratulations on your decision to improve your health by participating in a professional exercise program!</p>
                 <p class="">With the help of our Fitness trainer, you greatly improve your ability to accomplish your training goals faster, safer, and with maximum benefits. The education you will learn during these training sessions can be used for a lifetime.</p>
                 <p>In order to maximize progress, it will be necessary for you to follow program guidelines during supervised and, if applicable, unsupervised training days. Remember, exercise and healthy eating are EQUALLY important!</p>
@@ -884,7 +884,7 @@ ul.nav.nav-tabs {
 	<div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12 both-space card">
-                    <h3 class="text-center mt-5 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
+                    <h3 class="heading-title text-center mt-5 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
                     <p>We want to build an awesome fitness community here, so we’re asking for your input. Who are your “Plus-­Two” friends, family, co-­workers, or neighbors who could benefit from personal training?</p>
                     <p>Your two referrals (a.k.a. your “Plus-­Two”) will each receive a FREE transformation coaching session for 3 days where Kanvan Sports will help them outline their goals and a path to get there.</p>
                     <p>So, who comes to mind when you think of your Plus‐Two?</p>
@@ -987,7 +987,7 @@ ul.nav.nav-tabs {
 <div class="tab-pane" id="tab_default_5">
 	<div class="">
     <div class="col-md-12 both-space mt-4 card">
-                <h4 class="text-center pt-5 pb-2">ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</h4><br/><br/>
+                <h4 class="heading-title text-center pt-5 pb-2">ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</h4><br/><br/>
                 <h5>DECLARATIONS:</h5>
                 <p>This Agreement is entered into between Kanvan Sports (“FitnessTrainer”) and the undersigned (“Client”). The provision of personal training services by Trainer to Client, and Client’s use of any premises, facilities or equipment are
                     contingent upon this Agreement.</p>

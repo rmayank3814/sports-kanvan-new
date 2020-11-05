@@ -1,10 +1,10 @@
-<!-- <div style="margin-top:100px"> -->
+<div style="margin-top:100px">
 <section class="mt-5 mb-5">
     <div class="py-1">
         <div class="container">
             <div class="row">
             <div class="section-head col-sm-12">
-                                <h3 class="heading-title text-center pb-5">Why Choose ?</h3>
+                                <h3 class="heading-title text-center pb-5">Why Choose </h3>
                             </div>
                 <div class="col-md-7 align-self-center">
                     <div class="max-box">
@@ -24,7 +24,7 @@
                 <div class="container py-1">
                     <div class="row ">
                     <div class="section-head col-sm-12">
-                                <h3 class="heading-title text-center pb-5">What  Choose ?</h3>
+                                <h3 class="heading-title text-center pb-5">What  Choose </h3>
                             </div>
                             <div class="col-md-6">
                         <img src="<?php echo base_url();?>main/images/inner-page/fit.gif" alt="up and down sports" class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
@@ -36,7 +36,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat bibendum
                                 consequat. Praesent eget feugiat quam</p>
 
-                            <a href="" class="btn-text">View Details →</a>
+                            <a href="" title="view details" class="btn-text">View Details →</a>
                         </div>
                        
                     </div>
@@ -113,4 +113,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

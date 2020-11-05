@@ -5,7 +5,7 @@
             <div class="card mt-3 mb-5 border-0 card-opacity shadow ">
                 <div class="card-body rounded-sm">
                     <div class="text-box">
-                    <h3 class="text-center mt-4 mb-5">PERSONAL DETAILS</h3>
+                    <h3 class="heading-title text-center mt-4 mb-5">PERSONAL DETAILS</h3>
                     <?php echo form_open('pages/profile',array('method'=>'post','novalidate'=>"novalidate",'enctype' => "multipart/form-data")); ?>
                     <?php echo validation_errors(); ?>
                     <?php if($profile_image == ''){
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center mt-3 mb-4">
-                        <button type="submit" class="btn btn-blue btn-sm m-auto" name="update_profile">Update</button>
+                        <button type="submit" class="btn btn-blue btn-sm m-auto" title="update" name="update_profile">Update</button>
                     </div>
                 <?php echo form_close(); ?>
             </div>
