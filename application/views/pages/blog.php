@@ -1,14 +1,6 @@
-<style>
-.card:hover{
-    transform: translateY(-10px);
-    transition: transform 0.3s ease;
-}
-
-    </style>
-
-<div style="margin-top:100px">
-<div class="global-container ">
-<section class="our-blog mt-5 pb-5">
+<div class="image-about-banner">
+ <div class="global-container ">
+    <section class="our-blog mt-5 pb-5">
         <div class="container">
             <div class="text-center">
             <h3 class="heading-title text-center pb-5">Blog</h3>
@@ -16,8 +8,8 @@
             </div>
             <div class="row mt-5">
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                        <img src="<?php echo base_url();?>main/images/blog-4.gif" alt="forward exercise sports" class="img-fluid ">
+                        <div class="card post-cards">
+                        <img src="<?php echo base_url();?>main/images/inner-page/blog-4.gif" alt="forward exercise sports" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -33,8 +25,8 @@
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                        <img src="<?php echo base_url();?>main/images/exercise-2.gif" alt="pushup sports" class="img-fluid ">
+                        <div class="card post-cards">
+                        <img src="<?php echo base_url();?>main/images/inner-page/exercise-2.gif" alt="pushup sports" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -50,8 +42,8 @@
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                        <img src="<?php echo base_url();?>main/images/forwad.gif" alt="finess exercise" class="img-fluid ">
+                        <div class="card post-cards">
+                        <img src="<?php echo base_url();?>main/images/inner-page/forwad.gif" alt="finess exercise" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -68,8 +60,8 @@
                 </div>
                 <div class="row mt-5">
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                        <img src="<?php echo base_url();?>main/images/blog-image.gif" alt=".." class="img-fluid ">
+                        <div class="card post-cards">
+                        <img src="<?php echo base_url();?>main/images/inner-page/blog-image.gif" alt=".." class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -84,8 +76,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                        <img src="<?php echo base_url();?>main/images/fit.gif" alt="fitness player" class="img-fluid ">
+                        <div class="card post-cards">
+                        <img src="<?php echo base_url();?>main/images/inner-page/fit.gif" alt="fitness player" class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -100,8 +92,8 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="card">
-                        <img src="<?php echo base_url();?>main/images/fitness-blog.gif" alt=".." class="img-fluid ">
+                        <div class="card post-cards">
+                        <img src="<?php echo base_url();?>main/images/inner-page/fitness-blog.gif" alt=".." class="img-fluid ">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="#">Card Title</a>
@@ -114,10 +106,9 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
-
-                   
+                    </div> 
                 </div>
             </div>
-            </div>
-            </div>
+        </section>
+    </div>
+</div>

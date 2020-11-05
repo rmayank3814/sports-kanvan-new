@@ -20,14 +20,14 @@
         </div>
     </div>
 </section>
-<div class="service-half section-gr">
+         <div class="service-half comman-gr">
                 <div class="container py-1">
                     <div class="row ">
                     <div class="section-head col-sm-12">
                                 <h3 class="heading-title text-center pb-5">What  Choose ?</h3>
                             </div>
                             <div class="col-md-6">
-                        <img src="<?php echo base_url();?>main/images/fit.gif" alt="up and down sports" class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
+                        <img src="<?php echo base_url();?>main/images/inner-page/fit.gif" alt="up and down sports" class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">
                         </div>
                         <div class="col-md-6 align-self-center wow fadeInRight" data-wow-delay="0.2s">
                             <h3 class="my-2 heading-terinary">Awesome with Ordinary Flexibility</h3>
@@ -44,7 +44,7 @@
             </div>
            
 <!--card section-->
-<div class="section-gr">
+<div class="comman-gr">
     <div class="container  py-1">
         <div class="row">
             <div class="col-lg-6 col-sm-6">
@@ -113,4 +113,4 @@
             </div>
         </div>
     </div>
-<!-- </div> -->
+</div>
