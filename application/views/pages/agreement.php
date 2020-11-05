@@ -2,7 +2,7 @@
 
     <div class="py-5 mt-3 global-container">
         <div class="container">
-                <h4 class="text-center"><b>ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</b></h4><br/><br/>
+                <h4 class="heading-title text-center"><b>ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</b></h4><br/><br/>
                 <h5>DECLARATIONS:</h5>
                 <p>This Agreement is entered into between Kanvan Sports (“FitnessTrainer”) and the undersigned (“Client”). The provision of personal training services by Trainer to Client, and Client’s use of any premises, facilities or equipment are
                     contingent upon this Agreement.</p>
@@ -66,7 +66,7 @@
         </div>
         </div>
             <div class="d-flex justify-content-center mt-5 mb-3">
-                <button class="btn btn-blue btn-sm m-auto" name="agreement_button" type="submit">Submit</button>
+                <button class="btn btn-blue btn-sm m-auto" title="submit" name="agreement_button" type="submit">Submit</button>
             </div>
             
             <?php echo form_close(); ?>

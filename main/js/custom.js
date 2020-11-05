@@ -96,78 +96,12 @@ const NOTIFICATION_TYPES = {
     DANGER: 'danger'
 }
 
-// function addNotification(type, text) {
-//     // create the DIV and add the required classes
-//     const newNotification = document.createElement('div');
-//     newNotification.classList.add('notification', `notification-${type}`);
 
-//     const innerNotification = `
-// 		<strong>${type}:</strong> ${text}
-// 	`;
-
-//     // insert the inner elements
-//     newNotification.innerHTML = innerNotification;
-
-//     // add the newNotification to the container
-//     notificationContainer.appendChild(newNotification);
-
-//     return newNotification;
-// }
-
-// function removeNotification(notification) {
-//     notification.classList.add('hide');
-
-//     // remove notification from the DOM after 0.5 seconds
-//     setTimeout(() => {
-//         notificationContainer.removeChild(notification);
-//     }, 500);
-// }
-
-// adding and removing notification for DEMO purposes
-// const info = addNotification(NOTIFICATION_TYPES.INFO, 'Info text added');
-// setTimeout(() => {
-//     removeNotification(info);
-// }, 5000);
-
-// $(document).on('click', '#closeNotify', function() {
-//     $(".notification").fadeOut(500);
-//     // return false;
-// });
 
 $(document).on('click', '#closeNotify', function() {
     $(".notification").fadeOut(500);
     return false;
-    // const swalWithBootstrapButtons = Swal.mixin({
-    //     customClass: {
-    //         confirmButton: 'btn btn-success',
-    //         cancelButton: 'btn btn-danger'
-    //     },
-    //     buttonsStyling: false
-    // })
 
-    // swalWithBootstrapButtons.fire({
-    //     title: 'Are you sure?',
-    //     text: "You won't be able to revert this!",
-    //     icon: 'warning',
-    //     showCancelButton: true,
-    //     confirmButtonText: 'Yes, delete it!',
-    //     cancelButtonText: 'No, cancel!',
-    //     reverseButtons: true
-    // }).then((result) => {
-    //     if (result.value) {
-    //         $(".notification").fadeOut(500);
-    //         // return false;
-    //     } else if (
-    //         /* Read more about handling dismissals below */
-    //         result.dismiss === Swal.DismissReason.cancel
-    //     ) {
-    //         swalWithBootstrapButtons.fire(
-    //             'Cancelled',
-    //             'Your imaginary file is safe :)',
-    //             'error'
-    //         )
-    //     }
-    // })
 });
 
 // $(document).on('click', '#openNotify', function(e) {
@@ -209,25 +143,25 @@ $(document).ready(function() {
 });
 /*testimonial*/
 
-$(function() {
-    $('.testi3').owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
-            },
-            1024: {
-                items: 3
-            }
-        }
-    })
-});
+// $(function() {
+//     $('.testi3').owlCarousel({
+//         loop: true,
+//         margin: 30,
+//         nav: false,
+//         dots: true,
+//         autoplay: true,
+//         responsiveClass: true,
+//         responsive: {
+//             0: {
+//                 items: 1,
+//                 nav: false
+//             },
+//             1024: {
+//                 items: 3
+//             }
+//         }
+//     })
+// });
 
 /*slideout*/
 $(function() {
@@ -276,70 +210,8 @@ $(function() {
     }
 
 });
-/*======Donation========*/
-$(document).ready(function() {
-    $(document).on('click', '.add-row', function(e) {
-        e.preventDefault();
-        var markup = '<div class="row"><div class="col-md-6"><div class="form-group"> <label class="label-input" for="amount">Amount <span class="text-danger font-weight-medium">*</span></label><input type="text" name="amount" id="amount" class="form-control amount" placeholder="Enter Amount" value="" required=""><div class="invalid-feedback">Valid amount is required.</div></div></div><div class="col-md-5"><div class="form-group"> <label class="label-input" for="designation">Designation <span class="text-danger font-weight-medium">*</span></label><input type="text" name="designation" id="designation" class="form-control" placeholder="Designation" value="" required=""> <div class="invalid-feedback"> Valid designation is required. </div></div></div><div class="col-md-1 action" style="padding-top:45px"><a class="add-row" href="" data-toggle="tooltip" data-placement="top" title="would you like to add one more?"><span class="fa fa-plus"></span></a> <a class="delete-row" href="" data-toggle="tooltip" data-placement="top" title="would you like to remove this row?"><span class="fa fa-minus"></span></a> </div></div>';
-        $("#paymentRow").append(markup);
-    });
-
-    $(document).on('keyup', '.amount', function() {
-        var t_a = 0;
-        var amount = $('.amount');
-
-        amount.each(function() {
-            var temp_amount = $(this).val();
-            if (!isNaN(temp_amount) && temp_amount != '') {
-                t_a += parseInt($(this).val());
-            }
-        });
-
-        // $('#ta').text('$' + t_a + '.00');
-        $('#ta').val('$' + t_a + '.00');
-    })
-
-    // Find and remove selected table rows
-    $(document).on('click', '.delete-row', function(e) {
-        e.preventDefault();
-        var row_count = $("#paymentRow").children('.row').length;
-        if (row_count > 1) {
-            $(this).parents(".row").remove();
-            var t_a = 0;
-            var amount = $('.amount');
-
-            amount.each(function() {
-                var total = $(this).val();
-                if (!isNaN(total) && total != '') {
-                    t_a += parseInt($(this).val());
-                }
-            });
-
-            // $('#ta').text('$' + t_a + '.00');
-            $('#ta').val('$' + t_a + '.00');
-        } else {
-            $("#paymentRow").find('.delete-row').remove();
-        }
 
 
-    });
-});
-/*---counter-----*/
-// $(document).ready(function() {
-
-//     $('.counter').each(function() {
-//         $(this).prop('Counter', 0).animate({
-//             Counter: $(this).text()
-//         }, {
-//             duration: 4000,
-//             easing: 'swing',
-//             step: function(now) {
-//                 $(this).text(Math.ceil(now));
-//             }
-//         });
-//     });
-
-// });
 
 /*---validation----*/
 // Example starter JavaScript for disabling form submissions if there are invalid fields

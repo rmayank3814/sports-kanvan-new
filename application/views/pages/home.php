@@ -1,4 +1,4 @@
-           <div style="margin-top:100px">
+           <div style="margin-top:75px">
            
                 <!-- <div class=""> -->
                     <div class="row">
@@ -6,57 +6,56 @@
                             <br/>
                             <div id="carousel" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-7.jpg'); background-size: cover;">
+                                <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-7.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more <i class="fas fa-angle-double-right"></i></a>
+                                            <a class="btn-text" href="" title="view more">View more <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                         
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/sports-8.gif'); background-size: cover;">
+                                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/sports-8.gif'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
+                                            <a class="btn-text" href="" title="view more">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                         
                                     </div>
-                                    <div class="carousel-item active" style="background: #25c;">
+                                    <div class="carousel-item active" title="sports image" style="background: #25c;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
+                                            <a class="btn-text" href="" title="view more">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/happy-diwali.gif'); background-size: cover;">
+                                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/happy-diwali.gif'); background-size: cover;">
                                         <div class="caption">
                                             <!-- <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2> -->
                                             <!-- <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a> -->
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-4.jpg'); background-size: cover;">
+                                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-4.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
+                                            <a class="btn-text" href="" title="view more">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-5.jpg'); background-size: cover;">
+                                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-5.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
+                                            <a class="btn-text" href="" title="view more">View more  <i class="fas fa-angle-double-right"></i></a>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-2.jpg'); background-size: cover;">
+                                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-2.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>
-                                            <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a>
-                                        </div>
-                                        
+                                            <a class="btn-text" href="" title="view more">View more  <i class="fas fa-angle-double-right"></i></a>
+                                        </div> 
                                     </div>
 
                                 </div>
@@ -82,7 +81,7 @@
               <div class="service-half comman-gr">
                 <div class="container py-1">
                     <div class="row ">
-                    <div class="section-head col-sm-12">
+                           <div class="section-head col-sm-12">
                                 <h3 class="heading-title text-center pb-5">What  Choose ?</h3>
                             </div>
                         <div class="col-md-6">
@@ -95,7 +94,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat bibendum
                                 consequat. Praesent eget feugiat quam</p>
 
-                            <a href="" class="btn-text">View Details →</a>
+                            <a href="" title="view details" class="btn-text">View Details →</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +113,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl augue, feugiat non hendrerit quis, pellentesque et dui. Integer nisi ligula, aliquet ac ullamcorper non, scelerisque mattis nisi. Maecenas volutpat bibendum
                                 consequat. Praesent eget feugiat quam</p>
 
-                            <a href="" class="btn-text">View Details →</a>
+                            <a href="" title="view details" class="btn-text">View Details →</a>
                         </div>
                         <div class="col-md-5">
                             <img src="main/images/inner-page/fitness.gif" alt=".." class="img-fluid img-bg mt-2 wow fadeInLeft" data-wow-delay="0.2s">

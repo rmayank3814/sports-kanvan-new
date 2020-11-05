@@ -1,4 +1,5 @@
- <div class="image-about-banner">
+<div style="margin-top:100px">
+ <div class="global-container ">
     <div class="container">
     <div class="pt-5 pb-5">
         <h4 class="mb-3">This privacy policy discloses the privacy practices for (Kanvan Sports powered by Kanvan Business Solutions Pvt Ltd). This privacy policy applies solely to information collected by this web site. It will notify you of the following</h4>
@@ -45,5 +46,6 @@
         <p>Our Privacy Policy may change from time to time and all updates will be posted on this page.</p>
         <p>If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at <b>9871587820</b> or via email at-<a href=""> info@kanvan.in</a></p>
     </div>
+</div>
 </div>
 </div>

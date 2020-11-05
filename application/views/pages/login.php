@@ -18,7 +18,7 @@
                 <a href="<?php echo base_url();?>index.php/pages/forgot_password" style="float:right;padding-bottom:17px">Forgot password?</a>
 				<br><br>
 				<div class="d-flex justify-content-center">
-				   <button type="submit" name="login" class="btn-block btn btn-blue btn-sm m-auto login-buttons">Sign in</button>
+				   <button type="submit" title="submit" name="login" class="btn-block btn btn-blue btn-sm m-auto login-buttons">Sign in</button>
                 </div>
 				<div class="sign-up">
 					Don't have an account? <a href="<?php echo base_url();?>index.php/pages/registration">Sign up</a>

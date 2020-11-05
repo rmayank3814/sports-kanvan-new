@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-12 both-space mt-4">
-                    <h3 class="text-center mt-3 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
+                    <h3 class="heading-title text-center mt-3 mb-5">LET’S BUILD AN AMAZING FITNESS COMMUNITY: PLUS-TWO</h3>
                     <p>We want to build an awesome fitness community here, so we’re asking for your input. Who are your “Plus-­Two” friends, family, co-­workers, or neighbors who could benefit from personal training?</p>
                     <p>Your two referrals (a.k.a. your “Plus-­Two”) will each receive a FREE transformation coaching session for 3 days where Kanvan Sports will help them outline their goals and a path to get there.</p>
                     <p>So, who comes to mind when you think of your Plus‐Two?</p>
@@ -90,7 +90,7 @@
                             </div>
 
                             <div class="d-flex justify-content-center mt-5 mb-3">
-                                <button class="btn btn-blue btn-sm m-auto" name="community_button" type="submit">Submit</button>
+                                <button class="btn btn-blue btn-sm m-auto" title="submit" name="community_button" type="submit">Submit</button>
                             </div>
                             <?php echo form_close(); ?>
                             <h6 class="text-center pt-4 pb-1"> THANKS FOR HELPING SPREAD THE GIFT OF IMPROVED HEALTH AND FITNESS!</h6>

@@ -1,7 +1,10 @@
-
+<div style="margin-top:100px">
     <div class="global-container">
         <div class="container">
             <div class="row">
+            <div class="section-head col-sm-12">
+                <h3 class="heading-title text-center pt-5 pb-5">Testimonial</h3>
+             </div>
             <div class="mt-5 mb-5">
         <div class="container py-1">
             <blockquote class="quote-card">
@@ -64,7 +67,5 @@
             </div>
         </div>
     </div>
-
-    <!--testimonial-->
+    </div>
    
-    <!--End Section-->
