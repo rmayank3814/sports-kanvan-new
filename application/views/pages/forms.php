@@ -44,7 +44,7 @@ ul.nav.nav-tabs {
 }
 
 </style>
-<div class="py-5 global-container" id="section-quote">
+<div class="py-5 global-container" id="section-quote" style="margin-top:100px">
 <div class="container" >
     <div class="row">
         <div class="col-md-12">
