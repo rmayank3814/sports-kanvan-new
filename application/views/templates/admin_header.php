@@ -54,7 +54,7 @@
                             </a>
                         </li>
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="<?php echo base_url(); ?>index.php/admin/banner_management">
                                 <i class="fas fa-tachometer-alt"></i>Banner Management
                             </a>
                         </li>
@@ -80,15 +80,15 @@
                         <div class="account-wrap">
                             <div class="account-item clearfix js-item-menu">
                                 <div class="image">
-                                    <img src="<?php echo base_url(); ?>Admin/images/icon/avatar-01.jpg" alt="Admin" />
+                                    <img src="<?php echo base_url(); ?>main/images/avatar.png" alt="Admin" />
                                 </div>
                                 <div class="content">
-                                    <a class="js-acc-btn" href="#"><?=$_SESSION['fname']?></a>
+                                    <a class="js-acc-btn" href="#"><?= $_SESSION['fname']?></a>
                                 </div>
                                 <div class="account-dropdown js-dropdown">
                                     <div class="info clearfix">
                                         <div class="image">
-                                            <a href="#"><img src="<?php echo base_url(); ?>Admin/images/icon/avatar-01.jpg" alt="Admin" /></a>
+                                            <a href="#"><img src="<?php echo base_url(); ?>main/images/avatar.png" alt="Admin" /></a>
                                         </div>
                                         <div class="content">
                                             <h5 class="name">
