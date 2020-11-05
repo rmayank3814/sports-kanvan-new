@@ -104,7 +104,7 @@
                                     </div>
                                     <div class="account-dropdown__body">
                                         <div class="account-dropdown__item">
-                                            <a href="<?php echo base_url();?>index.php/admin/change_password">
+                                            <a href="<?php echo base_url();?>index.php/admin/change_admin_password">
                                                 <i class="zmdi zmdi-account"></i>Change Password</a>
                                         </div>
                                     </div>

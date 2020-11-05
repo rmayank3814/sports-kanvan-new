@@ -77,23 +77,19 @@ class Admin extends CI_Controller {
         $this->load->view('templates/admin_footer');
     }
 
-    function change_password() {
+    function change_admin_password() {
 
 		$this->load->view('templates/admin_header');
 		$this->form_validation->set_rules('old_pass', 'Old Password', 'required|callback_oldPassCheck');
     	$this->form_validation->set_rules('new_pass', 'New Password', 'required|min_length[8]|regex_match[/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/]');
 		$this->form_validation->set_rules('confirm_pass', 'Confirm Password', 'required|matches[new_pass]');
 
-		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-		$this->form_validation->set_message('required', 'Enter %s');
-
-
-		if(isset($_POST['change_password']) && $this->form_validation->run()){
+		if(isset($_POST['admin_change_password']) && $this->form_validation->run()){
             $session_id = $this->session->userdata('role_id');
             if($session_id == '1'){
                 $new_pass = md5($this->input->post('new_pass'));
-                $this->admin_model->change_pass($session_id,$new_pass);
-                redirect('admin');
+                $this->admin_model->change_password($session_id,$new_pass);
+                redirect('admin/dashboard');
             }
 		}
 		$this->load->view('admin/change_password');

@@ -7,7 +7,7 @@
                     <div class="card-body rounded-sm">
                         <div class="text-box">
                             <h3 class="text-center mt-3 mb-4">Change Password</h3>
-                            <?php echo form_open('pages/change_password',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate')); ?>
+                            <?php echo form_open('admin/change_admin_password',array('class' => 'needs-validation','method' => 'post','novalidate'=>'novalidate')); ?>
                             <?php echo validation_errors();?>
                                 <div class="row">
                                     <div class="col-lg-12">
@@ -39,7 +39,7 @@
                                 </div>
                             </div> 
                             <div class="d-flex justify-content-center mb-4">
-								<input type="submit" name="change_password" value="Change Password" class="btn text-center btn-blue" /><br />
+								<input type="submit" name="admin_change_password" value="Change Password" class="btn text-center btn-blue" /><br />
                             </div>
 							<?php echo form_close(); ?>
                         </div>
