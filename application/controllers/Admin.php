@@ -52,31 +52,6 @@ class Admin extends CI_Controller {
 		redirect('admin');
     }
 
-    function banner_management(){
-        $this->load->view('templates/admin_header');
-
-        $this->form_validation->set_rules('name', 'File ','required');
-
-        if(isset($_POST['banner_button']) && $this->form_validation->run()){
-            $config['upload_path'] = './main/images/banners';
-            $config['allowed_types'] = 'gif|jpg|png';
-            $config['max_size'] = 2000;
-            $config['max_width'] = 1500;
-            $config['max_height'] = 1500;
-
-            $this->load->library('upload', $config);
-
-            if (!$this->upload->do_upload('name')) {
-                $error = array('error' => $this->upload->display_errors());
-            } else {
-                $_POST['name'] = $this->upload->data('file_name');
-                $this->admin_model->upload_banner();
-            }
-        }
-        $this->load->view('admin/banner_management');
-        $this->load->view('templates/admin_footer');
-    }
-
     function change_admin_password() {
 
 		$this->load->view('templates/admin_header');
@@ -106,7 +81,7 @@ class Admin extends CI_Controller {
 		}
 	}
    
-
+  
    
 
 }
