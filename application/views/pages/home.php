@@ -36,7 +36,7 @@
                                             <!-- <a class="btn-text" href="" title="">View more  <i class="fas fa-angle-double-right"></i></a> -->
                                         </div>
                                     </div>
-                                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/banner-4.jpg'); background-size: cover;">
+                                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banner-image/anner-4.jpg'); background-size: cover;">
                                         <div class="caption">
                                             <h1>Create and share your whatever</h1>
                                             <h2>Make it easy for you to do whatever this thing does.</h2>

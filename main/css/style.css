@@ -1866,7 +1866,8 @@
                         margin-top: 10px;
                         display: block;
                         font-weight: 200;
-                        opacity: 0.8;
+                        opacity: 0.9;
+                        color: #32c3f1;
                     }
                     
                     .quote-card:before {
