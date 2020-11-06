@@ -45,6 +45,7 @@ class Banner extends CI_Controller {
 
     function update_banner(){
         $this->load->view('templates/admin_header');
+        
         if(isset($_POST['update_banner_button'])){
             
             $config['upload_path'] = './main/images/banners';
@@ -59,7 +60,7 @@ class Banner extends CI_Controller {
                 $error = array('error' => $this->upload->display_errors());
             } else {
                 $_POST['name'] = $this->upload->data('file_name');
-                
+                $id = $this->input->post('id');
                 $this->banner_model->update_banner($id);
             }
         }
