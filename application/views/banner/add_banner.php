@@ -97,10 +97,7 @@ table.table td .add {
     padding:5px;
     font-size:8px;
 }
-
 </style>
-
-<body>
 <div class="container-lg" style="margin-top:100px">
     <div class="table-responsive">
         <div class="table-wrapper">
@@ -113,112 +110,112 @@ table.table td .add {
                 </div>
             </div>
             <!-- Add Modal HTML -->
-	<div id="addEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-                <?php echo form_open('banner/add_banner',array('method'=>'post','enctype' => "multipart/form-data")); ?>
-					<div class="modal-header">						
-						<h4 class="modal-title">New Banner</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					</div>
-                    <?php echo validation_errors(); ?>
-					<div class="modal-body">					
-						<div class="form-group">
-							<label>File:<span class="text-danger font-weight-medium">*</span></label>
-							<input type="file" name="name" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Title</label>
-							<input type="text" name="title" class="form-control">
-						</div>
-						<div class="form-group">
-							<label>Sub-title</label>
-							<input type="text" name="sub-title" class="form-control">
-						</div>
-						<div class="form-group">
-							<label>Description</label>
-							<input type="text" name="description" class="form-control">
-						</div>					
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<button type="submit" class="btn btn-success" name="add_banner_button">Add</button>
-					</div>
-                <?php echo form_close(); ?>
-			</div>
-		</div>
-	</div>
-   
-    <div id="updateEmployeeModal" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-                <?php echo form_open('banner/update_banner',array('method'=>'post','enctype' => "multipart/form-data")); ?>
-                    <?php echo validation_errors(); ?>
-					<div class="modal-header">						
-						<h4 class="modal-title">Update Banner</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					</div>
-					<div class="modal-body">					
-						<div class="form-group">
-							<label>File:<span class="text-danger font-weight-medium">*</span></label>
-							<input type="file" name="name" class="form-control" required>
-						</div>
-						<div class="form-group">
-							<label>Title</label>
-							<input type="text" name="title" class="form-control">
-						</div>
-						<div class="form-group">
-							<label>Sub-title</label>
-							<input type="text" name="sub-title" class="form-control">
-						</div>
-						<div class="form-group">
-							<label>Description</label>
-							<input type="text" name="description" class="form-control">
-						</div>	
-                        <!-- <input type="hidden" name="id" value="">				 -->
-					</div>
-					<div class="modal-footer">
-						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<button type="submit" class="btn btn-success" name="update_banner_button">Update</button>
-					</div>
-                <?php echo form_close(); ?>
-			</div>
-		</div>
-	</div>
-	<!-- Edit Modal HTML -->
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>S.No</th>
-                <th>File</th>
-                <th>Title</th>
-                <th>Sub-title</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <?php 
-        if ($banner_data) {
-            $i = 0;
-            foreach($banner_data as $bannerData) {
-                $i++; 
-                ?>
-        <tbody>
-            <tr>
-                <td><?=$i;?></td>
-                <td><img src="<?php echo base_url();?>/main/images/banners/<?=$bannerData['name']?>"> </td>
-                <td><?=$bannerData['title']?></td>
-                <td><?=$bannerData['sub-title']?></td>
-                <td><?=$bannerData['description']?></td>
-                <td>
-                    <a href="#updateEmployeeModal" class="btn btn-success" data-toggle="modal">Update</a>
-                    <a href="<?php echo base_url();?>index.php/banner/delete_banner/<?=$bannerData['id'];?>"> Delete </a>
-                </td>
-            </tr>     
-        </tbody>
-        <?php } ?>
-        <?php } ?>
-    </table>
-</div>
-</div>
+            <div id="addEmployeeModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <?php echo form_open('banner/add_banner',array('method'=>'post','enctype' => "multipart/form-data")); ?>
+                            <div class="modal-header">						
+                                <h4 class="modal-title">New Banner</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <?php echo validation_errors(); ?>
+                            <div class="modal-body">					
+                                <div class="form-group">
+                                    <label>File:<span class="text-danger font-weight-medium">*</span></label>
+                                    <input type="file" name="name" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Title</label>
+                                    <input type="text" name="title" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Sub-title</label>
+                                    <input type="text" name="sub-title" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input type="text" name="description" class="form-control">
+                                </div>					
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                <button type="submit" class="btn btn-success" name="add_banner_button">Add</button>
+                            </div>
+                        <?php echo form_close(); ?>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Edit Modal HTML -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>File</th>
+                        <th>Title</th>
+                        <th>Sub-title</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <?php 
+                if ($banner_data) {
+                    $i = 0;
+                    foreach($banner_data as $bannerData) {
+                        $i++; 
+                        ?>
+                <tbody>
+                    <tr>
+                        <td><?=$i;?></td>
+                        <td><img src="<?php echo base_url();?>/main/images/banners/<?=$bannerData['name']?>"> </td>
+                        <td><?=$bannerData['title']?></td>
+                        <td><?=$bannerData['sub-title']?></td>
+                        <td><?=$bannerData['description']?></td>
+                        <td>
+                            <a href="#updateEmployeeModal<?=$i?>" class="btn btn-success" data-toggle="modal">Update</a>
+                            <a href="<?php echo base_url();?>index.php/banner/delete_banner/<?=$bannerData['id'];?>"> Delete </a>
+                        </td>
+                        <div id="updateEmployeeModal<?=$i?>" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <?php echo form_open('banner/update_banner',array('method'=>'post','enctype' => "multipart/form-data")); ?>
+                                        <?php echo validation_errors(); ?>
+                                        <div class="modal-header">						
+                                            <h4 class="modal-title">Update Banner</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body">					
+                                            <div class="form-group">
+                                                <label>File:<span class="text-danger font-weight-medium">*</span></label>
+                                                <input type="file" value="<?=$bannerData['name']?>" name="name" class="form-control" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Title</label>
+                                                <input value="<?=$bannerData['title']?>" type="text" name="title" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Sub-title</label>
+                                                <input type="text" value="<?=$bannerData['sub-title']?>" name="sub-title" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Description</label>
+                                                <input type="text" name="description" value="<?=$bannerData['description']?>" class="form-control">
+                                            </div>	
+                                            <input type="hidden" name="id" value="<?=$bannerData['id']?>">				
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                            <button type="submit" class="btn btn-success" name="update_banner_button">Update</button>
+                                        </div>
+                                    <?php echo form_close(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </tr>     
+                </tbody>
+                <?php } ?>
+                <?php } ?>
+            </table>
+        </div>
+    </div>
 </div>
