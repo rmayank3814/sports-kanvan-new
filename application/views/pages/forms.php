@@ -1,8 +1,5 @@
 <style>
-
 .tabbable-panel {
-  /* border:1px solid #eee; */
-  
   padding: 10px;
 }
 ul.nav.nav-tabs {
@@ -569,11 +566,11 @@ ul.nav.nav-tabs {
 </div>
 
 <div class="tab-pane" id="tab_default_2">
-    <div class="container">
+    <div class="">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-10 both-space">
+            <div class="col-lg-12 both-space">
 
-                <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
+                <div class="card border-0 card-opacity shadow ">
                     <div class="card-body rounded-sm">
                         <div class="text-box">
                             <h3 class="heading-title text-center mt-3 mb-5">TRAINING FITNESS ASSESSMENT</h3>

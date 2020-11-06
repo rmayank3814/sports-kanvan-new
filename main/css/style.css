@@ -350,7 +350,7 @@
                     
                     .anime-header {
                         text-align: center;
-                        color: #f28226!important;
+                        color: #26afeb!important;
                         margin: 0;
                         /* padding-top: 10px; */
                         opacity: 1;
@@ -987,29 +987,6 @@
                         padding: 15px 45px;
                         font-size: 16px;
                     }
-                    /*Donate*/
-                    
-                    .donate-section {
-                        font-family: 'Open Sans', sans-serif;
-                        color: #8d97ad;
-                        font-weight: 300;
-                        background-position: center top;
-                        background-size: cover;
-                        background-attachment: fixed;
-                    }
-                    
-                    .donate-section .op-8 {
-                        opacity: 0.8;
-                    }
-                    
-                    .donate-section .font-weight-medium {
-                        font-weight: 500;
-                    }
-                    
-                    .donate-section .btn-md {
-                        padding: 15px 45px;
-                        font-size: 16px;
-                    }
                     /*Single Half Section*/
                     
                     .service-half {
@@ -1313,7 +1290,7 @@
                     }
                     
                     .mini-footer {
-                        background: #4a4e4d;
+                        /* background: #4a4e4d; */
                         text-align: center;
                         padding: 10px 0;
                         color: #fff;
@@ -1651,23 +1628,9 @@
                         color: #fff;
                         text-decoration: none;
                     }
-                    /* .border-link::after {
-                        content: '';
-                        display: block;
-                        width: 0;
-                        height: 2px;
-                        background: #ff951f;
-                        -webkit-transition: ;
-                        -webkit-transition: width .3s;
-                        transition: width .3s;
-                        -moz-transition: ;
-                        -ms-transition: ;
-                        -o-transition: s
-                    } */
                     
                     .border-link:hover::after {
                         width: 100%;
-                        /* //transition: width .3s; */
                     }
                     /*=====braedcrumbs======*/
                     
