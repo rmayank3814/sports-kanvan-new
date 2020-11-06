@@ -173,8 +173,24 @@ table.table td .add {
                         <td><?=$bannerData['description']?></td>
                         <td>
                             <a href="#updateEmployeeModal<?=$i?>" class="btn btn-success" data-toggle="modal">Update</a>
-                            <a href="<?php echo base_url();?>index.php/banner/delete_banner/<?=$bannerData['id'];?>"> Delete </a>
+                            <!-- <a href="<?php echo base_url();?>index.php/banner/delete_banner/<?=$bannerData['id'];?>"> Delete </a> -->
+                            <button onClick="deleteThis(<?=$bannerData['id'];?>);" name="delete" data-href="<?php echo base_url();?>index.php/banner/delete_banner/<?=$bannerData['id'];?>" id="delete-<?=$i?>" class="btn btn-warning deleteThis">Delete</button>
                         </td>
+                        <script>
+                            function deleteThis(bannerId) {
+                                if(confirm('Are you sure?')) {
+                                    window.location.replace('<?php echo base_url();?>index.php/banner/delete_banner/'+bannerId);
+                                }
+                            }
+                            // $(document).ready(function(){
+                            //     $(".deleteThis").click(function(){
+                            //         var bannerUrl = $(this).attr('data-href');
+                            //         if(confirm('Are you sure?')) {
+                            //             window.location.replace(bannerUrl);
+                            //         }
+                            //     });
+                            // });
+                            </script>
                         <div id="updateEmployeeModal<?=$i?>" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">
