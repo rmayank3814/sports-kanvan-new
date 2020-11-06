@@ -211,7 +211,6 @@ table.table td .add {
                                 </div>
                             </div>
                         </div>
-            
                     </tr>     
                 </tbody>
                 <?php } ?>
