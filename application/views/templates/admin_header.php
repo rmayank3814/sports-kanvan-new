@@ -49,12 +49,12 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="<?php echo base_url(); ?>index.php/admin">
+                            <a class="js-arrow" href="<?php echo base_url(); ?>index.php/admin/dashboard">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard
                             </a>
                         </li>
                         <li class="active has-sub">
-                            <a class="js-arrow" href="<?php echo base_url(); ?>index.php/admin/banner_management">
+                            <a class="js-arrow" href="<?php echo base_url(); ?>index.php/banner">
                                 <i class="fas fa-tachometer-alt"></i>Banner Management
                             </a>
                         </li>
