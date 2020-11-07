@@ -1,6 +1,4 @@
-<!-- <div style="margin-top:100px"> -->
-
-    <div class="py-5 mt-3 global-container">
+  <div class="py-5 mt-3 global-container">
         <div class="container">
                 <h4 class="heading-title text-center"><b>ASSUMPTION OF RISK,WAIVER AND RELEASE OF LIABILITY AND INDEMNITY AGREEMENT</b></h4><br/><br/>
                 <h5>DECLARATIONS:</h5>
@@ -68,9 +66,8 @@
             <div class="d-flex justify-content-center mt-5 mb-3">
                 <button class="btn btn-blue btn-sm m-auto" title="submit" name="agreement_button" type="submit">Submit</button>
             </div>
-            
             <?php echo form_close(); ?>
         </div>
     </div>
-<!-- </div> -->
+
 

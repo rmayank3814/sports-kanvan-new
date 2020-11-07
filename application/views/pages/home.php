@@ -1,13 +1,20 @@
-<div style="margin-top:75px">
+<div style="margin-top:100px">
     <?php 
         foreach($banner_data as $banner) {
     ?>
 
-    <div class="row">
-        <div class="col">
-            <div id="carousel" class="carousel slide" data-ride="carousel">
+    <!-- <div class="row">
+        <div class="col"> -->
+            <div id="carousel " class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banners/<?=$banner['name']?>');">
+                        <div class="caption">
+                            <h1><?=$banner['title']?></h1>
+                            <h2><?=$banner['sub-title']?></h2>
+                            <a class="btn-text" href="<?php echo base_url();?>index.php/<?=$banner['description']?>" title="view more">View more <i class="fas fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banners/<?=$banner['name']?>');">
                         <div class="caption">
                             <h1><?=$banner['title']?></h1>
                             <h2><?=$banner['sub-title']?></h2>
@@ -24,8 +31,8 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
-    </div>
+    <!-- </div>
+    </div> -->
     <?php } ?>
 
     <marquee class="latest-updates"><i><?=$eventdata['event']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['date']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['time']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['event']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['date']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['time']?></i></marquee>

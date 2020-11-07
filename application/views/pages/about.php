@@ -1,11 +1,11 @@
-<div style="margin-top:100px">
+<div class="comman-page">
 <section class="mt-5 mb-5">
     <div class="py-1">
         <div class="container">
-            <div class="row">
-            <div class="section-head col-sm-12">
-                                <h3 class="heading-title text-center pb-5">Why Choose </h3>
-                            </div>
+            <div class="row pt-5">
+            <div class="section-head pt-3 col-sm-12">
+                <h3 class="heading-title text-center pb-5">Why Choose </h3>
+            </div>
                 <div class="col-md-7 align-self-center">
                     <div class="max-box">
                         <p class="mt-3">Do you have time to do training to your Inhouse staff, Why you want to involve on employees hirring, attrition, employee leaves approvals, productivity, reporting and much more…</p>
@@ -84,7 +84,7 @@
                     <div class="card-body py-4">
                         <div class="d-flex align-items-start">
                             <div class="icon bg-white text-success rounded-circle icon-lg icon-shape shadow-sm">
-                                <i class="fas fa-laptop-medical"></i>
+                                <i class="fa fa-laptop"></i>
                             </div>
                             <div class="icon-text pl-4">
                                 <h5 class="ma-0 ">Our Technology</h5>

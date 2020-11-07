@@ -89,7 +89,7 @@
     overflow: hidden!important;
 }
 </style>
-<div style="margin-top:140px; margin-bottom:80px">
+<div class="comman-page" style="margin-bottom:80px">
 <div class="container">
     <div class="row">
         <div class="col-lg-4">

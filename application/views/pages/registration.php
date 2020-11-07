@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10 both-space">
-                    <div class="card mt-5 mb-5 border-0 card-opacity shadow ">
+                    <div class="card mt-4 mb-5 border-0 card-opacity shadow ">
                         <div class="card-body rounded-sm">
                             <div class="text-box">
                             <h3 class="heading-title text-center mt-4 mb-5">PERSONAL DETAILS</h3>

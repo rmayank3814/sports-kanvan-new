@@ -1,47 +1,5 @@
-<style>
-.tabbable-panel {
-  padding: 10px;
-}
-ul.nav.nav-tabs {
-    display: flex;
-    justify-content: center;
-}
-.tabbable-line > .nav-tabs {
-  border: none;
-  margin: 0px;
-}
-.tabbable-line > .nav-tabs > li {
-  margin-right: 26px;
-  font-weight: bold;
-}
-.tabbable-line > .nav-tabs > li > a {
 
-  color: #737373;
-}
-.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
-  border-bottom: 2px solid #32c3f1;
-}
-.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
-  border: 0;
-  background: none !important;
-  color: #333333;
-}
-.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
-  color: #a6a6a6;
-}
-.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
-  margin-top: 0px;
-}
-.tabbable-line > .nav-tabs > li.active {
-  border-bottom: 2px solid #32465B;
-  position: relative;
-}
-.tabbable-line > .tab-content {
-  margin-top: 31px;
-}
-
-</style>
-<div class="py-5 global-container" id="section-quote" style="margin-top:100px">
+<div class="py-5 global-container comman-page" id="section-quote">
 <div class="container" >
     <div class="row">
         <div class="col-md-12">

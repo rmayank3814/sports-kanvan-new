@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<div class="comman-page">
 <div class="image-about-banner">
 <div class="form4 top" style="background-image: url('<?php echo base_url();?>main/images/inner-page/contact-us-page.jpg'); background-size: cover;   opacity: 0.9;">
     <div class="container">
@@ -6,24 +6,24 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="form-bg">
                     <h3 class="text-white">GET IN TOUCH WITH US</h3>
-                    <form class="form">
-                        <label class="label-input text-white">First Name</label>
+                    <form class="form" id="contact-us">
+                        <label class="label-input text-white">Name <span class="text-danger font-weight-medium">*</span></label>
                         <div class="form-group"> 
-                           <input type="text" class="form-control form-control-lg" id="nameNine">
+                           <input type="text" class="form-control form-control-lg" name="nameNine" id="nameNine">
                          </div>
-                         <label class="label-input text-white">Phone Number</label>
+                         <label class="label-input text-white">Phone Number <span class="text-danger font-weight-medium">*</span></label>
                         <div class="form-group"> 
-                          <input type="number" class="form-control form-control-lg"> 
+                          <input type="text" name="number" id="number" class="form-control form-control-lg"> 
                         </div>
-                         <label class="label-input text-white">Email</label>
+                         <label class="label-input text-white">Email <span class="text-danger font-weight-medium">*</span></label>
                         <div class="form-group">
-                           <input type="email" class="form-control form-control-lg"  id="emailNine">
+                           <input type="email" name="emailNine" class="form-control form-control-lg"  id="emailNine">
                          </div>
-                         <label class="label-input text-white">Message</label>
+                         <label class="label-input text-white">Message <span class="text-danger font-weight-medium">*</span></label>
                         <div class="form-group">
-                            <textarea class="form-control" required="" rows="9" id="messageNine"></textarea> 
+                            <textarea class="form-control" name="messageNine" required="" rows="9" id="messageNine"></textarea> 
                         </div>
-                        <button type="submit" name="contact_button" class="btn text-center btn-blue">Send Message</button>
+                        <button type="submit" name="submit" class="btn text-center btn-blue">Send Message</button>
                     </form>
                 </div>
             </div>
