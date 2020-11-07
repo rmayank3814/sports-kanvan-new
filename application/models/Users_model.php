@@ -232,4 +232,9 @@ class Users_model extends CI_Model {
         return $this->db->update('users',$data);
     }
 
+    function fetch_banner_data(){
+        $this->db->select("*");
+        $this->db->from('banner');
+        return $this->db->get();
+    }
 }

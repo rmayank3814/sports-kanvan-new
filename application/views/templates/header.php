@@ -36,12 +36,6 @@
                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
                                         </li>
-                                        <!-- <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php //echo base_url();?>index.php/pages/about">About Us</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" href="<?php //echo base_url();?>index.php/pages/contact">Contact Us</a>
-                                        </li> -->
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="blog" href="<?php echo base_url();?>index.php/pages/Blog">Blog</a>
                                         </li>
