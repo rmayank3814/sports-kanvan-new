@@ -1,7 +1,8 @@
-<?php 
-    foreach($banner_data as $banner) {
-        ?>
 <div style="margin-top:75px">
+    <?php 
+        foreach($banner_data as $banner) {
+    ?>
+
     <div class="row">
         <div class="col">
             <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -13,18 +14,19 @@
                             <a class="btn-text" href="<?php echo base_url();?>index.php/<?=$banner['description']?>" title="view more">View more <i class="fas fa-angle-double-right"></i></a>
                         </div>
                     </div>
+                </div>
             </div>
-        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-<?php } ?>
-    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    </div>
+    <?php } ?>
 
     <marquee class="latest-updates"><i>Hence, Kanvan Sports Events incorporated with multi Sports.</i></marquee>
     <marquee behavior="alternate" scrollamount="13">Your bouncing text goes here</marquee>           
@@ -124,6 +126,4 @@
         </div>
     </div>
 </div>
-        
-
-   
+ <!-- </div>   -->
