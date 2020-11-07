@@ -6,16 +6,18 @@ class Pages extends CI_Controller {
 	public function __construct() {
         parent::__construct();
 
-        $this->load->model('users_model');
+        $this->load->model(array('users_model','banner_model','admin_model'));
 		$this->load->helper(array('form','url','html'));
 		$this->load->library(array('form_validation','session'));
 	}
 	
     function index(){
 		$this->load->view('templates/header');
-		$que = $this->users_model->fetch_banner_data();
-        $banner_data = $que->result_array();
-        $data['banner_data'] = $banner_data;
+		$que = $this->banner_model->fetch_banner_data();
+		$banner_data = $que->result_array();
+		$eventdata = $this->admin_model->fetch_event_details();
+		$data['eventdata'] = $eventdata;
+		$data['banner_data'] = $banner_data;
 		$this->load->view('pages/home',$data);
 		$this->load->view('templates/footer');
 	}
@@ -180,6 +182,7 @@ class Pages extends CI_Controller {
 				} else {
 					$_POST['profile_image'] = $this->upload->data('file_name');
 					$this->users_model->profile_update($sess_id);
+					redirect('pages/profile');
 				}
 		    }
 		}
@@ -321,5 +324,7 @@ class Pages extends CI_Controller {
 			$query = $this->db->get();
 			return $query->row_array();
 	}
+
+
 	
 }
