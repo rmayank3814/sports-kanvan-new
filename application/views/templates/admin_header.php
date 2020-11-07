@@ -63,6 +63,11 @@
                                 <i class="fas fa-tachometer-alt"></i>Event News
                             </a>
                         </li>
+                        <li class="active has-sub">
+                            <a class="js-arrow" href="<?php echo base_url(); ?>index.php/blog/blogs">
+                                <i class="fas fa-tachometer-alt"></i>Blogs
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
