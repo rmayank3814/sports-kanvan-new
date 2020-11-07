@@ -79,7 +79,20 @@ class Admin extends CI_Controller {
 		if($row['password'] == md5($old_pass)){
 			return true;
 		}
-	}
+    }
+    
+    function event_news(){
+        $this->load->view('templates/admin_header');
+        $data = $this->admin_model->fetch_event_details();
+        if(isset($_POST['event_button'])){
+            $this->admin_model->insert_event();
+            redirect('admin/event_news');
+        }
+        $this->load->view('admin/event_news',$data);
+        $this->load->view('templates/admin_footer');
+    }
+
+    
    
   
    

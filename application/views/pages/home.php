@@ -35,8 +35,8 @@
     </div> -->
     <?php } ?>
 
-    <marquee class="latest-updates"><i>Hence, Kanvan Sports Events incorporated with multi Sports.</i></marquee>
-    <marquee behavior="alternate" scrollamount="13">Your bouncing text goes here</marquee>           
+    <marquee class="latest-updates"><i><?=$eventdata['event']?></i><i><?=$eventdata['date']?></i><i><?=$eventdata['time']?></i></marquee>
+    <marquee behavior="alternate" scrollamount="13">Hurry Up</marquee>           
 
     <div class="service-half comman-gr">
         <div class="container py-1">
