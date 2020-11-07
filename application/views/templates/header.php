@@ -46,7 +46,7 @@
                                             <a class="nav-link" title="blog" href="<?php echo base_url();?>index.php/pages/Blog">Blog</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="sign in" href="<?php echo base_url();?>index.php/pages/registration">Sign Up</a>
+                                            <a class="nav-link" title="sign up" href="<?php echo base_url();?>index.php/pages/registration">Sign Up</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="sign in" href="<?php echo base_url();?>index.php/pages/login">Sign In</a>

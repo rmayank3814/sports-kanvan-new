@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<div class="comman-page">
 <div class="py-5 " id="section-quote">
     <div class="container">
         <div class="row d-flex justify-content-center">

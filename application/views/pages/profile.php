@@ -11,10 +11,10 @@
                     <?php if($profile_image == ''){
                         $profile_image = 'avatar.png';
                     } ?>
-                    <div class="text-center">
+                    <div class="text-center ">
                         <img src="<?php echo base_url();?>/main/images/<?php echo $profile_image; ?>" class="avatar rounded-circle profile_size img-thumbnail" alt="avatar">
                     </div>  
-                    <div class="text-center">
+                    <div class="text-center pt-3 pb-5">
                         <input type="file" name="profile_image" />  
                     </div>
                     <div class="row">

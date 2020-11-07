@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<div class="comman-page">
  <div class="global-container ">
     <div class="container">
     <div class="pt-5 pb-5">

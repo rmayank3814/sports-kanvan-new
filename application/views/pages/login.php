@@ -1,4 +1,4 @@
-<div style="margin-top:100px">
+<div class="comman-page">
 <div class="global-container pt-5 pb-5">
 <div class="col-lg-6 col-sm-6 col-xs-12">
 	<div class="card login-form" >

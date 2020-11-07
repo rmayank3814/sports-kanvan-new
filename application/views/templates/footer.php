@@ -80,6 +80,7 @@
     <script src="<?php echo base_url();?>vendor/others/js/sweetalert.js"></script>
     <script> new WOW().init(); </script>
     <!--Custom Script-->
+    <script src="<?php echo base_url();?>/others/js/contactus-validation.js"></script>
     <script src="<?php echo base_url();?>main/js/custom.js"></script>
     <script src="<?php echo base_url();?>/others/js/validation.js"></script>
     <script src="<?php echo base_url();?>/others/js/medical.js"></script>
