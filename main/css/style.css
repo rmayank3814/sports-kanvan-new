@@ -2854,8 +2854,13 @@ button {
                         transition: transform 0.3s ease;
                     }
                     /* end */
+                    .event_comment{
+                        color:green;
+                        font-weight:bold;
+                        font-size: 18px;
+                    }
                     /* comman space */
-                    
+                   
                     .comman-page {
                         margin-top: 100px;
                     }

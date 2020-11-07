@@ -22,6 +22,7 @@ class Admin_model extends CI_Model {
     function insert_event(){
         $eventdata = array(
             'event' => $this->input->post('event'),
+            'comment' => $this->input->post('comment'),
             'date' => $this->input->post('event_date'),
             'time' => $this->input->post('event_time')
         );

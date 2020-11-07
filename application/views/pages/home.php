@@ -35,8 +35,8 @@
     </div> -->
     <?php } ?>
 
-    <marquee class="latest-updates"><i><?=$eventdata['event']?></i><i><?=$eventdata['date']?></i><i><?=$eventdata['time']?></i></marquee>
-    <marquee behavior="alternate" scrollamount="13">Hurry Up</marquee>           
+    <marquee class="latest-updates"><i><?=$eventdata['event']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['date']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['time']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['event']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['date']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['time']?></i></marquee>
+    <marquee class="event_comment" behavior="alternate" scrollamount="10"><i><?=$eventdata['comment']?></i></marquee>           
 
     <div class="service-half comman-gr">
         <div class="container py-1">
