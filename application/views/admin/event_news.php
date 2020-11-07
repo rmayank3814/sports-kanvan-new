@@ -5,6 +5,10 @@
         <input type="text" name="event" value="<?=$event?>">
     </div>
     <div>
+        <label> Comment </label>
+        <input type="text" name="comment" value="<?=$comment?>">
+    </div>
+    <div>
         <label> Date </label>
         <input type="date" name="event_date" value="<?=$date?>">
     </div>
