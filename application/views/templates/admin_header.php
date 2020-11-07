@@ -55,12 +55,12 @@
                         </li>
                         <li class="active has-sub">
                             <a class="js-arrow" href="<?php echo base_url(); ?>index.php/banner">
-                                <i class="fas fa-tachometer-alt"></i>Banner Management
+                            <i class="fas fa-edit"></i>Banner Management
                             </a>
                         </li>
                         <li class="active has-sub">
                             <a class="js-arrow" href="<?php echo base_url(); ?>index.php/admin/event_news">
-                                <i class="fas fa-tachometer-alt"></i>Event News
+                            <i class="fas fa-calendar-alt"></i>Event News
                             </a>
                         </li>
                         <li class="active has-sub">
