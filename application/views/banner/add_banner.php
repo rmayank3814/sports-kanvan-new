@@ -15,7 +15,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 .table-wrapper {
-    width: 700px;
+    width: 100%;
     margin: 30px auto;
     background: #fff;
     padding: 20px;	
@@ -97,14 +97,40 @@ table.table td .add {
     padding:5px;
     font-size:8px;
 }
+.serial-number{
+    width:55px;
+}
+.bnr-image{
+    width:100px;
+}
+.title-banner{
+    width:100px;
+}
+
+.sub-bnr{
+width:140px;
+}
+.bnr-action{
+    width:100px
+}
+.bnr-deactive{
+    font-size:12px;
+font-weight:bold;
+}
+@media all and (max-width: 680px) {
+    .table-wrapper{
+        background-color:#e5e5e5;
+    }
+}
+
 </style>
 <div class="container-lg" style="margin-top:100px">
-    <div class="table-responsive">
+    <div class=" table-responsive-sm">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Banner <b>Details</b></h2></div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-9"><h2>Banner <b>Details</b></h2></div>
+                    <div class="col-sm-3">
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"> <span>Add New Banner</span></a>
                     </div>
                 </div>
@@ -147,16 +173,17 @@ table.table td .add {
             </div>
         
             <!-- Edit Modal HTML -->
+            <div style="">
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>S.No</th>
-                        <th>File</th>
-                        <th>Title</th>
-                        <th>Sub-title</th>
+                        <th class="serial-number">S.No</th>
+                        <th class="bnr-image">File</th>
+                        <th class="title-banner">Title</th>
+                        <th class="sub-bnr">Sub-title</th>
                         <th>Description</th>
-                        <th>Action</th>
-                        <th>Status</th>
+                        <th class="bnr-action">Action</th>
+                        <th class="button-status">Status</th>
                     </tr>
                 </thead>
                 <?php 
@@ -173,12 +200,12 @@ table.table td .add {
                         <td><?=$bannerData['sub-title']?></td>
                         <td><?=$bannerData['description']?></td>
                         <td>
-                            <a href="#updateEmployeeModal<?=$i?>" class="btn btn-success" data-toggle="modal">Update</a>
-                            <button onClick="deleteThis(<?=$bannerData['id'];?>);" name="delete" data-href="<?php echo base_url();?>index.php/banner/delete_banner/<?=$bannerData['id'];?>" id="delete-<?=$i?>" class="btn btn-warning deleteThis">Delete</button>
+                            <a href="#updateEmployeeModal<?=$i?>" class="btn btn-primary btn-sm mb-3" data-toggle="modal">Update</a>
+                            <a href="#" onClick="deleteThis(<?=$bannerData['id'];?>);" name="delete" data-href="<?php echo base_url();?>index.php/banner/delete_banner/<?=$bannerData['id'];?>" id="delete-<?=$i?>" class="btn btn-danger btn-sm deleteThis">Delete</a>
                         </td>
                         <td>
-                            <a href="#" class="btn btn-success" data-toggle="modal">Activate</a>
-                            <button name="delete" data-href="#" class="btn btn-warning deleteThis">Deactivate</button>
+                            <a href="#" class="btn btn-success btn-sm mb-3" data-toggle="modal">Activate</a>
+                            <a href="#" name="delete" data-href="#" class="btn btn-warning btn-sm deleteThis bnr-deactive">Deactivate</a>
                         </td>
                         <script>
                             function deleteThis(bannerId) {
@@ -228,6 +255,7 @@ table.table td .add {
                 <?php } ?>
                 <?php } ?>
             </table>
+        </div>
         </div>
     </div>
 </div>
