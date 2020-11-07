@@ -21,7 +21,7 @@ class Banner_model extends CI_Model {
         return $this->db->get();
     }
 
-    function update_banner(){
+    function update_banner($id){
         $banner = array(
             'name' => $this->input->post('name'),
             'title' => $this->input->post('title'),

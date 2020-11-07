@@ -13,7 +13,10 @@ class Pages extends CI_Controller {
 	
     function index(){
 		$this->load->view('templates/header');
-		$this->load->view('pages/home');
+		$que = $this->users_model->fetch_banner_data();
+        $banner_data = $que->result_array();
+        $data['banner_data'] = $banner_data;
+		$this->load->view('pages/home',$data);
 		$this->load->view('templates/footer');
 	}
 	
