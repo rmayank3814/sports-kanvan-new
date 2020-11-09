@@ -19,11 +19,46 @@ class Blog extends CI_Controller {
 
 	function blogs(){
 		$this->load->view('templates/admin_header');
-		if(isset($_POST['blog_button'])){
-			$this->blog_model->insert_blog();
+		if(isset($_POST['blog_button'])) {
+			$config['upload_path'] = './main/images/blog';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			$config['max_size'] = 2000;
+			$config['max_width'] = 1500;
+			$config['max_height'] = 1500;
+
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('photo')) {
+				$error = array('error' => $this->upload->display_errors());
+			} else {
+				$_POST['photo'] = $this->upload->data('file_name');
+				$this->blog_model->insert_blog();
+			}
 		}
-		$this->load->view('blog/blogs');
+		redirect('blog');
 		$this->load->view('templates/admin_footer');
 	}
+
+	function update_blog_details(){
+		$this->load->view('templates/admin_header');
+		if(isset($_POST['update_blog_button'])) {
+			$config['upload_path'] = './main/images/blog';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			$config['max_size'] = 2000;
+			$config['max_width'] = 1500;
+			$config['max_height'] = 1500;
+
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('photo')) {
+				$error = array('error' => $this->upload->display_errors());
+			} else {
+				$_POST['photo'] = $this->upload->data('file_name');
+				$id = $this->input->post('id');
+				$this->blog_model->update_blog($id);
+			}
+		}
+		redirect('blog');
+		$this->load->view('templates/admin_footer');
+	}
+
 
 }

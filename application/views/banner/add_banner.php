@@ -145,8 +145,7 @@ font-weight:bold;
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                             </div>
                             <?php echo validation_errors(); ?>
-                            <div class="modal-body">
-                            <div class="row">					
+                            <div class="modal-body">				
                                 <div class="form-group">
                                     <label>File:<span class="text-danger font-weight-medium">*</span></label>
                                     <input type="file" name="name" class="form-control" required>
@@ -256,7 +255,7 @@ font-weight:bold;
                 <?php } ?>
                 <?php } ?>
             </table>
-        </div>
+            </div>
         </div>
     </div>
 </div>
