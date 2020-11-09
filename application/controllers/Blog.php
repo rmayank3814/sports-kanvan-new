@@ -13,7 +13,10 @@ class Blog extends CI_Controller {
 	
     function index(){
 		$this->load->view('templates/admin_header');
-		$this->load->view('blog/blogs');
+		$query = $this->blog_model->fetch_blog();
+        $blog_data = $query->result_array();
+        $data['blog_data'] = $blog_data;
+		$this->load->view('blog/blogs',$data);
 		$this->load->view('templates/admin_footer');
 	}
 
@@ -59,6 +62,13 @@ class Blog extends CI_Controller {
 		redirect('blog');
 		$this->load->view('templates/admin_footer');
 	}
+
+	function delete_blog_details($id){
+        $this->load->view('templates/admin_header');
+        $this->blog_model->delete_blog($id);
+        redirect('blog');
+        $this->load->view('templates/admin_footer');
+    }
 
 
 }
