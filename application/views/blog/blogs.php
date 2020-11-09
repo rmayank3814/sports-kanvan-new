@@ -101,10 +101,10 @@ table.table td .add {
     width:55px;
 }
 .bnr-image{
-    width:100px;
+    width:130px;
 }
 .title-banner{
-    width:100px;
+    width:130px;
 }
 
 .sub-bnr{
