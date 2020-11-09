@@ -1,40 +1,28 @@
 <div style="margin-top:100px">
-    <?php 
-        foreach($banner_data as $banner) {
-    ?>
-
-    <!-- <div class="row">
-        <div class="col"> -->
-            <div id="carousel " class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banners/<?=$banner['name']?>');">
-                        <div class="caption">
-                            <h1><?=$banner['title']?></h1>
-                            <h2><?=$banner['sub-title']?></h2>
-                            <a class="btn-text" href="<?php echo base_url();?>index.php/<?=$banner['description']?>" title="view more">View more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-item" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banners/<?=$banner['name']?>');">
-                        <div class="caption">
-                            <h1><?=$banner['title']?></h1>
-                            <h2><?=$banner['sub-title']?></h2>
-                            <a class="btn-text" href="<?php echo base_url();?>index.php/<?=$banner['description']?>" title="view more">View more <i class="fas fa-angle-double-right"></i></a>
-                        </div>
+<div class="row">
+    <div class="col">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <?php $i = 0; foreach($banner_data as $banner) { ?>   
+                <div class="carousel-item <?php if($i==0) { echo 'active'; } ?>" title="sports image" style="background-image: url('<?php echo base_url();?>main/images/banners/<?=$banner['name']?>'); background-size: cover;">
+                    <div class="caption">
+                        <h1><?=$banner['title']?></h1>
+                        <h2><?=$banner['sub-title']?></h2>
+                        <a class="btn-text" href="" title="view more">View more <i class="fas fa-angle-double-right"></i></a>
                     </div>
                 </div>
+                <?php $i++; } ?>
             </div>
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    <!-- </div>
-    </div> -->
-    <?php } ?>
-
+    
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     <marquee class="latest-updates"><i><?=$eventdata['event']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['date']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['time']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['event']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['date']?></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i><?=$eventdata['time']?></i></marquee>
     <marquee class="event_comment" behavior="alternate" scrollamount="10"><i><?=$eventdata['comment']?></i></marquee>           
 
@@ -133,4 +121,4 @@
         </div>
     </div>
 </div>
- <!-- </div>   -->
+</div>

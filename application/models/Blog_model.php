@@ -12,12 +12,7 @@ class Blog_model extends CI_Model {
             'author' => $this->input->post('author'),
             'content' => $this->input->post('content')
         );
-        $this->db->select("*");
-        $this->db->from('blog');
-        $query = $this->db->get();
-        if($query->row_array() == 0){
-            return $this->db->insert('blog',$data);
-        }
+        return $this->db->insert('blog',$data);
     }
     
     function update_blog($id) {

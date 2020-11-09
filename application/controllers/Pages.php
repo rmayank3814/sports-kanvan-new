@@ -6,7 +6,7 @@ class Pages extends CI_Controller {
 	public function __construct() {
         parent::__construct();
 
-        $this->load->model(array('users_model','banner_model','admin_model'));
+        $this->load->model(array('users_model','banner_model','admin_model','blog_model'));
 		$this->load->helper(array('form','url','html'));
 		$this->load->library(array('form_validation','session'));
 	}
@@ -92,7 +92,10 @@ class Pages extends CI_Controller {
 	}
 	function blog(){
 		$this->load->view('templates/header');
-		$this->load->view('pages/blog');
+		$query = $this->blog_model->fetch_blog();
+		$blog_data = $query->result_array();
+        $data['blog_data'] = $blog_data;
+		$this->load->view('pages/blog',$data);
 		$this->load->view('templates/footer');
 	}
 	function testimonial(){

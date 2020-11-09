@@ -14,7 +14,7 @@ class Blog extends CI_Controller {
     function index(){
 		$this->load->view('templates/admin_header');
 		$query = $this->blog_model->fetch_blog();
-        $blog_data = $query->result_array();
+		$blog_data = $query->result_array();
         $data['blog_data'] = $blog_data;
 		$this->load->view('blog/blogs',$data);
 		$this->load->view('templates/admin_footer');
