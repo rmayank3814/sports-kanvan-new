@@ -62,7 +62,8 @@
                         <label class="radio-inline">
                             <input type="radio" name="option6" value="no"> No
                         </label>
-                        <?php echo form_error('option6', '<div class="error ml-2">', '</div>'); ?>
+                        <?php echo form_error('option6', '<div class="error ml-2">', '
+                        </div>'); ?>
                     </div>  
                 </div>
             </div>
@@ -92,7 +93,7 @@
                   </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+                <div class="col-lg-6">
                     <div class="form-group">
                        <label>6) Muscle pain or an injury (explain on back of Form)? <span class="error-medical"> *</span></label>
                         <div class="optional-radio-button">
@@ -116,7 +117,7 @@
             </div>
         </div>
         <div class="row">
-        <div class="col-lg-6">
+         <div class="col-lg-6">
                 <div class="form-group" >
                     <label>7) Have you ever had an exercise stress test <span class="error-medical"> *</span></label>
                     <div class="optional-radio-button">

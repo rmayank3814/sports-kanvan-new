@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 mt-5">
         <div class="copyright">
             <p>&copy<?php echo date('Y'); ?> Kanvan Sports. All rights reserved.</p>
         </div>

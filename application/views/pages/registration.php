@@ -83,9 +83,41 @@
                                 <div class="col-md-6 mb-3">
                                     <label class="label-input" for="address2">Address 2:</label>
                                     <input class="form-control" type="text" name="address2" id="address2">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Package select</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Select Plan</option>
+                                    <option>Family Package</option>
+                                    <option>Per Person</option>
+                                    <option>couple</option>
+                                    </select>
+                                </div>
                                     
                                 </div>
-                                
+                                <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                <label> Do you smoke? <span class="error-medical"> *</span></label>
+                                <div class="optional-radio-button">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="option6" value="yes"> 1 Month
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="option6" value="no"> 3 Months
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="option6" value="no"> 6 Months
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="option6" value="no"> 1 Year
+                                    </label>  
+                                </div>
+                              </div>  
+                             </div>
+                          </div>
                             </div>
                             <div class="d-flex justify-content-center  mt-3 mb-4">
                                 <button class="btn btn-blue btn-sm m-auto" title="submit" name="registration" type="submit">Submit</button>
