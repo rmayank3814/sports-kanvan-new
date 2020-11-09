@@ -35,7 +35,7 @@ class Banner_model extends CI_Model {
 
     function delete_banner($id){
         $this->db->where('id', $id);
-        $this->db->delete('banner');
+        return $this->db->delete('banner');
     }
 
 

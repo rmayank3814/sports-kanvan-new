@@ -31,6 +31,18 @@ class Blog_model extends CI_Model {
         $this->db->where('id', $id);
         return $this->db->update('blog',$data);
     }
+
+    function delete_blog($id){
+        $this->db->where('id', $id);
+        return $this->db->delete('blog');
+    }
+
+    function fetch_blog(){
+        $this->db->select("*");
+        $this->db->from('blog');
+        return $this->db->get();
+    }
     
+
 
 }
