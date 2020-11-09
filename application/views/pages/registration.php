@@ -87,32 +87,31 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Package select</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                    <option>Select Plan</option>
-                                    <option>Family Package</option>
-                                    <option>Per Person</option>
-                                    <option>couple</option>
-                                    </select>
-                                </div>
-                                    
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Package select <span class="error-medical"> *</span></label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                        <option value="">---Select Plan---</option>
+                                        <option>Individual</option>
+                                        <option>Couple</option>
+                                        <option>Family Package</option>
+                                        </select>
+                                    </div>   
                                 </div>
                                 <div class="col-md-6 mb-3">
                                 <div class="form-group">
-                                <label> Do you smoke? <span class="error-medical"> *</span></label>
+                                <label> Select Your Package <span class="error-medical"> *</span></label>
                                 <div class="optional-radio-button">
                                     <label class="radio-inline">
-                                        <input type="radio" name="option6" value="yes"> 1 Month
+                                        <input type="radio" name="package" value="yes"> 1-Month
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="option6" value="no"> 3 Months
+                                        <input type="radio" name="package" value="no"> 3-Months
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="option6" value="no"> 6 Months
+                                        <input type="radio" name="package" value="no"> 6-Months
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="option6" value="no"> 1 Year
+                                        <input type="radio" name="package" value="no"> 1-Year
                                     </label>  
                                 </div>
                               </div>  
