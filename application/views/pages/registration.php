@@ -89,7 +89,7 @@
                                 <div class="col-md-6 mb-3">
                                     <div class="form-group">
                                         <label for="exampleFormControlSelect1">Package select <span class="error-medical"> *</span></label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
+                                        <select class="form-control" name="plan" id="plan">
                                         <option value="">---Select Plan---</option>
                                         <option>Individual</option>
                                         <option>Couple</option>
@@ -98,26 +98,19 @@
                                     </div>   
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                <label> Select Your Package <span class="error-medical"> *</span></label>
-                                <div class="optional-radio-button">
-                                    <label class="radio-inline">
-                                        <input type="radio" name="package" value="yes"> 1-Month
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="package" value="no"> 3-Months
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="package" value="no"> 6-Months
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input type="radio" name="package" value="no"> 1-Year
-                                    </label>  
+                                    <div class="form-group">
+                                        <label for="plan">Select Package <span class="error-medical"> *</span></label>
+                                        <select class="form-control" name="package" id="package">
+                                            <option>---Select---</option>
+                                            <option>1-Month</option>
+                                            <option>3-Month</option>
+                                            <option>6-Month</option>
+                                            <option>1-Year</option>
+                                        </select>
+                                    </div>  
                                 </div>
-                              </div>  
-                             </div>
-                          </div>
                             </div>
+                        </div>
                             <div class="d-flex justify-content-center  mt-3 mb-4">
                                 <button class="btn btn-blue btn-sm m-auto" title="submit" name="registration" type="submit">Submit</button>
                             </div>
@@ -129,4 +122,3 @@
     </div>
 </div>
 </div>
-<!-- </div> -->

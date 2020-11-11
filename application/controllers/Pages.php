@@ -41,8 +41,9 @@ class Pages extends CI_Controller {
 		$this->form_validation->set_message('required', 'Enter %s');
 
 		if(isset($_POST['registration']) && $this->form_validation->run()) { 
-			$this->users_model->users_data();
-			redirect('pages/login');
+			redirect('payment/cashfree');die;
+			// $this->users_model->users_data();
+			// redirect('pages/login');
 		}
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');
