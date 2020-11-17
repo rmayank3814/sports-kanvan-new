@@ -752,7 +752,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center mt-3 mb-4">
-                                    <button class="btn btn-blue btn-sm m-auto" name="tfa_update" type="submit">Submit</button>
+                                    <button class="btn btn-blue btn-sm m-auto" name="tfa_update" type="submit">Update</button>
                                 </div>
                             <?php echo form_close(); ?>
                         </div>
@@ -823,7 +823,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-center mt-5 mb-3">
-                                    <button class="btn btn-blue btn-sm m-auto" name="ptc_update" type="submit">Submit</button>
+                                    <button class="btn btn-blue btn-sm m-auto" name="ptc_update" type="submit">Update</button>
                                 </div>
                                 <?php echo form_close(); ?>
                             <h6 class="text-center pt-4 pb-4"> WE ARE EXCITED TO BEGIN WORKING WITH YOU!</h6>
@@ -927,7 +927,7 @@
                             </div>
 
                             <div class="d-flex justify-content-center mt-5 mb-3">
-                                <button class="btn btn-blue btn-sm m-auto" name="community_update" type="submit">Submit</button>
+                                <button class="btn btn-blue btn-sm m-auto" name="community_update" type="submit">Update</button>
                             </div>
                             <?php echo form_close(); ?>
                             <h6 class="text-center pt-4 pb-1"> THANKS FOR HELPING SPREAD THE GIFT OF IMPROVED HEALTH AND FITNESS!</h6>
@@ -1014,7 +1014,7 @@
         </div>
         </div>
             <div class="d-flex justify-content-center mt-5 pb-5">
-                <button class="btn btn-blue btn-sm m-auto" name="agreement_update" type="submit">Submit</button>
+                <button class="btn btn-blue btn-sm m-auto" name="agreement_update" type="submit">Update</button>
             </div>
             <?php echo form_close(); ?>
             </div>

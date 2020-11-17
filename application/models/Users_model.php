@@ -17,9 +17,12 @@ class Users_model extends CI_Model {
             'address1' => $this->input->post('address1'),
             'address2' => $this->input->post('address2'),
             'gender' => $this->input->post('gender'),
-            'password' => md5($this->input->post('password'))
+            'address2' => $this->input->post('address2'),
+            'plan' => $this->input->post('plan'),
+            'package' => $this->input->post('package')
         );        
-            return $this->db->insert('users', $data);
+            $this->db->insert('users', $data);
+            return $this->db->insert_id();
     }
 
     function medical_data($sess_id){

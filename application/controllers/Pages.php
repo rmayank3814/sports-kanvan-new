@@ -6,7 +6,7 @@ class Pages extends CI_Controller {
 	public function __construct() {
         parent::__construct();
 
-        $this->load->model(array('users_model','banner_model','admin_model','blog_model'));
+        $this->load->model(array('users_model','banner_model','admin_model','blog_model','payment_model'));
 		$this->load->helper(array('form','url','html'));
 		$this->load->library(array('form_validation','session'));
 	}
@@ -36,14 +36,16 @@ class Pages extends CI_Controller {
 		$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
 		$this->form_validation->set_rules('shift', 'Shift','required');
 		$this->form_validation->set_rules('address1', 'Address','required');
+		$this->form_validation->set_rules('plan', 'Plan','required');
+		$this->form_validation->set_rules('package', 'Package','required');
 
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		$this->form_validation->set_message('required', 'Enter %s');
 
 		if(isset($_POST['registration']) && $this->form_validation->run()) { 
-			redirect('payment/cashfree');die;
-			// $this->users_model->users_data();
-			// redirect('pages/login');
+			$id = $this->users_model->users_data();
+			// $this->payment_model->fetch_user_data($id);
+			redirect('payment/verify_details');
 		}
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');
