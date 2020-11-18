@@ -6,7 +6,7 @@
                 <div class="card-body rounded-sm">
                     <div class="text-box">
                     <h3 class="heading-title text-center mt-4 mb-5">VERIFY YOUR DETAILS</h3>
-                    <?=form_open('payment/verify_details',array('method'=>'post','novalidate'=>"novalidate")); ?>
+                    <?=form_open('payment',array('method'=>'post','novalidate'=>"novalidate")); ?>
 
                             <div class="col-md-6 mb-3">
                                 First Name: <?php echo $user_data[0]['fname']?>  <br/>

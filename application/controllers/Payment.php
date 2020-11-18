@@ -12,16 +12,23 @@ class Payment extends CI_Controller {
 	}
 	
     function index(){
-        $this->verify_details();
-    }
-
-    function verify_details($id){
+        // $cid = $_GET['id'];
+        // echo $cid;die;
         $this->load->view('templates/header');
-        echo $id;die;
         $query = $this->payment_model->fetch_user_data($id);
         $user_data = $query->result_array();
         $this->load->view('payment/verify_details',$user_data[0]);
         $this->load->view('templates/footer');
     }
+
+    // function verify_details(){
+    //     $cid = $_GET['id'];
+    //     echo $cid;die;
+    //     $this->load->view('templates/header');
+    //     $query = $this->payment_model->fetch_user_data($id);
+    //     $user_data = $query->result_array();
+    //     $this->load->view('payment/verify_details',$user_data[0]);
+    //     $this->load->view('templates/footer');
+    // }
 
 }
