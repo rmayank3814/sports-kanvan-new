@@ -44,7 +44,7 @@ class Pages extends CI_Controller {
 
 		if(isset($_POST['registration']) && $this->form_validation->run()) { 
 			$id = $this->users_model->users_data();
-			redirect('payment/verify_details');
+			redirect('payment/index/'.$id);
 		}
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');
