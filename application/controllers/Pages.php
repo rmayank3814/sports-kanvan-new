@@ -22,6 +22,50 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 	
+	function getPlanPackageAmount() {
+		if(isset($_POST)) {
+			if($_POST['plan'] == 'Individual') {
+				if($_POST['package'] == '1-Month') {
+					echo 1;
+				} else if($_POST['package'] == '3-Month') {
+					echo 2;
+				} else if($_POST['package'] == '6-Month') {
+					echo 3;
+				} else if($_POST['package'] == '1-Year') {
+					echo 4;
+				} else {
+					echo 0;
+				} 
+			} else if($_POST['plan'] == 'Couple') {
+				if($_POST['package'] == '1-Month') {
+					echo 11;
+				} else if($_POST['package'] == '3-Month') {
+					echo 21;
+				} else if($_POST['package'] == '6-Month') {
+					echo 31;
+				} else if($_POST['package'] == '1-Year') {
+					echo 41;
+				} else {
+					echo 0;
+				} 			
+			} else if($_POST['plan'] == 'Family Package') {
+				if($_POST['package'] == '1-Month') {
+					echo 111;
+				} else if($_POST['package'] == '3-Month') {
+					echo 211;
+				} else if($_POST['package'] == '6-Month') {
+					echo 311;
+				} else if($_POST['package'] == '1-Year') {
+					echo 411;
+				} else {
+					echo 0;
+				}
+			}
+			else{
+				echo 0;
+			}
+		}		
+	}
 
 	function registration() {
 		$this->load->view('templates/header');
@@ -43,8 +87,8 @@ class Pages extends CI_Controller {
 		$this->form_validation->set_message('required', 'Enter %s');
 
 		if(isset($_POST['registration']) && $this->form_validation->run()) { 
-			$id = $this->users_model->users_data();
-			redirect('payment/index/'.$id);
+			$orderId= $this->users_model->users_data();
+			redirect('payment/index/'.$orderId);
 		}
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');

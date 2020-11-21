@@ -19,10 +19,17 @@ class Users_model extends CI_Model {
             'gender' => $this->input->post('gender'),
             'address2' => $this->input->post('address2'),
             'plan' => $this->input->post('plan'),
-            'package' => $this->input->post('package')
+            'package' => $this->input->post('package'),
+            'password' => md5($this->input->post('password'))
         );        
-            $this->db->insert('users', $data);
-            return $this->db->insert_id();
+        $this->db->insert('users', $data);
+        $order = array(
+            'user_id' => $this->db->insert_id(),
+            'orderId' => rand(000000,999999),
+            'orderAmount' => $this->input->post('orderAmount')
+        );
+        $this->db->insert('payment', $order);
+        return $order['orderId'];
     }
 
     function medical_data($sess_id){

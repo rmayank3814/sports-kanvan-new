@@ -91,9 +91,9 @@
                                         <label for="exampleFormControlSelect1">Package select <span class="error-medical"> *</span></label>
                                         <select class="form-control" name="plan" id="plan">
                                         <option value="">---Select Plan---</option>
-                                        <option>Individual</option>
-                                        <option>Couple</option>
-                                        <option>Family Package</option>
+                                        <option value="Individual">Individual</option>
+                                        <option value="Couple">Couple</option>
+                                        <option value="Family Package">Family Package</option>
                                         </select>
                                     </div>   
                                 </div>
@@ -102,12 +102,15 @@
                                         <label for="plan">Select Package <span class="error-medical"> *</span></label>
                                         <select class="form-control" name="package" id="package">
                                             <option>---Select---</option>
-                                            <option>1-Month</option>
-                                            <option>3-Month</option>
-                                            <option>6-Month</option>
-                                            <option>1-Year</option>
+                                            <option value="1-Month">1-Month</option>
+                                            <option value="3-Month">3-Month</option>
+                                            <option value="6-Month">6-Month</option>
+                                            <option value="1-Year">1-Year</option>
                                         </select>
                                     </div>  
+                                </div>
+                                <div id="amount-display">
+                                    <input readonly="readonly" type="text" name="orderAmount" id="pack-plan-amount-id" />
                                 </div>
                             </div>
                         </div>
@@ -122,3 +125,47 @@
     </div>
 </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#amount-display').hide();
+	$('#plan').on('change', function(event) {
+        
+		var plan = $(this).val();
+        var package = $('#package').val();
+        
+        $.ajax({
+            type : 'POST', 
+            url: "<?=base_url("index.php/pages/getPlanPackageAmount");?>",
+            dataType : 'json',
+            data : {"plan": plan,"package": package },
+            success: function(amtVal) {
+                $('#amount-display').show();
+                $('#pack-plan-amount-id').val(amtVal);
+            },
+            error: function(){
+                alert("error");
+            }
+        });
+	});
+    $('#package').on('change', function(event) {
+        
+        var plan = $('#plan').val();
+        var package = $(this).val();
+        
+        $.ajax({
+            type : 'POST', 
+            url: "<?=base_url("index.php/pages/getPlanPackageAmount");?>",
+            dataType : 'json',
+            data : {"plan": plan,"package": package },
+            success: function(amtVal){
+                    $('#amount-display').show();
+                    $('#pack-plan-amount-id').val(amtVal);
+                },
+            error: function(){
+                alert("error");
+            }
+        });
+	});
+});
+</script>
