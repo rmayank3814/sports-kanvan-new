@@ -46,7 +46,6 @@
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="sign in" href="<?php echo base_url();?>index.php/pages/login">Sign In</a>
                                         </li>
-                                 
                                     <?php } else { ?>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
