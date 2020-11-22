@@ -2854,13 +2854,14 @@ button {
                         transition: transform 0.3s ease;
                     }
                     /* end */
-                    .event_comment{
-                        color:green;
-                        font-weight:bold;
+                    
+                    .event_comment {
+                        color: green;
+                        font-weight: bold;
                         font-size: 18px;
                     }
                     /* comman space */
-                   
+                    
                     .comman-page {
                         margin-top: 100px;
                     }
@@ -2918,4 +2919,15 @@ button {
                     
                     .tabbable-line>.tab-content {
                         margin-top: 31px;
+                    }
+                    /* 22/11/2020 */
+                    
+                    .success-msg {
+                        text-align: center;
+                        width: 38%;
+                    }
+                    
+                    .failure-message {
+                        text-align: center;
+                        width: 38%;
                     }
