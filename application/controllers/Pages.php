@@ -202,38 +202,39 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/header');
 		$sess_id = $this->session->userdata('id');
 		$data = $this->fetch_user_profile_details($sess_id);
+
+		if(isset($_FILES['profile_image']) && $_FILES['profile_image']['error'] == '0'){
+            $config['upload_path'] = './main/images/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['max_size'] = 2000;
+			$config['max_width'] = 1500;
+			$config['max_height'] = 1500;
+
+			$this->load->library('upload', $config);
+
+			if ($this->upload->do_upload('profile_image')) {
+				$_POST['profile_image'] = $this->upload->data('file_name');
+			} else {
+				$error = array('error' => $this->upload->display_errors());
+			}
+		}
 		
-		if(isset($_POST['update_profile'])){
-			$this->form_validation->set_rules('fname', 'First name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-			$this->form_validation->set_rules('lname', 'Last name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
-			$this->form_validation->set_rules('email', 'Email', 'required|valid_email|regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]');
-			$this->form_validation->set_rules('mobile', 'Mobile number','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
-			$this->form_validation->set_rules('gender', 'Gender','required');
-			$this->form_validation->set_rules('dob', 'Birth Date','required');
-			$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
-			$this->form_validation->set_rules('shift', 'Shift','required');
-			$this->form_validation->set_rules('address1', 'Address','required');
+		$this->form_validation->set_rules('fname', 'First name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('lname', 'Last name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]');
+		$this->form_validation->set_rules('mobile', 'Mobile number','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
+		$this->form_validation->set_rules('gender', 'Gender','required');
+		$this->form_validation->set_rules('dob', 'Birth Date','required');
+		$this->form_validation->set_rules('emergency', 'Emergency contact','required|min_length[10]|max_length[12]|regex_match[/^[0]?[6789]\d{9}$/]');
+		$this->form_validation->set_rules('shift', 'Shift','required');
+		$this->form_validation->set_rules('address1', 'Address','required');
 
-			$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-			$this->form_validation->set_message('required', 'Enter %s');
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+		$this->form_validation->set_message('required', 'Enter %s');
 
-			if($this->form_validation->run()){
-				$config['upload_path'] = './main/images/';
-				$config['allowed_types'] = 'gif|jpg|png';
-				$config['max_size'] = 2000;
-				$config['max_width'] = 1500;
-				$config['max_height'] = 1500;
-
-				$this->load->library('upload', $config);
-
-				if (!$this->upload->do_upload('profile_image')) {
-					$error = array('error' => $this->upload->display_errors());
-				} else {
-					$_POST['profile_image'] = $this->upload->data('file_name');
-					$this->users_model->profile_update($sess_id);
-					redirect('pages/profile');
-				}
-		    }
+		if(isset($_POST['update_profile']) && $this->form_validation->run()){
+			$this->users_model->profile_update($sess_id);
+			redirect('pages/profile');
 		}
 		$this->load->view('pages/profile', $data);
 		$this->load->view('templates/footer');	
