@@ -11,7 +11,7 @@
 
     <!-- Title Page-->
     <title>Login</title>
-
+    <link rel="icon" href="<?php echo base_url();?>main/images/logo/kanvan-sports-logo.png" type="image/png" sizes="152x145">
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url(); ?>Admin/css/font-face.css" rel="stylesheet" media="all">
     <link href="<?php echo base_url(); ?>Admin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
