@@ -232,13 +232,15 @@ class Users_model extends CI_Model {
             'emergency' => $this->input->post('emergency'),
             'address1' => $this->input->post('address1'),
             'address2' => $this->input->post('address2'),
-            'gender' => $this->input->post('gender'),
-            'profile_image' => $this->input->post('profile_image')
+            'gender' => $this->input->post('gender')
         );  
-        $this->db->select("*");
-        $this->db->from('users');
-        $this->db->where('id', $sess_id);
+        if(!empty($this->input->post('profile_image'))) {
+            $data['profile_image'] = $this->input->post('profile_image');
+        }
+        $profile = $this->input->post('profile_image');
+
         $this->db->set($data);
+        $this->db->where('id', $sess_id);
         return $this->db->update('users',$data);
     }
 
