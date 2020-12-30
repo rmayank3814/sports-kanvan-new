@@ -66,7 +66,7 @@
             <div class="container ">
                 <div class="copyright-text wow fadeInDown" data-wow-delay="0.5s " style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
                     <p>&copy<?php echo date('Y'); ?> . All rights reserved.</p>
-                    <p class="love">Made with <i class="fas fa-heart"></i> .<a href="http://www.kanvan.in/" class="text-footer" target="_blank" title="Kanvan Business Solution"> Designed by Kanvan Business Solution</a></p>
+                    <p class="love">Made with <i class="fas fa-heart"></i> .<a href="http://www.kanvan.in/" class="text-footer" target="_blank" title="Kanvan Business Solutions"> Designed by Kanvan Business Solutions</a></p>
                 </div>
             </div>
         </div>
