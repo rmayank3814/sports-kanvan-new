@@ -1152,7 +1152,7 @@
                     }
                     
                     .service-wd .bg-success-gradiant {
-                        background: #f27b29;
+                        background: #26afeb;
                     }
                     
                     .service-wd .icon-round {
@@ -1212,7 +1212,7 @@
                     }
                     
                     .box-part4 {
-                        background: #d79922;
+                        background: #26afeb;
                         padding: 60px 10px;
                     }
                     /*
@@ -2187,26 +2187,29 @@
                     #back-to-top {
                         position: fixed;
                         bottom: 50px;
-                        right: 10px;
                         z-index: 9999;
-                        width: 40px;
-                        height: 40px;
-                        font-size: 1.6rem;
                         text-align: center;
                         line-height: 40px;
-                        background: #f5f5f5;
-                        color: #444;
                         cursor: pointer;
                         border: 0;
-                        border-radius: 50%;
-                        text-decoration: none;
-                        -webkit-transition: opacity 0.2s ease-out;
-                        transition: opacity 0.2s ease-out;
-                        opacity: 0;
-                        -webkit-border-radius: 50%;
-                        -moz-border-radius: 50%;
-                        -ms-border-radius: 50%;
-                        -o-border-radius: 50%;
+                        background: #919191 none repeat scroll 0 0;
+                        bottom: 70px;
+                        color: #ffffff;
+                        font-size: 20px;
+                        height: 40px;
+                        right: 3%;
+                        text-align: center;
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                        -webkit-transition: all 0.3s ease 0s;
+                        transition: all 0.3s ease 0s;
+                        width: 40px;
+                    }
+                    
+                    #back-to-top i {
+                        line-height: 40px;
+                        -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
                     }
                     
                     #back-to-top:hover {
@@ -2637,7 +2640,7 @@ button {
                             height: 1px;
                             content: "";
                             border: none;
-                            background-color: #cb7401;
+                            background-color: #26afeb;
                             /* vertical-align: 0; */
                         }
                         .dropdown-toggle::after {
@@ -2649,7 +2652,7 @@ button {
                             height: 11px;
                             content: "";
                             border: none;
-                            background-color: #cb7401;
+                            background-color: #26afeb;
                             /* vertical-align: 0; */
                             -webkit-transition: all 200ms linear;
                             transition: all 200ms linear;
