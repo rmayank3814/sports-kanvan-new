@@ -69,6 +69,7 @@ class Pages extends CI_Controller {
 
 	function registration() {
 		$this->load->view('templates/header');
+		$email = $this->input->post('email');
 		$this->form_validation->set_rules('fname', 'First name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 		$this->form_validation->set_rules('lname', 'Last name','required|min_length[2]|max_length[50]|regex_match[/^[A-Za-z]+$/]');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|regex_match[/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]|is_unique[users.email]');
@@ -89,6 +90,7 @@ class Pages extends CI_Controller {
 		if(isset($_POST['registration']) && $this->form_validation->run()) { 
 			$orderId= $this->users_model->users_data();
 			redirect('payment/index/'.$orderId);
+			$this->email_config($email);
 		}
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');
@@ -375,6 +377,21 @@ class Pages extends CI_Controller {
 			return $query->row_array();
 	}
 
+	function email_config($email){
 
-	
+        $this->email->from('info@kanvan.com', 'KRITAK INFRA PVT.LTD.');
+        $this->email->reply_to('noreply@gmail.com', 'No Reply');
+        $this->email->to($email);
+        $this->email->subject('Kritak|OTP for Authentication');
+        $this->email->message('This OTP '.$login_otp.' ia valid within 10 minutes only. Use this OTP to create your password.');
+
+        if ($this->email->send()) {
+            $this->response(['Your OTP has been sent to your entered email.'], REST_Controller::HTTP_OK);
+        } else {
+            show_error($this->email->print_debugger());
+        }
+
+    }
+
+
 }

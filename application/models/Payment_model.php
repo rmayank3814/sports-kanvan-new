@@ -7,10 +7,10 @@ class Payment_model extends CI_Model {
 
     function fetch_user_data($orderId){
         $this->db->select('*');
-			$this->db->from('payment as p');
-			$this->db->join('users as u', 'u.id = p.user_id', 'left');
-			$this->db->where('orderId',$orderId);
-			return $this->db->get();
+        $this->db->from('payment as p');
+        $this->db->join('users as u', 'u.id = p.user_id', 'left');
+        $this->db->where('orderId',$orderId);
+        return $this->db->get();
     }
 
     function insert_payment_data($orderId){

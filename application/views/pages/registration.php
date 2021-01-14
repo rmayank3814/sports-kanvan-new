@@ -37,9 +37,9 @@
 
                             <h3 class="heading-title text-center mt-4 mb-5">PERSONAL DETAILS</h3>
 
-                            <?php echo form_open('pages/registration',array('method'=>'post','novalidate'=>"novalidate", 'id' =>'registration_form')); ?>
+                            <?=form_open('pages/registration',array('method'=>'post','novalidate'=>"novalidate", 'id' =>'registration_form')); ?>
 
-                            <?php echo validation_errors(); ?>
+                            <?=validation_errors(); ?>
 
                             <div class="row">
 
@@ -79,8 +79,6 @@
 
                                     <input class="form-control" type="text" name="mobile" id="mobile" required>
 
-                                    
-
                                 </div>
 
                             </div>
@@ -102,8 +100,6 @@
                                     <label class="label-input" for="passconf">Confirm Password: <span class="text-danger font-weight-medium">*</span></label>
 
                                     <input class="form-control" type="password" name="passconf" id="passconf" required>
-
-                                    
 
                                 </div>
 

@@ -38,24 +38,46 @@
                                             <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                            <a class="nav-link" title="services" href="#">Services</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" title="Yoga" href="#">Yoga</a>
+                                                <a class="dropdown-item" title="Fitness Training" href="#">Fitness Training</a>
+                                                <a class="dropdown-item" title="Health & Wellness" href="#">Health & Wellness</a>
+                                                <a class="dropdown-item" title="Recreation" href="#">Recreation</a>
+                                                <a class="dropdown-item" title="Cycling" href="#">Cycling</a>
+                                                <a class="dropdown-item" title="Running" href="#">Running</a>
+                                                <a class="dropdown-item" title="Indoor & Outdoor games" href="#">Indoor & Outdoor games</a>
+                                                <a class="dropdown-item" title="Mountain Adventure" href="#">Mountain Adventure</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="blog" href="<?php echo base_url();?>index.php/pages/Blog">Blog</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="sign up" href="<?php echo base_url();?>index.php/pages/registration">Sign Up</a>
+                                            <a class="nav-link" title="sign up" href="<?php echo base_url();?>index.php/pages/registration">Register</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="sign in" href="<?php echo base_url();?>index.php/pages/login">Sign In</a>
+                                            <a class="nav-link" title="sign in" href="<?php echo base_url();?>index.php/pages/login">Login</a>
                                         </li>
                                     <?php } else { ?>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <?php if($_SESSION['role_id'] == '1') { ?>
-                                                <a class="nav-link" title="dashboard" href="<?php echo base_url();?>index.php/admin/index">Dashboard</a>
-                                            <?php } else { ?>
+                                            <a class="nav-link" title="services" href="#">Services</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" title="Yoga" href="#">Yoga</a>
+                                                <a class="dropdown-item" title="Fitness Training" href="#">Fitness Training</a>
+                                                <a class="dropdown-item" title="Health & Wellness" href="#">Health & Wellness</a>
+                                                <a class="dropdown-item" title="Recreation" href="#">Recreation</a>
+                                                <a class="dropdown-item" title="Cycling" href="#">Cycling</a>
+                                                <a class="dropdown-item" title="Running" href="#">Running</a>
+                                                <a class="dropdown-item" title="Indoor & Outdoor games" href="#">Indoor & Outdoor games</a>
+                                                <a class="dropdown-item" title="Mountain Adventure" href="#">Mountain Adventure</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link" title="sports form" href="<?php echo base_url();?>index.php/pages/forms">Sport Forms</a>
-                                            <?php } ?>
                                         </li>
                                         <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                             <a class="nav-link dropdown-toggle" title="my account" data-toggle="dropdown" href="#" >My Account</a>
