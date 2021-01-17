@@ -7,8 +7,8 @@ class Pages extends CI_Controller {
         parent::__construct();
 
         $this->load->model(array('users_model','banner_model','admin_model','blog_model','payment_model'));
-		$this->load->helper(array('form','url','html'));
-		$this->load->library(array('form_validation','session'));
+		$this->load->helper(array('form','url','html','string'));
+        $this->load->library(array('form_validation','session','email'));
 	}
 	
     function index(){
@@ -89,8 +89,8 @@ class Pages extends CI_Controller {
 
 		if(isset($_POST['registration']) && $this->form_validation->run()) { 
 			$orderId= $this->users_model->users_data();
-			redirect('payment/index/'.$orderId);
 			$this->email_config($email);
+			redirect('payment/index/'.$orderId);
 		}
 		$this->load->view('pages/registration');
 		$this->load->view('templates/footer');
@@ -110,6 +110,7 @@ class Pages extends CI_Controller {
 		
 		if(isset($_POST['login']) && $this->form_validation->run()){
 			$user = $query->row_array();
+			
 			if(!empty($user)) {
 				$this->session->set_userdata($user);
 				redirect(base_url());
@@ -379,18 +380,12 @@ class Pages extends CI_Controller {
 
 	function email_config($email){
 
-        $this->email->from('info@kanvan.com', 'KRITAK INFRA PVT.LTD.');
+        $this->email->from('info@kanvan.com', 'Kanvan Business Solutions');
         $this->email->reply_to('noreply@gmail.com', 'No Reply');
         $this->email->to($email);
-        $this->email->subject('Kritak|OTP for Authentication');
-        $this->email->message('This OTP '.$login_otp.' ia valid within 10 minutes only. Use this OTP to create your password.');
-
-        if ($this->email->send()) {
-            $this->response(['Your OTP has been sent to your entered email.'], REST_Controller::HTTP_OK);
-        } else {
-            show_error($this->email->print_debugger());
-        }
-
+        $this->email->subject('Kanvan|Email Authentication');
+        $this->email->message('You have successfully register with Kanvan Sports.');
+		$this->email->send();
     }
 
 

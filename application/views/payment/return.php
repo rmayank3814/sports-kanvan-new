@@ -21,7 +21,7 @@ i.fa.fa-check-circle {
           <h1 class="text-center mt-3">
           <i class="fa fa-check-circle" aria-hidden="true"></i>
           <br><?php echo $this->session->flashdata('success'); ?>
-          </h1>
+          </h1> 
         <br>
         <h5 >Your order successfully confirmed.</h5><br>
         <div class="confirm mt-2 mb-4"> <a href="<?=base_url();?>" class="alert-link btn btn-success">Home</a> 

@@ -37,11 +37,11 @@ class Payment extends CI_Controller {
         $this->payment_model->insert_payment_data($orderId);
 
         if (($signature == $computedSignature) && ($txStatus == 'SUCCESS')) {
-            $this->session->set_flashdata('success', 'Success...');
+            $this->session->set_flashdata('message', 'Success...');
         }else{
-            $this->session->set_flashdata('failure', 'Something Went Wrong!!!');
+            $this->session->set_flashdata('message', 'Something Went Wrong!!!');
         }
-        $this->load->view('payment/return');
+        $this->load->view('pages/login');
         $this->load->view('templates/footer');
     }
 

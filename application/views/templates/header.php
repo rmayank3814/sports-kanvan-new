@@ -26,72 +26,81 @@
         <div class="hero-anime">
             <div class="navigation-wrap start-header start-style ">
                 <div class="container">
-                        <div class="col">
-                            <nav class="navbar navbar-expand-md navbar-light">
-                                <a class="navbar-brand"  href="<?php echo base_url();?>"><img src="<?php echo base_url();?>main/images/logo/kanvan-sports-logo-1.svg" alt="kanvan sports logo"><span class="logo-title" title="Kanvan sports">Kanvan Sports</span></a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span></button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav ml-auto px-3 py-4 py-md-0">
-                                    <?php if(!isset($_SESSION) || (empty($_SESSION['id']))) { ?>
-                                       <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="services" href="#">Services</a>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" title="Yoga" href="#">Yoga</a>
-                                                <a class="dropdown-item" title="Fitness Training" href="#">Fitness Training</a>
-                                                <a class="dropdown-item" title="Health & Wellness" href="#">Health & Wellness</a>
-                                                <a class="dropdown-item" title="Recreation" href="#">Recreation</a>
-                                                <a class="dropdown-item" title="Cycling" href="#">Cycling</a>
-                                                <a class="dropdown-item" title="Running" href="#">Running</a>
-                                                <a class="dropdown-item" title="Indoor & Outdoor games" href="#">Indoor & Outdoor games</a>
-                                                <a class="dropdown-item" title="Mountain Adventure" href="#">Mountain Adventure</a>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="blog" href="<?php echo base_url();?>index.php/pages/Blog">Blog</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="sign up" href="<?php echo base_url();?>index.php/pages/registration">Register</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="sign in" href="<?php echo base_url();?>index.php/pages/login">Login</a>
-                                        </li>
-                                    <?php } else { ?>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="services" href="#">Services</a>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" title="Yoga" href="#">Yoga</a>
-                                                <a class="dropdown-item" title="Fitness Training" href="#">Fitness Training</a>
-                                                <a class="dropdown-item" title="Health & Wellness" href="#">Health & Wellness</a>
-                                                <a class="dropdown-item" title="Recreation" href="#">Recreation</a>
-                                                <a class="dropdown-item" title="Cycling" href="#">Cycling</a>
-                                                <a class="dropdown-item" title="Running" href="#">Running</a>
-                                                <a class="dropdown-item" title="Indoor & Outdoor games" href="#">Indoor & Outdoor games</a>
-                                                <a class="dropdown-item" title="Mountain Adventure" href="#">Mountain Adventure</a>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link" title="sports form" href="<?php echo base_url();?>index.php/pages/forms">Sport Forms</a>
-                                        </li>
-                                        <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                            <a class="nav-link dropdown-toggle" title="my account" data-toggle="dropdown" href="#" >My Account</a>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" title="view profile" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
-                                                <a class="dropdown-item" title="change password" href="<?php echo base_url();?>index.php/pages/change_password"> Change Password</a>
-                                                <a class="dropdown-item" title="logout" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
-                                            </div>
-                                        </li>
-                                    <?php } ?>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
+                    <div class="col">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand"  href="<?php echo base_url();?>"><img src="<?php echo base_url();?>main/images/logo/kanvan-sports-logo-1.svg" alt="kanvan sports logo"><span class="logo-title" title="Kanvan sports">Kanvan Sports</span></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span></button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto px-3 py-4 py-md-0">
+                                <?php if(!isset($_SESSION) || (empty($_SESSION['id']))) { ?>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="services" href="">Services</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" title="Yoga" href="<?=base_url();?>index.php/services/yoga">Yoga</a>
+                                            <a class="dropdown-item" title="Fitness Training" href="<?=base_url();?>index.php/services/fitness">Fitness Training</a>
+                                            <a class="dropdown-item" title="Health & Wellness" href="<?=base_url();?>index.php/services/health">Health & Wellness</a>
+                                            <a class="dropdown-item" title="Recreation" href="<?=base_url();?>index.php/services/recreation">Recreation</a>
+                                            <a class="dropdown-item" title="Cycling" href="<?=base_url();?>index.php/services/cycling">Cycling</a>
+                                            <a class="dropdown-item" title="Running" href="<?=base_url();?>index.php/services/running">Running</a>
+                                            <a class="dropdown-item" title="Indoor & Outdoor games" href="<?=base_url();?>index.php/services/games">Indoor & Outdoor games</a>
+                                            <a class="dropdown-item" title="Mountain Adventure" href="<?=base_url();?>index.php/services/adventure">Mountain Adventure</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="Events" href="<?=base_url();?>index.php/events">Events</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="blog" href="<?=base_url();?>index.php/pages/Blog">Blog</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="sign up" href="<?php echo base_url();?>index.php/pages/registration">Register</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="sign in" href="<?php echo base_url();?>index.php/pages/login">Login</a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="home" href="<?php echo base_url();?>">Home</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="Events" href="<?=base_url();?>index.php/events">Events</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="blog" href="<?=base_url();?>index.php/pages/Blog">Blog</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="services" href="">Services</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" title="Yoga" href="<?=base_url();?>index.php/services/yoga">Yoga</a>
+                                            <a class="dropdown-item" title="Fitness Training" href="<?=base_url();?>index.php/services/fitness">Fitness Training</a>
+                                            <a class="dropdown-item" title="Health & Wellness" href="<?=base_url();?>index.php/services/health">Health & Wellness</a>
+                                            <a class="dropdown-item" title="Recreation" href="<?=base_url();?>index.php/services/recreation">Recreation</a>
+                                            <a class="dropdown-item" title="Cycling" href="<?=base_url();?>index.php/services/cycling">Cycling</a>
+                                            <a class="dropdown-item" title="Running" href="<?=base_url();?>index.php/services/running">Running</a>
+                                            <a class="dropdown-item" title="Indoor & Outdoor games" href="<?=base_url();?>index.php/services/games">Indoor & Outdoor games</a>
+                                            <a class="dropdown-item" title="Mountain Adventure" href="<?=base_url();?>index.php/services/adventure">Mountain Adventure</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" title="sports form" href="<?php echo base_url();?>index.php/pages/forms">Sport Forms</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link dropdown-toggle" title="my account" data-toggle="dropdown" href="#" >My Account</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" title="view profile" href="<?php echo base_url();?>index.php/pages/profile"> View Profile</a>
+                                            <a class="dropdown-item" title="change password" href="<?php echo base_url();?>index.php/pages/change_password"> Change Password</a>
+                                            <a class="dropdown-item" title="logout" href="<?php echo base_url();?>index.php/pages/logout">Logout</a>
+                                        </div>
+                                    </li>
+                                <?php } ?>
+                                </ul>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </div>
+        </div>
